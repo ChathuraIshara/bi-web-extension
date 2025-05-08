@@ -1,0 +1,18 @@
+import ballerina/log;
+import ballerinax/sfdc;
+
+string channelName = "{{ CHANNEL_NAME }}";
+
+sfdc:ListenerConfiguration listenerConfig = {
+    username: "{{ USER_NAME }}",
+    password: "{{ PASSWORD }}"
+};
+
+listener sfdc:Listener eventListener = new (listenerConfig);
+
+@sfdc:ServiceConfig {channelName:  channelName}
+service / on eventListener {
+    remote function {{ EVENT }}(sfdc:EventData event) returns error? {
+        log:printInfo("event triggered : ", eventData = event);
+    }
+}

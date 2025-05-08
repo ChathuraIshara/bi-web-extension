@@ -1,0 +1,9 @@
+import ballerina/http;
+
+service {{ BASE_PATH }} on new http:Listener({{ PORT }}) {
+    {{#each RESOURCES }}
+    resource function {{{ METHOD }}} {{#if PATH}}{{{ PATH }}}{{else}}.{{/if}}({{{ QUERY_PARAM }}}{{{ PAYLOAD }}}{{#if ADD_REQUEST}}http:Request request{{/if}}{{#if ADD_CALLER}}{{#if ADD_REQUEST}}, {{/if}}{{/if}}{{#if ADD_CALLER}}http:Caller caller{{/if}}) {{#if ADD_RETURN}}returns {{ADD_RETURN}}{{/if}} {
+
+    }
+    {{/each}}
+}

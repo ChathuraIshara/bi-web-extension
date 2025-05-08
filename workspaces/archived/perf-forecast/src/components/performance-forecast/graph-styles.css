@@ -1,0 +1,66 @@
+.performance-forcast {
+    padding: 20pt 10pt 10pt 10pt;
+    font-size: 10pt;
+}
+
+.performance-forcast div.x-label {
+    text-align: center;
+    color: gray;
+    margin-top: 10pt;
+}
+
+.performance-forcast div.y-label {
+    display: inline-block;
+    margin: 0 0 -25pt -25pt;
+}
+
+.performance-forcast .latency {
+    margin-top: 20pt;
+}
+
+.center {
+    text-align: center;
+}
+
+.link {
+    margin-top: 20px;
+}
+
+.diagram-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.no-data-dialog {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #5567D5;
+    padding: 10px;
+    border-radius: 16px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.MuiDataGrid-cell:focus {
+    outline: none !important;
+}
+
+.MuiDataGrid-cellContent {
+    cursor: pointer;
+}

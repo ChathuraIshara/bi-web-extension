@@ -1,0 +1,211 @@
+.plus-holder {
+    .holder-wrapper {
+        width: 312px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+        z-index: 3;
+        height: calc(100vh - 60px);
+        overflow-x: hidden;
+    }
+
+    .element-options {
+        display: flex;
+        margin: 0.5rem 1.5rem 0;
+        flex-direction: column;
+
+        .element-option-holder {
+            display: flex;
+            flex-direction: column;
+
+            .options-title {
+                width: 260px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+
+                .options-title-label {
+                    font-size: 13px;
+                    line-height: 14px;
+                    font-weight: 500;
+                    margin-top: 0;
+                    width: auto;
+                }
+            }
+
+            hr.MuiDivider-root {
+                margin: 10px 0;
+            }
+
+            .options-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                hr.MuiDivider-root {
+                    width: 262px;
+                    height: 1px;
+                    margin: 10px 0;
+                }
+
+                .connect-option {
+                    display: flex;
+                    align-items: center;
+                    border-radius: 3px;
+                    width: 100%;
+
+                    &:hover {
+                        background: #f7f8fb;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .connector-details {
+                        display: flex;
+                        align-items: center;
+                        width: 173px;
+                        padding: 0.75rem 0;
+                        margin: 0.15rem 0;
+
+                        .connector-icon {
+                            display: flex;
+                            align-items: center;
+                            // width: 40px;
+                            transform: scale(1, 1);
+                            -webkit-transform: scale(1, 1);
+                            padding-left: 0.5rem;
+
+                            img {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+
+                        .beta-btn-wrapper {
+                            margin: 0 0 10px 33px;
+                            display: flex;
+
+                            .beta-button {
+                                fill: #36b475;
+                            }
+
+                            .beta-text {
+                                font-family: inherit;
+                                font-size: 8px;
+                                font-weight: 500;
+                                fill: #fff;
+                            }
+                        }
+
+                        .connector-name {
+                            color: #222228;
+                            font-family: "Gilmer", sans-serif;
+                            font-size: 13px;
+                            letter-spacing: 0;
+                            line-height: 15px;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                &.disabled {
+                    opacity: 0.3;
+                }
+
+                .sub-option {
+                    width: 260px;
+                    height: 40px;
+                    padding: 4px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    opacity: 0.3;
+
+                    &:hover {
+                        background: #f7f8fb;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        .icon-wrapper {
+                            .svg-sub-menu-plus-option-icon {
+                                // fill: #5567D5;
+                                fill: #5567D5;
+    
+                                &.secondary {
+                                    fill: #5567D5;
+                                }
+                            }
+                        }
+
+                        .text-label {
+                            color: #5567D5;
+                        }
+                    }
+
+                    &.enabled {
+                        opacity: 1;
+                    }
+
+                    .icon-wrapper {
+                        width: 30px;
+                        height: 30px;
+                        margin: 5px;
+                        display: flex;
+                        align-items: center;
+                        transform: scale(1.25);
+
+                        .svg-sub-menu-plus-option-icon {
+                            // fill: #5567D5;
+                            fill: #40404B;
+
+                            &.secondary {
+                                fill: #40404B;
+                            }
+                        }
+                    }
+
+                    .text-label {
+                        width: auto;
+                        margin-top: 0;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .search-wrapper {
+            height: 40px;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: inset 0 0 0 1px #dee0e7, inset 0 2px 1px 0 rgba(0, 0, 0, 0.07), 0 0 0 0 rgba(50, 50, 77, 0.07);
+            padding: 0 1rem;
+            border: 0;
+        }
+
+        .connector-option-holder {
+            .label-wrapper {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .search-options-wrapper {
+            width: 340px;
+
+            label {
+                height: 10px;
+                width: inherit;
+                color: #cbcedb;
+                font-family: inherit;
+                font-size: 10px;
+                letter-spacing: 1px;
+                line-height: 12px;
+                font-weight: 600;
+                display: flex;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

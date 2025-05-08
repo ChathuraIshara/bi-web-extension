@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "workspaces/choreo/choreo-core"
+		},
+		{
+			"path": "workspaces/choreo/choreo-extension"
+		},
+		{
+			"path": "workspaces/choreo/cell-diagram"
+		},
+		{
+			"path": "workspaces/choreo/choreo-webviews"
+		}
+	]
+}

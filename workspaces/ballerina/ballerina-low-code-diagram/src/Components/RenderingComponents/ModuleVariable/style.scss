@@ -1,0 +1,82 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+.module-variable-container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    height: auto;
+    width: 275px;
+    border: 1px solid #e6e7ec;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: "Gilmer", sans-serif;
+    font-weight: 300;
+
+    .module-variable-header {
+        display: flex;
+        flex-direction: row;
+        height: 49px;
+        width: 100%;
+
+        .module-variable-wrapper {
+            display: flex;
+            flex-direction: row;
+            font-size: 13px;
+            align-content: center;
+            align-items: center;
+            width: 75%;
+            padding-left: 16px;
+
+            .module-variable-icon {
+                height: 16px;
+                width: 10%;
+            }
+
+            .module-variable-type-text {
+                color: #222228;
+                padding-left: 10px;
+            }
+
+            .module-variable-name-text {
+                padding-left: 10px;
+                color: #8d91a3;
+                font-weight: normal;
+            }
+        }
+
+        .module-variable-actions {
+            display: flex;
+            width: 25%;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+
+            .edit-btn-wrapper,
+            .delete-btn-wrapper {
+                width: 25px;
+                text-align: center;
+                padding-right: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .show-on-hover {
+        display: none;
+    }
+
+    &:hover {
+        .show-on-hover {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+	"name": "@wso2-enterprise/type-diagram",
+	"version": "1.0.0",
+	"description": "The front-end implementation for the Type Diagram",
+	"files": [
+		"lib"
+	  ],
+	  "main": "lib/index.js",
+	  "types": "lib/index.d.ts",
+	"scripts": {
+		"watch": "tsc --watch",
+		"build": "tsc && pnpm run copy:assets",
+		"copy:assets": "copyfiles -u 1 \"src/**/*.scss\" \"src/**/*.svg\"  \"src/**/*.css\" \"src/**/*.png\" \"src/**/*.txt\" \"src/**/*.json\" \"src/resources/assets/font/*.*\" lib/",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+	},
+	"keywords": [],
+	"dependencies": {
+		"@emotion/react": "^11.9.3",
+		"@emotion/styled": "^11.10.5",
+		"@projectstorm/geometry": "^6.7.4",
+		"@projectstorm/react-canvas-core": "^6.7.4",
+		"@projectstorm/react-diagrams": "^6.7.4",
+		"@projectstorm/react-diagrams-core": "^6.7.4",
+		"@projectstorm/react-diagrams-defaults": "^6.7.4",
+		"@projectstorm/react-diagrams-routing": "^6.7.4",
+		"@types/lodash": "^4.14.189",
+		"@types/node": "^18.11.19",
+		"closest": "^0.0.1",
+		"dagre": "^0.8.5",
+		"file-loader": "^5.0.2",
+		"html-to-image": "^1.10.8",
+		"lodash": "^4.17.11",
+		"pathfinding": "^0.4.18",
+		"paths-js": "^0.4.11",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"resize-observer-polyfill": "^1.5.1",
+		"typescript": "^4.9.4",
+		"uuid": "^8.3.0",
+		"@emotion/css": "~11.11.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.12",
+		"@types/react": "^17.0.37",
+		"@types/react-dom": "17.0.14",
+		"@wso2-enterprise/ballerina-core": "workspace:*",
+		"@wso2-enterprise/ui-toolkit": "workspace:*",
+		"babel-loader": "^8.2.5",
+		"copyfiles": "^2.4.1",
+		"css-loader": "^6.7.1",
+		"source-map-loader": "^4.0.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.4.1",
+		"@types/uuid": "^8.3.0",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0",
+		"webpack-dev-server": "^4.11.1"
+	},
+	"author": "wso2",
+	"license": "UNLICENSED"
+}

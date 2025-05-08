@@ -1,0 +1,25 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+import React from 'react';
+
+export default function AssignmentIcon(props: any) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" {...props}>
+        <g id="Page-1" className="svg-sub-menu-plus-option-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Module-level-plus" transform="translate(-762.000000, -340.000000)" fill-rule="nonzero">
+                <g id="Dropdown/Select/Default-Copy-2" transform="translate(752.000000, 328.000000)">
+                    <g id="Logo/Circle" transform="translate(10.000000, 12.000000)">
+                        <path d="M8,0 C8.27614237,0 8.5,0.223857625 8.5,0.5 C8.5,0.776142375 8.27614237,1 8,1 C4.13400675,1 1,4.13400675 1,8 C1,11.8659932 4.13400675,15 8,15 C11.8659932,15 15,11.8659932 15,8 C15,7.72385763 15.2238576,7.5 15.5,7.5 C15.7761424,7.5 16,7.72385763 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M8.38000782,3.02562785 C8.51164707,3.09141403 8.62337105,3.18994385 8.70492145,3.31096185 L8.76026642,3.40578163 L12.6707961,10.9305954 C12.8560649,11.3010659 12.7059292,11.7515815 12.3354588,11.9368503 C11.9958608,12.10668 11.5890027,11.9946768 11.3808472,11.6894736 L11.3292039,11.6015129 L10.131,9.312 L5.87,9.312 L4.67364468,11.601328 C4.50390861,11.9409727 4.11124045,12.0955364 3.76157856,11.976313 L3.6674823,11.9369427 C3.32783757,11.7672067 3.17327384,11.3745385 3.29249731,11.0248766 L3.33186756,10.9307803 L7.23969045,3.40599122 C7.44954596,2.98606683 7.96008343,2.81577235 8.38000782,3.02562785 Z M8,5.23933215 L6.654,7.812 L9.346,7.812 L8,5.23933215 Z M15.3194836,0.505341736 C15.5082997,0.66218257 15.5523202,0.928685141 15.4358479,1.13515964 L15.384617,1.20944233 L11.9813418,5.30654537 L9.76483841,2.35220403 C9.59911722,2.13131696 9.64383801,1.81790904 9.86472509,1.65218785 C10.0610692,1.50488013 10.3305161,1.52384755 10.5043605,1.6850172 L10.5647413,1.75207453 L12.021,3.693 L14.615383,0.570475067 C14.791829,0.358056984 15.1070655,0.328895798 15.3194836,0.505341736 Z" id="Combined-Shape" />
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+  )
+}

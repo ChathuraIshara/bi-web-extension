@@ -1,0 +1,15 @@
+.TextVerticalPreloader-wrapper-relative {
+    position: relative;
+    height: 50px;
+    width: 55px;
+    margin: 50% auto;
+}
+
+.TextVerticalPreloader-wrapper-absolute {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

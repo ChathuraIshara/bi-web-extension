@@ -1,0 +1,34 @@
+
+.MuiStepper-root {
+    display: flex;
+    padding: 24px 0 !important;
+}
+
+.MuiStepLabel-alternativeLabel {
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    color: #cbcedb !important;
+
+    .MuiStepLabel-active {
+        color: #5567d5 !important;
+    }
+}
+
+.makeStyles-completed-560 {
+    background-color: #5567d5 !important;
+
+    path {
+        display: none;
+    }
+}
+
+.MuiStep-horizontal {
+    padding-left: 0 !important;
+    padding-right: 1px !important;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 5.7rem;
+    right: 1rem;
+}

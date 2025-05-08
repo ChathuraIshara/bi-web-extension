@@ -1,0 +1,126 @@
+/**
+ * Copyright (c) 2020, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+.respond-contect-wrapper {
+    .respond-wrapper {
+        .respond {
+            .respond-comp {
+                rect {
+                    stroke: #5567d5;
+                    stroke-miterlimit: 10;
+                    stroke-width: 1;
+                    fill: url(#linear-gradient) #fafafc;
+                    filter: url(#RespondFilter) #fafafc;
+                }
+
+                text {
+                    tspan {
+                        fill: #5567d5;
+                        font-family: inherit;
+                        font-size: 12px;
+                        letter-spacing: 0;
+                        line-height: 12px;
+                        font-weight: normal;
+                    }
+                }
+
+                &:hover {
+                    rect {
+                        cursor: pointer;
+                        stroke: #c0ceff8a;
+                        stroke-miterlimit: 10;
+                        stroke-width: 9;
+                        fill: url(#linear-gradient) #fafafc;
+                        filter: none;
+                    }
+
+                    .click-effect {
+                        stroke-width: 1px !important;
+                        stroke: #5566d5 !important;
+                    }
+                }
+
+                &:active {
+                    rect {
+                        cursor: pointer;
+                        stroke: #c0ceff8a;
+                        stroke-miterlimit: 10;
+                        stroke-width: 9;
+                        fill: url(#linear-gradient) #fafafc;
+                        filter: none;
+                    }
+
+                    .click-effect {
+                        stroke-width: 1px !important;
+                        stroke: #5566d5 !important;
+                    }
+                }
+
+                /* stylelint-disable */
+                text {
+                    text-transform: lowercase;
+                }
+                /* stylelint-enable */
+            }
+        }
+    }
+
+    .respond-options-wrapper {
+        fill: none;
+        display: none;
+        width: 100px;
+        height: 30px;
+
+        .disable {
+            opacity: 0.5;
+        }
+
+        .respond-rect {
+            fill: #fafafc;
+            height: 15px;
+            width: 60px;
+        }
+    }
+
+    &:hover {
+        .respond-options-wrapper {
+            display: inline !important;
+        }
+
+        .respond-active {
+
+            /* stylelint-disable */
+            rect {
+                cursor: pointer;
+                stroke: #c0ceff8a;
+                stroke-miterlimit: 10;
+                stroke-width: 9;
+                fill: url(#linear-gradient) #fafafc;
+                filter: none;
+            }
+
+            .click-effect {
+                stroke-width: 1px !important;
+                stroke: #5566d5 !important;
+            }
+
+            text {
+                tspan {
+                    fill: #5567d5;
+                    font-family: inherit;
+                    font-size: 12px;
+                    letter-spacing: 0;
+                    line-height: 12px;
+                    font-weight: normal;
+                }
+            }
+
+            /* stylelint-enable */
+        }
+    }
+}

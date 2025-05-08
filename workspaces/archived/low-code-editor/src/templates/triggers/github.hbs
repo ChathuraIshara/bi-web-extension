@@ -1,0 +1,25 @@
+import ballerinax/github.webhook as webhook;
+import ballerina/websub;
+
+configurable string CHOREO_APP_INVOCATION_URL = ?;
+configurable string {{ ACCESS_TOKEN }} = ?;
+configurable string {{ SECRET_KEY }} = ?;
+
+listener webhook:Listener githubWebhookListener = new ({{ PORT }});
+
+@websub:SubscriberServiceConfig {
+    target: [webhook:HUB, "{{{ GH_REPO_URL }}}/events/*.json"],
+    secret: {{ SECRET_KEY }},
+    callback: CHOREO_APP_INVOCATION_URL + "{{{ WEBHOOK }}}",
+    httpConfig: {
+        auth: {
+            token: {{ ACCESS_TOKEN }}
+        }
+    }
+}
+
+service {{{ WEBHOOK }}} on githubWebhookListener {
+    remote function {{ RESOURCE_NAME }}(webhook:{{ RECORD_NAME }} event) returns (webhook:Acknowledgement|error)? {
+
+    }
+}

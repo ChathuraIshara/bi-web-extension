@@ -1,0 +1,13 @@
+<!--
+ ~   Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ ~   
+ ~   This software is the property of WSO2 LLC. and its suppliers, if any.
+ ~   Dissemination of any information or reproduction of any material contained
+ ~   herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ ~   You may not alter or remove any copyright or other notice from copies of this content.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path
+        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z" />
+</svg>

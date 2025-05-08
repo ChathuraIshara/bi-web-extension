@@ -1,0 +1,44 @@
+/**
+ * Copyright (c) 2020, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+ $default_color :#5567d5;
+ $warning_color : #FF9D52;
+ $error_color : #FE523C;
+
+.else-line {
+    line {
+        stroke: $default_color;
+        stroke-width: 1px;
+    }
+
+    .line-curve {
+        stroke: $default_color;
+        stroke-width: 1px;
+        fill: none;
+    }
+
+    .line-curve-error {
+        stroke: $error_color;
+        stroke-width: 1.5px;
+        fill: none;
+    }
+
+    .line-curve-warning {
+        stroke: $warning_color;
+        stroke-width: 2px;
+        fill: none;
+    }
+
+    .then-text {
+        fill: #32324d;
+        letter-spacing: 0.05em;
+        font-weight: normal;
+        font-size: 10px !important;
+        font-family: inherit;
+    }
+}

@@ -1,0 +1,49 @@
+/**
+ * Copyright (c) 2018, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+
+@imagePath : "assets/images";
+@fontPath  : "assets/fonts";
+
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@iconFont          : "font-ballerina";
+@fontName          : -apple-system, BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif, @iconFont;
+@googleFontName    : 'Lato';
+@monospaceFont     : monospace, monospace, @iconFont;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+@relativeBorderRadius: 0;
+@absoluteBorderRadius: 0;
+
+@defaultBorderRadius: @absoluteBorderRadius;
+
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @teal;
+
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@teal             : #22b7b1;
+@blue             : #006faa;
+@black            : #464646;
+@green            : #6a9955;

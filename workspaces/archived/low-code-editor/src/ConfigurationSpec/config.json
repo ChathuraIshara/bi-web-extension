@@ -1,0 +1,23 @@
+{
+  "type": "connector",
+  "name": "Accuweather Connector",
+  "arguments": [
+    {
+      "description": "Request method",
+      "name": "Method",
+      "type": "string"
+    },
+    {
+      "description": "Accuwether endpoint",
+      "name": "Accuweather URL",
+      "type": "string"
+    },
+    {
+      "description": "Token required for accuweather client",
+      "name": "API Token",
+      "type": "string"
+    }
+  ],
+  "icon": null,
+  "description": "Accuweather connector"
+}

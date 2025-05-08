@@ -1,0 +1,31 @@
+import ballerina/log;
+import ballerinax/googleapis.calendar;
+import ballerinax/googleapis.calendar.'listener as listen;
+
+configurable string {{ CLIENT_ID }} = ?;
+configurable string {{ CLIENT_SECRET }} = ?;
+configurable string {{{ REFRESH_URL }}} = ?;
+configurable string {{ REFRESH_TOKEN }} = ?;
+configurable string CHOREO_APP_INVOCATION_URL = ?;
+
+calendar:CalendarConfiguration config = {
+    oauth2Config: {
+        clientId: {{ CLIENT_ID }},
+        clientSecret: {{ CLIENT_SECRET }},
+        refreshUrl: {{{ REFRESH_URL }}},
+        refreshToken: {{ REFRESH_TOKEN }}  
+    }
+};
+
+listener listen:Listener googleListener = new (
+    {{ PORT }}, 
+    config, 
+    "{{ CALENDAR_ID }}", 
+    CHOREO_APP_INVOCATION_URL + "/calendar/events"
+);
+
+service /calendar on googleListener {
+    remote function {{ EVENT }}(calendar:Event event) returns error? {
+        log:printInfo("event triggered : ", event);
+    }
+}

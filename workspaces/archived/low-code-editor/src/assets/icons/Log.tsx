@@ -1,0 +1,21 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+import React from 'react';
+export interface LogIconProps {
+    className?: string
+}
+
+export default function Log(props: LogIconProps) {
+    return (
+      <svg className="svg-sub-menu-plus-option-icon" width="16" height="16" viewBox="0 0 20 20" {...props}>
+          <path d="M11.2928932,10.2928932 C11.845178,10.2928932 12.2928932,10.7406085 12.2928932,11.2928932 L12.2928932,14.8778932 L15.8786797,14.8786797 C16.4309644,14.8786797 16.8786797,15.3263949 16.8786797,15.8786797 C16.8786797,16.4309644 16.4309644,16.8786797 15.8786797,16.8786797 L11.2928932,16.8786797 L11.2928932,16.8786797 C10.7406085,16.8786797 10.2928932,16.4309644 10.2928932,15.8786797 L10.2928932,11.2928932 C10.2928932,10.7406085 10.7406085,10.2928932 11.2928932,10.2928932 Z" id="Combined-Shape-Copy-7" transform="translate(13.585786, 13.585786) scale(-1, 1) rotate(-315.000000) translate(-13.585786, -13.585786) "/>
+          <path d="M15,0 C16.5976809,0 17.9036609,1.24891996 17.9949073,2.82372721 L18,3 L18,8 C18,8.55228475 17.5522847,9 17,9 C16.4871642,9 16.0644928,8.61395981 16.0067277,8.11662113 L16,8 L16,3 C16,2.48716416 15.6139598,2.06449284 15.1166211,2.00672773 L15,2 L3,2 C2.48716416,2 2.06449284,2.38604019 2.00672773,2.88337887 L2,3 L2,15 C2,15.5128358 2.38604019,15.9355072 2.88337887,15.9932723 L3,16 L9,16 C9.55228475,16 10,16.4477153 10,17 C10,17.5128358 9.61395981,17.9355072 9.11662113,17.9932723 L9,18 L3,18 C1.40231912,18 0.0963391206,16.75108 0.00509269341,15.1762728 L0,15 L0,3 C0,1.40231912 1.24891996,0.0963391206 2.82372721,0.00509269341 L3,0 L15,0 Z" id="Path" fill-rule="nonzero"/>
+      </svg>
+    )
+}

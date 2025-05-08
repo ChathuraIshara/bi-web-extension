@@ -1,0 +1,83 @@
+.stepWrapper.stepSctive {
+    .currentStep {
+        background-color: #5567d5;
+    }
+}
+
+.stepperWrapper {
+    .stepContainer:first-child {
+        .stepLabel {
+            .MuiStepLabel-iconContainer {
+                .stepWrapper {
+                    border-radius: 10px 0 0 10px !important;
+
+                    .currentStep {
+                        border-radius: 10px 0 0 10px !important;
+                    }
+
+                    .completedStep {
+                        border-radius: 10px 0 0 10px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .stepContainer:last-child {
+        .stepLabel {
+            .MuiStepLabel-iconContainer {
+                .stepWrapper {
+                    border-radius: 0 10px 10px 0 !important;
+
+                    .currentStep {
+                        border-radius: 0 10px 10px 0 !important;
+                    }
+
+                    .completedStep {
+                        border-radius: 0 10px 10px 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 0;
+}
+
+.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 0;
+}
+
+.MuiInput-underline::before {
+    border-bottom: 0 solid #fff !important;
+
+    &:hover {
+        border-bottom: 0 solid #fff !important;
+    }
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled)::before {
+    border-bottom: 0 solid #fff !important;
+}
+
+.MuiInput-underline::after {
+    border-bottom: 0 solid #fff !important;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.margin-left {
+    margin-left: 1rem;
+}
+
+.margin-right {
+    margin-right: 1rem;
+}

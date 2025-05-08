@@ -1,0 +1,3878 @@
+{
+    "qualifiers": [],
+    "serviceKeyword": {
+        "kind": "ServiceKeyword",
+        "isToken": true,
+        "value": "service",
+        "isMissing": false,
+        "position": {
+            "startLine": 2,
+            "startColumn": 0,
+            "endLine": 2,
+            "endColumn": 7
+        },
+        "leadingMinutiae": [
+            {
+                "kind": "END_OF_LINE_MINUTIAE",
+                "minutiae": "\n",
+                "isInvalid": false
+            }
+        ],
+        "trailingMinutiae": [
+            {
+                "kind": "WHITESPACE_MINUTIAE",
+                "minutiae": " ",
+                "isInvalid": false
+            }
+        ]
+    },
+    "absoluteResourcePath": [
+        {
+            "kind": "SlashToken",
+            "isToken": true,
+            "value": "/",
+            "isMissing": false,
+            "position": {
+                "startLine": 2,
+                "startColumn": 8,
+                "endLine": 2,
+                "endColumn": 9
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": []
+        },
+        {
+            "kind": "IdentifierToken",
+            "isToken": true,
+            "value": "hello",
+            "isMissing": false,
+            "position": {
+                "startLine": 2,
+                "startColumn": 9,
+                "endLine": 2,
+                "endColumn": 14
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": " ",
+                    "isInvalid": false
+                }
+            ]
+        }
+    ],
+    "onKeyword": {
+        "kind": "OnKeyword",
+        "isToken": true,
+        "value": "on",
+        "isMissing": false,
+        "position": {
+            "startLine": 2,
+            "startColumn": 15,
+            "endLine": 2,
+            "endColumn": 17
+        },
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "WHITESPACE_MINUTIAE",
+                "minutiae": " ",
+                "isInvalid": false
+            }
+        ]
+    },
+    "expressions": [
+        {
+            "kind": "ExplicitNewExpression",
+            "newKeyword": {
+                "kind": "NewKeyword",
+                "isToken": true,
+                "value": "new",
+                "isMissing": false,
+                "position": {
+                    "startLine": 2,
+                    "startColumn": 18,
+                    "endLine": 2,
+                    "endColumn": 21
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "typeDescriptor": {
+                "kind": "QualifiedNameReference",
+                "modulePrefix": {
+                    "kind": "IdentifierToken",
+                    "isToken": true,
+                    "value": "http",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 22,
+                        "endLine": 2,
+                        "endColumn": 26
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "colon": {
+                    "kind": "ColonToken",
+                    "isToken": true,
+                    "value": ":",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 26,
+                        "endLine": 2,
+                        "endColumn": 27
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "identifier": {
+                    "kind": "IdentifierToken",
+                    "isToken": true,
+                    "value": "Listener",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 27,
+                        "endLine": 2,
+                        "endColumn": 35
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "source": "http:Listener",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [],
+                "position": {
+                    "startLine": 2,
+                    "startColumn": 22,
+                    "endLine": 2,
+                    "endColumn": 35
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "kind": "TYPE",
+                        "typeKind": "union",
+                        "signature": "ballerina/http:2.9.5:Listener|ballerina/http:2.9.5:ListenerError",
+                        "members": [
+                            {
+                                "name": "Listener",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Listener"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:Listener"
+                            },
+                            {
+                                "name": "ListenerError",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "readonly": false,
+                                    "moduleQualifiedName": "http:ListenerError"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:ListenerError"
+                            }
+                        ]
+                    },
+                    "symbol": {
+                        "name": "Listener",
+                        "moduleID": {
+                            "orgName": "ballerina",
+                            "packageName": "http",
+                            "moduleName": "http",
+                            "version": "2.9.5"
+                        },
+                        "definition": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "packageName": "http",
+                                "moduleName": "http",
+                                "version": "2.9.5"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "Listener"
+                        },
+                        "kind": "TYPE",
+                        "typeKind": "typeReference",
+                        "signature": "ballerina/http:2.9.5:Listener"
+                    },
+                    "diagnostics": []
+                }
+            },
+            "parenthesizedArgList": {
+                "kind": "ParenthesizedArgList",
+                "openParenToken": {
+                    "kind": "OpenParenToken",
+                    "isToken": true,
+                    "value": "(",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 35,
+                        "endLine": 2,
+                        "endColumn": 36
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "arguments": [
+                    {
+                        "kind": "PositionalArg",
+                        "expression": {
+                            "kind": "NumericLiteral",
+                            "literalToken": {
+                                "kind": "DecimalIntegerLiteralToken",
+                                "isToken": true,
+                                "value": "9090",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 2,
+                                    "startColumn": 36,
+                                    "endLine": 2,
+                                    "endColumn": 40
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "9090",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 2,
+                                "startColumn": 36,
+                                "endLine": 2,
+                                "endColumn": 40
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "int",
+                                    "signature": "int"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "9090",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 2,
+                            "startColumn": 36,
+                            "endLine": 2,
+                            "endColumn": 40
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "int",
+                                "signature": "int"
+                            },
+                            "diagnostics": []
+                        }
+                    }
+                ],
+                "closeParenToken": {
+                    "kind": "CloseParenToken",
+                    "isToken": true,
+                    "value": ")",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 40,
+                        "endLine": 2,
+                        "endColumn": 41
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "(9090) ",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 2,
+                    "startColumn": 35,
+                    "endLine": 2,
+                    "endColumn": 41
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "kind": "TYPE",
+                        "typeKind": "union",
+                        "signature": "ballerina/http:2.9.5:Listener|ballerina/http:2.9.5:ListenerError",
+                        "members": [
+                            {
+                                "name": "Listener",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Listener"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:Listener"
+                            },
+                            {
+                                "name": "ListenerError",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "readonly": false,
+                                    "moduleQualifiedName": "http:ListenerError"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:ListenerError"
+                            }
+                        ]
+                    },
+                    "diagnostics": []
+                }
+            },
+            "source": "new http:Listener(9090) ",
+            "syntaxDiagnostics": [],
+            "leadingMinutiae": [],
+            "trailingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": " ",
+                    "isInvalid": false
+                }
+            ],
+            "position": {
+                "startLine": 2,
+                "startColumn": 18,
+                "endLine": 2,
+                "endColumn": 41
+            },
+            "typeData": {
+                "typeSymbol": {
+                    "kind": "TYPE",
+                    "typeKind": "union",
+                    "signature": "ballerina/http:2.9.5:Listener|ballerina/http:2.9.5:ListenerError",
+                    "members": [
+                        {
+                            "name": "Listener",
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "packageName": "http",
+                                "moduleName": "http",
+                                "version": "2.9.5"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Listener"
+                            },
+                            "kind": "TYPE",
+                            "typeKind": "typeReference",
+                            "signature": "ballerina/http:2.9.5:Listener"
+                        },
+                        {
+                            "name": "ListenerError",
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "packageName": "http",
+                                "moduleName": "http",
+                                "version": "2.9.5"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "kind": "TYPE_DEFINITION",
+                                "readonly": false,
+                                "moduleQualifiedName": "http:ListenerError"
+                            },
+                            "kind": "TYPE",
+                            "typeKind": "typeReference",
+                            "signature": "ballerina/http:2.9.5:ListenerError"
+                        }
+                    ]
+                },
+                "diagnostics": []
+            }
+        }
+    ],
+    "openBraceToken": {
+        "kind": "OpenBraceToken",
+        "isToken": true,
+        "value": "{",
+        "isMissing": false,
+        "position": {
+            "startLine": 2,
+            "startColumn": 42,
+            "endLine": 2,
+            "endColumn": 43
+        },
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "END_OF_LINE_MINUTIAE",
+                "minutiae": "\n",
+                "isInvalid": false
+            }
+        ]
+    },
+    "members": [
+        {
+            "kind": "ResourceAccessorDefinition",
+            "qualifierList": [
+                {
+                    "kind": "ResourceKeyword",
+                    "isToken": true,
+                    "value": "resource",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "endLine": 7,
+                        "endColumn": 12
+                    },
+                    "leadingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "COMMENT_MINUTIAE",
+                            "minutiae": "// resource function get greeting(string name) {",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "COMMENT_MINUTIAE",
+                            "minutiae": "// }",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                }
+            ],
+            "functionKeyword": {
+                "kind": "FunctionKeyword",
+                "isToken": true,
+                "value": "function",
+                "isMissing": false,
+                "position": {
+                    "startLine": 7,
+                    "startColumn": 13,
+                    "endLine": 7,
+                    "endColumn": 21
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "functionName": {
+                "kind": "IdentifierToken",
+                "isToken": true,
+                "value": "put",
+                "isMissing": false,
+                "position": {
+                    "startLine": 7,
+                    "startColumn": 22,
+                    "endLine": 7,
+                    "endColumn": 25
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "relativeResourcePath": [
+                {
+                    "kind": "IdentifierToken",
+                    "isToken": true,
+                    "value": "add",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 26,
+                        "endLine": 7,
+                        "endColumn": 29
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                {
+                    "kind": "SlashToken",
+                    "isToken": true,
+                    "value": "/",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 29,
+                        "endLine": 7,
+                        "endColumn": 30
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                {
+                    "kind": "ResourcePathSegmentParam",
+                    "openBracketToken": {
+                        "kind": "OpenBracketToken",
+                        "isToken": true,
+                        "value": "[",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 30,
+                            "endLine": 7,
+                            "endColumn": 31
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "annotations": [],
+                    "typeDescriptor": {
+                        "kind": "StringTypeDesc",
+                        "name": {
+                            "kind": "StringKeyword",
+                            "isToken": true,
+                            "value": "string",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 31,
+                                "endLine": 7,
+                                "endColumn": 37
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "string ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 31,
+                            "endLine": 7,
+                            "endColumn": 37
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "paramName": {
+                        "kind": "IdentifierToken",
+                        "isToken": true,
+                        "value": "p",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 38,
+                            "endLine": 7,
+                            "endColumn": 39
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "closeBracketToken": {
+                        "kind": "CloseBracketToken",
+                        "isToken": true,
+                        "value": "]",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 39,
+                            "endLine": 7,
+                            "endColumn": 40
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "source": "[string p]",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [],
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 30,
+                        "endLine": 7,
+                        "endColumn": 40
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "kind": "TYPE",
+                            "typeKind": "string",
+                            "signature": "string"
+                        },
+                        "symbol": {
+                            "isTypeOnlyParam": false,
+                            "moduleID": {
+                                "orgName": "tharinduj",
+                                "packageName": "proj4",
+                                "moduleName": "proj4",
+                                "version": "0.1.0"
+                            },
+                            "kind": "PATH_PARAMETER",
+                            "signature": "[string p]"
+                        },
+                        "diagnostics": []
+                    }
+                }
+            ],
+            "functionSignature": {
+                "kind": "FunctionSignature",
+                "openParenToken": {
+                    "kind": "OpenParenToken",
+                    "isToken": true,
+                    "value": "(",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 40,
+                        "endLine": 7,
+                        "endColumn": 41
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "parameters": [
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "QualifiedNameReference",
+                            "modulePrefix": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "http",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 41,
+                                    "endLine": 7,
+                                    "endColumn": 45
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "colon": {
+                                "kind": "ColonToken",
+                                "isToken": true,
+                                "value": ":",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 45,
+                                    "endLine": 7,
+                                    "endColumn": 46
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "identifier": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "Request",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 46,
+                                    "endLine": 7,
+                                    "endColumn": 53
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "http:Request ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 41,
+                                "endLine": 7,
+                                "endColumn": 53
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "name": "Request",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Request"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Request"
+                                },
+                                "symbol": {
+                                    "name": "Request",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Request"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Request"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param5",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 54,
+                                "endLine": 7,
+                                "endColumn": 60
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "http:Request param5",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 41,
+                            "endLine": 7,
+                            "endColumn": 60
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "name": "Request",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Request"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:Request"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "ballerina/http:2.9.5:Request param5"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 60,
+                            "endLine": 7,
+                            "endColumn": 61
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "QualifiedNameReference",
+                            "modulePrefix": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "http",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 62,
+                                    "endLine": 7,
+                                    "endColumn": 66
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "colon": {
+                                "kind": "ColonToken",
+                                "isToken": true,
+                                "value": ":",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 66,
+                                    "endLine": 7,
+                                    "endColumn": 67
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "identifier": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "Headers",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 67,
+                                    "endLine": 7,
+                                    "endColumn": 74
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "http:Headers ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 62,
+                                "endLine": 7,
+                                "endColumn": 74
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "name": "Headers",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Headers"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Headers"
+                                },
+                                "symbol": {
+                                    "name": "Headers",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Headers"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Headers"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param6",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 75,
+                                "endLine": 7,
+                                "endColumn": 81
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "http:Headers param6",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 62,
+                            "endLine": 7,
+                            "endColumn": 81
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "name": "Headers",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Headers"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:Headers"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "ballerina/http:2.9.5:Headers param6"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 81,
+                            "endLine": 7,
+                            "endColumn": 82
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "QualifiedNameReference",
+                            "modulePrefix": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "http",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 83,
+                                    "endLine": 7,
+                                    "endColumn": 87
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "colon": {
+                                "kind": "ColonToken",
+                                "isToken": true,
+                                "value": ":",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 87,
+                                    "endLine": 7,
+                                    "endColumn": 88
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "identifier": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "Caller",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 88,
+                                    "endLine": 7,
+                                    "endColumn": 94
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "http:Caller ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 83,
+                                "endLine": 7,
+                                "endColumn": 94
+                            },
+                            "typeData": {
+                                "isEndpoint": true,
+                                "typeSymbol": {
+                                    "name": "Caller",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Caller"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Caller"
+                                },
+                                "symbol": {
+                                    "name": "Caller",
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Caller"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "typeReference",
+                                    "signature": "ballerina/http:2.9.5:Caller"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "paramcall",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 95,
+                                "endLine": 7,
+                                "endColumn": 104
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "http:Caller paramcall",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 83,
+                            "endLine": 7,
+                            "endColumn": 104
+                        },
+                        "typeData": {
+                            "isEndpoint": true,
+                            "typeSymbol": {
+                                "name": "Caller",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "packageName": "http",
+                                    "moduleName": "http",
+                                    "version": "2.9.5"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "http",
+                                        "moduleName": "http",
+                                        "version": "2.9.5"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Caller"
+                                },
+                                "kind": "TYPE",
+                                "typeKind": "typeReference",
+                                "signature": "ballerina/http:2.9.5:Caller"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "ballerina/http:2.9.5:Caller paramcall"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 104,
+                            "endLine": 7,
+                            "endColumn": 105
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [
+                            {
+                                "kind": "Annotation",
+                                "atToken": {
+                                    "kind": "AtToken",
+                                    "isToken": true,
+                                    "value": "@",
+                                    "isMissing": false,
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 106,
+                                        "endLine": 7,
+                                        "endColumn": 107
+                                    },
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": []
+                                },
+                                "annotReference": {
+                                    "kind": "QualifiedNameReference",
+                                    "modulePrefix": {
+                                        "kind": "IdentifierToken",
+                                        "isToken": true,
+                                        "value": "http",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 107,
+                                            "endLine": 7,
+                                            "endColumn": 111
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "colon": {
+                                        "kind": "ColonToken",
+                                        "isToken": true,
+                                        "value": ":",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 111,
+                                            "endLine": 7,
+                                            "endColumn": 112
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "identifier": {
+                                        "kind": "IdentifierToken",
+                                        "isToken": true,
+                                        "value": "Payload",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 112,
+                                            "endLine": 7,
+                                            "endColumn": 119
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": [
+                                            {
+                                                "kind": "WHITESPACE_MINUTIAE",
+                                                "minutiae": " ",
+                                                "isInvalid": false
+                                            }
+                                        ]
+                                    },
+                                    "source": "http:Payload ",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [
+                                        {
+                                            "kind": "WHITESPACE_MINUTIAE",
+                                            "minutiae": " ",
+                                            "isInvalid": false
+                                        }
+                                    ],
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 107,
+                                        "endLine": 7,
+                                        "endColumn": 119
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "tharinduj",
+                                                "packageName": "proj4",
+                                                "moduleName": "proj4",
+                                                "version": "0.1.0"
+                                            },
+                                            "kind": "CLASS",
+                                            "typeKind": "object",
+                                            "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                                        },
+                                        "symbol": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "packageName": "http",
+                                                "moduleName": "http",
+                                                "version": "2.9.5"
+                                            },
+                                            "kind": "ANNOTATION"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                },
+                                "source": "@http:Payload ",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ],
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 106,
+                                    "endLine": 7,
+                                    "endColumn": 119
+                                },
+                                "typeData": {
+                                    "symbol": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "ANNOTATION"
+                                    },
+                                    "diagnostics": []
+                                }
+                            }
+                        ],
+                        "typeName": {
+                            "kind": "StringTypeDesc",
+                            "name": {
+                                "kind": "StringKeyword",
+                                "isToken": true,
+                                "value": "string",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 120,
+                                    "endLine": 7,
+                                    "endColumn": 126
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "string ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 120,
+                                "endLine": 7,
+                                "endColumn": 126
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "paramPay",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 127,
+                                "endLine": 7,
+                                "endColumn": 135
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "@http:Payload string paramPay",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 106,
+                            "endLine": 7,
+                            "endColumn": 135
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "string paramPay"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 135,
+                            "endLine": 7,
+                            "endColumn": 136
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "StringTypeDesc",
+                            "name": {
+                                "kind": "StringKeyword",
+                                "isToken": true,
+                                "value": "string",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 137,
+                                    "endLine": 7,
+                                    "endColumn": 143
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "string ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 137,
+                                "endLine": 7,
+                                "endColumn": 143
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param1",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 144,
+                                "endLine": 7,
+                                "endColumn": 150
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "string param1",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 137,
+                            "endLine": 7,
+                            "endColumn": 150
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "string param1"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 150,
+                            "endLine": 7,
+                            "endColumn": 151
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "StringTypeDesc",
+                            "name": {
+                                "kind": "StringKeyword",
+                                "isToken": true,
+                                "value": "string",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 152,
+                                    "endLine": 7,
+                                    "endColumn": 158
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "string ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 152,
+                                "endLine": 7,
+                                "endColumn": 158
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param2",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 159,
+                                "endLine": 7,
+                                "endColumn": 165
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "string param2",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 152,
+                            "endLine": 7,
+                            "endColumn": 165
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "string param2"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 165,
+                            "endLine": 7,
+                            "endColumn": 166
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "RequiredParam",
+                        "annotations": [
+                            {
+                                "kind": "Annotation",
+                                "atToken": {
+                                    "kind": "AtToken",
+                                    "isToken": true,
+                                    "value": "@",
+                                    "isMissing": false,
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 167,
+                                        "endLine": 7,
+                                        "endColumn": 168
+                                    },
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": []
+                                },
+                                "annotReference": {
+                                    "kind": "QualifiedNameReference",
+                                    "modulePrefix": {
+                                        "kind": "IdentifierToken",
+                                        "isToken": true,
+                                        "value": "http",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 168,
+                                            "endLine": 7,
+                                            "endColumn": 172
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "colon": {
+                                        "kind": "ColonToken",
+                                        "isToken": true,
+                                        "value": ":",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 172,
+                                            "endLine": 7,
+                                            "endColumn": 173
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "identifier": {
+                                        "kind": "IdentifierToken",
+                                        "isToken": true,
+                                        "value": "Header",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 173,
+                                            "endLine": 7,
+                                            "endColumn": 179
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": [
+                                            {
+                                                "kind": "WHITESPACE_MINUTIAE",
+                                                "minutiae": " ",
+                                                "isInvalid": false
+                                            }
+                                        ]
+                                    },
+                                    "source": "http:Header ",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [
+                                        {
+                                            "kind": "WHITESPACE_MINUTIAE",
+                                            "minutiae": " ",
+                                            "isInvalid": false
+                                        }
+                                    ],
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 168,
+                                        "endLine": 7,
+                                        "endColumn": 179
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "tharinduj",
+                                                "packageName": "proj4",
+                                                "moduleName": "proj4",
+                                                "version": "0.1.0"
+                                            },
+                                            "kind": "CLASS",
+                                            "typeKind": "object",
+                                            "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                                        },
+                                        "symbol": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "packageName": "http",
+                                                "moduleName": "http",
+                                                "version": "2.9.5"
+                                            },
+                                            "kind": "ANNOTATION"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                },
+                                "source": "@http:Header ",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ],
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 167,
+                                    "endLine": 7,
+                                    "endColumn": 179
+                                },
+                                "typeData": {
+                                    "symbol": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "http",
+                                            "moduleName": "http",
+                                            "version": "2.9.5"
+                                        },
+                                        "kind": "ANNOTATION"
+                                    },
+                                    "diagnostics": []
+                                }
+                            }
+                        ],
+                        "typeName": {
+                            "kind": "StringTypeDesc",
+                            "name": {
+                                "kind": "StringKeyword",
+                                "isToken": true,
+                                "value": "string",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 180,
+                                    "endLine": 7,
+                                    "endColumn": 186
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "string ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 180,
+                                "endLine": 7,
+                                "endColumn": 186
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param3",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 187,
+                                "endLine": 7,
+                                "endColumn": 193
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "@http:Header string param3",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 167,
+                            "endLine": 7,
+                            "endColumn": 193
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "string param3"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    {
+                        "kind": "CommaToken",
+                        "isToken": true,
+                        "value": ",",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 193,
+                            "endLine": 7,
+                            "endColumn": 194
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "DefaultableParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "IntTypeDesc",
+                            "name": {
+                                "kind": "IntKeyword",
+                                "isToken": true,
+                                "value": "int",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 195,
+                                    "endLine": 7,
+                                    "endColumn": 198
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "int ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 195,
+                                "endLine": 7,
+                                "endColumn": 198
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "int",
+                                    "signature": "int"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "int",
+                                    "signature": "int"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param4",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 199,
+                                "endLine": 7,
+                                "endColumn": 205
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "equalsToken": {
+                            "kind": "EqualToken",
+                            "isToken": true,
+                            "value": "=",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 206,
+                                "endLine": 7,
+                                "endColumn": 207
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "expression": {
+                            "kind": "NumericLiteral",
+                            "literalToken": {
+                                "kind": "DecimalIntegerLiteralToken",
+                                "isToken": true,
+                                "value": "3",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 208,
+                                    "endLine": 7,
+                                    "endColumn": 209
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "3",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 208,
+                                "endLine": 7,
+                                "endColumn": 209
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "int",
+                                    "signature": "int"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "int param4 = 3",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 195,
+                            "endLine": 7,
+                            "endColumn": 209
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "int",
+                                "signature": "int"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "int param4"
+                            },
+                            "diagnostics": []
+                        }
+                    }
+                ],
+                "closeParenToken": {
+                    "kind": "CloseParenToken",
+                    "isToken": true,
+                    "value": ")",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 209,
+                        "endLine": 7,
+                        "endColumn": 210
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "returnTypeDesc": {
+                    "kind": "ReturnTypeDescriptor",
+                    "returnsKeyword": {
+                        "kind": "ReturnsKeyword",
+                        "isToken": true,
+                        "value": "returns",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 211,
+                            "endLine": 7,
+                            "endColumn": 218
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "annotations": [],
+                    "type": {
+                        "kind": "UnionTypeDesc",
+                        "leftTypeDesc": {
+                            "kind": "UnionTypeDesc",
+                            "leftTypeDesc": {
+                                "kind": "UnionTypeDesc",
+                                "leftTypeDesc": {
+                                    "kind": "FloatTypeDesc",
+                                    "name": {
+                                        "kind": "FloatKeyword",
+                                        "isToken": true,
+                                        "value": "float",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 219,
+                                            "endLine": 7,
+                                            "endColumn": 224
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "source": "float",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [],
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 219,
+                                        "endLine": 7,
+                                        "endColumn": 224
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "kind": "TYPE",
+                                            "typeKind": "float",
+                                            "signature": "float"
+                                        },
+                                        "symbol": {
+                                            "kind": "TYPE",
+                                            "typeKind": "float",
+                                            "signature": "float"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                },
+                                "pipeToken": {
+                                    "kind": "PipeToken",
+                                    "isToken": true,
+                                    "value": "|",
+                                    "isMissing": false,
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 224,
+                                        "endLine": 7,
+                                        "endColumn": 225
+                                    },
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": []
+                                },
+                                "rightTypeDesc": {
+                                    "kind": "StringTypeDesc",
+                                    "name": {
+                                        "kind": "StringKeyword",
+                                        "isToken": true,
+                                        "value": "string",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 7,
+                                            "startColumn": 225,
+                                            "endLine": 7,
+                                            "endColumn": 231
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "source": "string",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [],
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 225,
+                                        "endLine": 7,
+                                        "endColumn": 231
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "kind": "TYPE",
+                                            "typeKind": "string",
+                                            "signature": "string"
+                                        },
+                                        "symbol": {
+                                            "kind": "TYPE",
+                                            "typeKind": "string",
+                                            "signature": "string"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                },
+                                "source": "float|string",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [],
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 219,
+                                    "endLine": 7,
+                                    "endColumn": 231
+                                },
+                                "typeData": {
+                                    "typeSymbol": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "tharinduj",
+                                            "packageName": "proj4",
+                                            "moduleName": "proj4",
+                                            "version": "0.1.0"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                                    },
+                                    "diagnostics": []
+                                }
+                            },
+                            "pipeToken": {
+                                "kind": "PipeToken",
+                                "isToken": true,
+                                "value": "|",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 231,
+                                    "endLine": 7,
+                                    "endColumn": 232
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "rightTypeDesc": {
+                                "kind": "SimpleNameReference",
+                                "name": {
+                                    "kind": "IdentifierToken",
+                                    "isToken": true,
+                                    "value": "BadGatewayfloat",
+                                    "isMissing": false,
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 232,
+                                        "endLine": 7,
+                                        "endColumn": 247
+                                    },
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": []
+                                },
+                                "source": "BadGatewayfloat",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [],
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 232,
+                                    "endLine": 7,
+                                    "endColumn": 247
+                                },
+                                "typeData": {
+                                    "typeSymbol": {
+                                        "name": "BadGatewayfloat",
+                                        "moduleID": {
+                                            "orgName": "tharinduj",
+                                            "packageName": "proj4",
+                                            "moduleName": "proj4",
+                                            "version": "0.1.0"
+                                        },
+                                        "definition": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "tharinduj",
+                                                "packageName": "proj4",
+                                                "moduleName": "proj4",
+                                                "version": "0.1.0"
+                                            },
+                                            "kind": "TYPE_DEFINITION",
+                                            "readonly": false,
+                                            "moduleQualifiedName": "proj4:BadGatewayfloat"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "typeReference",
+                                        "signature": "tharinduj/proj4:0.1.0:BadGatewayfloat"
+                                    },
+                                    "symbol": {
+                                        "name": "BadGatewayfloat",
+                                        "moduleID": {
+                                            "orgName": "tharinduj",
+                                            "packageName": "proj4",
+                                            "moduleName": "proj4",
+                                            "version": "0.1.0"
+                                        },
+                                        "definition": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "tharinduj",
+                                                "packageName": "proj4",
+                                                "moduleName": "proj4",
+                                                "version": "0.1.0"
+                                            },
+                                            "kind": "TYPE_DEFINITION",
+                                            "readonly": false,
+                                            "moduleQualifiedName": "proj4:BadGatewayfloat"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "typeReference",
+                                        "signature": "tharinduj/proj4:0.1.0:BadGatewayfloat"
+                                    },
+                                    "diagnostics": []
+                                }
+                            },
+                            "source": "float|string|BadGatewayfloat",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 219,
+                                "endLine": 7,
+                                "endColumn": 247
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "tharinduj",
+                                        "packageName": "proj4",
+                                        "moduleName": "proj4",
+                                        "version": "0.1.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "pipeToken": {
+                            "kind": "PipeToken",
+                            "isToken": true,
+                            "value": "|",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 247,
+                                "endLine": 7,
+                                "endColumn": 248
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "rightTypeDesc": {
+                            "kind": "OptionalTypeDesc",
+                            "typeDescriptor": {
+                                "kind": "ErrorTypeDesc",
+                                "keywordToken": {
+                                    "kind": "ErrorKeyword",
+                                    "isToken": true,
+                                    "value": "error",
+                                    "isMissing": false,
+                                    "position": {
+                                        "startLine": 7,
+                                        "startColumn": 248,
+                                        "endLine": 7,
+                                        "endColumn": 253
+                                    },
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": []
+                                },
+                                "source": "error",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [],
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 248,
+                                    "endLine": 7,
+                                    "endColumn": 253
+                                },
+                                "typeData": {
+                                    "typeSymbol": {
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "lang.annotations",
+                                            "moduleName": "lang.annotations",
+                                            "version": "0.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "kind": "TYPE",
+                                            "typeParam": {
+                                                "name": "Cloneable",
+                                                "moduleID": {
+                                                    "orgName": "ballerina",
+                                                    "packageName": "lang.value",
+                                                    "moduleName": "lang.value",
+                                                    "version": "0.0.0"
+                                                },
+                                                "definition": {
+                                                    "deprecated": false,
+                                                    "moduleID": {
+                                                        "orgName": "ballerina",
+                                                        "packageName": "lang.value",
+                                                        "moduleName": "lang.value",
+                                                        "version": "0.0.0"
+                                                    },
+                                                    "kind": "TYPE_DEFINITION",
+                                                    "readonly": false,
+                                                    "moduleQualifiedName": "value:Cloneable"
+                                                },
+                                                "kind": "TYPE",
+                                                "typeKind": "typeReference",
+                                                "signature": "ballerina/lang.value:0.0.0:Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "signature": "map<ballerina/lang.value:0.0.0:Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "error",
+                                        "signature": "error"
+                                    },
+                                    "diagnostics": []
+                                }
+                            },
+                            "questionMarkToken": {
+                                "kind": "QuestionMarkToken",
+                                "isToken": true,
+                                "value": "?",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 7,
+                                    "startColumn": 253,
+                                    "endLine": 7,
+                                    "endColumn": 254
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "error? ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 7,
+                                "startColumn": 248,
+                                "endLine": 7,
+                                "endColumn": 254
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "union",
+                                    "signature": "error?",
+                                    "members": [
+                                        {
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "packageName": "lang.annotations",
+                                                "moduleName": "lang.annotations",
+                                                "version": "0.0.0"
+                                            },
+                                            "detailTypeDescriptor": {
+                                                "kind": "TYPE",
+                                                "typeParam": {
+                                                    "name": "Cloneable",
+                                                    "moduleID": {
+                                                        "orgName": "ballerina",
+                                                        "packageName": "lang.value",
+                                                        "moduleName": "lang.value",
+                                                        "version": "0.0.0"
+                                                    },
+                                                    "definition": {
+                                                        "deprecated": false,
+                                                        "moduleID": {
+                                                            "orgName": "ballerina",
+                                                            "packageName": "lang.value",
+                                                            "moduleName": "lang.value",
+                                                            "version": "0.0.0"
+                                                        },
+                                                        "kind": "TYPE_DEFINITION",
+                                                        "readonly": false,
+                                                        "moduleQualifiedName": "value:Cloneable"
+                                                    },
+                                                    "kind": "TYPE",
+                                                    "typeKind": "typeReference",
+                                                    "signature": "ballerina/lang.value:0.0.0:Cloneable"
+                                                },
+                                                "typeKind": "map",
+                                                "signature": "map<ballerina/lang.value:0.0.0:Cloneable>"
+                                            },
+                                            "kind": "TYPE",
+                                            "typeKind": "error",
+                                            "signature": "error"
+                                        },
+                                        {
+                                            "kind": "TYPE",
+                                            "typeKind": "nil",
+                                            "signature": "()"
+                                        }
+                                    ]
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "float|string|BadGatewayfloat|error? ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 7,
+                            "startColumn": 219,
+                            "endLine": 7,
+                            "endColumn": 254
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "union",
+                                "signature": "float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?",
+                                "members": [
+                                    {
+                                        "kind": "TYPE",
+                                        "typeKind": "float",
+                                        "signature": "float"
+                                    },
+                                    {
+                                        "kind": "TYPE",
+                                        "typeKind": "string",
+                                        "signature": "string"
+                                    },
+                                    {
+                                        "name": "BadGatewayfloat",
+                                        "moduleID": {
+                                            "orgName": "tharinduj",
+                                            "packageName": "proj4",
+                                            "moduleName": "proj4",
+                                            "version": "0.1.0"
+                                        },
+                                        "definition": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "tharinduj",
+                                                "packageName": "proj4",
+                                                "moduleName": "proj4",
+                                                "version": "0.1.0"
+                                            },
+                                            "kind": "TYPE_DEFINITION",
+                                            "readonly": false,
+                                            "moduleQualifiedName": "proj4:BadGatewayfloat"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "typeReference",
+                                        "signature": "tharinduj/proj4:0.1.0:BadGatewayfloat"
+                                    },
+                                    {
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "lang.annotations",
+                                            "moduleName": "lang.annotations",
+                                            "version": "0.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "kind": "TYPE",
+                                            "typeParam": {
+                                                "name": "Cloneable",
+                                                "moduleID": {
+                                                    "orgName": "ballerina",
+                                                    "packageName": "lang.value",
+                                                    "moduleName": "lang.value",
+                                                    "version": "0.0.0"
+                                                },
+                                                "definition": {
+                                                    "deprecated": false,
+                                                    "moduleID": {
+                                                        "orgName": "ballerina",
+                                                        "packageName": "lang.value",
+                                                        "moduleName": "lang.value",
+                                                        "version": "0.0.0"
+                                                    },
+                                                    "kind": "TYPE_DEFINITION",
+                                                    "readonly": false,
+                                                    "moduleQualifiedName": "value:Cloneable"
+                                                },
+                                                "kind": "TYPE",
+                                                "typeKind": "typeReference",
+                                                "signature": "ballerina/lang.value:0.0.0:Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "signature": "map<ballerina/lang.value:0.0.0:Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "error",
+                                        "signature": "error"
+                                    },
+                                    {
+                                        "kind": "TYPE",
+                                        "typeKind": "nil",
+                                        "signature": "()"
+                                    }
+                                ]
+                            },
+                            "diagnostics": [
+                                {
+                                    "message": "this function should explicitly return a value",
+                                    "diagnosticInfo": {
+                                        "code": "BCE20350",
+                                        "severity": "WARNING"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "source": "returns float|string|BadGatewayfloat|error? ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 211,
+                        "endLine": 7,
+                        "endColumn": 254
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "tharinduj",
+                                "packageName": "proj4",
+                                "moduleName": "proj4",
+                                "version": "0.1.0"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                        },
+                        "diagnostics": [
+                            {
+                                "message": "this function should explicitly return a value",
+                                "diagnosticInfo": {
+                                    "code": "BCE20350",
+                                    "severity": "WARNING"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "source": "(http:Request param5, http:Headers param6, http:Caller paramcall, @http:Payload string paramPay, string param1, string param2, @http:Header string param3, int param4 = 3) returns float|string|BadGatewayfloat|error? ",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 7,
+                    "startColumn": 40,
+                    "endLine": 7,
+                    "endColumn": 254
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "deprecated": false,
+                        "moduleID": {
+                            "orgName": "tharinduj",
+                            "packageName": "proj4",
+                            "moduleName": "proj4",
+                            "version": "0.1.0"
+                        },
+                        "kind": "CLASS",
+                        "typeKind": "object",
+                        "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                    },
+                    "diagnostics": [
+                        {
+                            "message": "this function should explicitly return a value",
+                            "diagnosticInfo": {
+                                "code": "BCE20350",
+                                "severity": "WARNING"
+                            }
+                        }
+                    ]
+                }
+            },
+            "functionBody": {
+                "kind": "FunctionBodyBlock",
+                "openBraceToken": {
+                    "kind": "OpenBraceToken",
+                    "isToken": true,
+                    "value": "{",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 255,
+                        "endLine": 7,
+                        "endColumn": 256
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "statements": [],
+                "closeBraceToken": {
+                    "kind": "CloseBraceToken",
+                    "isToken": true,
+                    "value": "}",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "endLine": 8,
+                        "endColumn": 5
+                    },
+                    "leadingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "{\n    }\n",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 7,
+                    "startColumn": 255,
+                    "endLine": 8,
+                    "endColumn": 5
+                },
+                "typeData": {
+                    "diagnostics": []
+                },
+                "VisibleEndpoints": [
+                    {
+                        "name": "paramcall",
+                        "isCaller": true,
+                        "typeName": "Caller",
+                        "orgName": "ballerina",
+                        "packageName": "http",
+                        "moduleName": "http",
+                        "version": "2.9.5",
+                        "isModuleVar": false,
+                        "isExternal": true,
+                        "position": {
+                            "startLine": 7,
+                            "endLine": 7
+                        },
+                        "isParameter": true,
+                        "innerBlock": true
+                    }
+                ]
+            },
+            "source": "\n    // resource function get greeting(string name) {\n\n    // }\n    resource function put add/[string p](http:Request param5, http:Headers param6, http:Caller paramcall, @http:Payload string paramPay, string param1, string param2, @http:Header string param3, int param4 = 3) returns float|string|BadGatewayfloat|error? {\n    }\n",
+            "syntaxDiagnostics": [],
+            "leadingMinutiae": [
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "COMMENT_MINUTIAE",
+                    "minutiae": "// resource function get greeting(string name) {",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "COMMENT_MINUTIAE",
+                    "minutiae": "// }",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                },
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                }
+            ],
+            "trailingMinutiae": [
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                }
+            ],
+            "position": {
+                "startLine": 7,
+                "startColumn": 4,
+                "endLine": 8,
+                "endColumn": 5
+            },
+            "typeData": {
+                "typeSymbol": {
+                    "kind": "TYPE",
+                    "typeKind": "function",
+                    "signature": "function (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?"
+                },
+                "symbol": {
+                    "deprecated": false,
+                    "moduleID": {
+                        "orgName": "tharinduj",
+                        "packageName": "proj4",
+                        "moduleName": "proj4",
+                        "version": "0.1.0"
+                    },
+                    "kind": "RESOURCE_METHOD",
+                    "signature": "isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?",
+                    "external": false
+                },
+                "diagnostics": [
+                    {
+                        "message": "this function should explicitly return a value",
+                        "diagnosticInfo": {
+                            "code": "BCE20350",
+                            "severity": "WARNING"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "ResourceAccessorDefinition",
+            "qualifierList": [
+                {
+                    "kind": "ResourceKeyword",
+                    "isToken": true,
+                    "value": "resource",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "endLine": 9,
+                        "endColumn": 12
+                    },
+                    "leadingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                }
+            ],
+            "functionKeyword": {
+                "kind": "FunctionKeyword",
+                "isToken": true,
+                "value": "function",
+                "isMissing": false,
+                "position": {
+                    "startLine": 9,
+                    "startColumn": 13,
+                    "endLine": 9,
+                    "endColumn": 21
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "functionName": {
+                "kind": "IdentifierToken",
+                "isToken": true,
+                "value": "get",
+                "isMissing": false,
+                "position": {
+                    "startLine": 9,
+                    "startColumn": 22,
+                    "endLine": 9,
+                    "endColumn": 25
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "relativeResourcePath": [
+                {
+                    "kind": "DotToken",
+                    "isToken": true,
+                    "value": ".",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 26,
+                        "endLine": 9,
+                        "endColumn": 27
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                }
+            ],
+            "functionSignature": {
+                "kind": "FunctionSignature",
+                "openParenToken": {
+                    "kind": "OpenParenToken",
+                    "isToken": true,
+                    "value": "(",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 27,
+                        "endLine": 9,
+                        "endColumn": 28
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "parameters": [
+                    {
+                        "kind": "DefaultableParam",
+                        "annotations": [],
+                        "typeName": {
+                            "kind": "StringTypeDesc",
+                            "name": {
+                                "kind": "StringKeyword",
+                                "isToken": true,
+                                "value": "string",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 28,
+                                    "endLine": 9,
+                                    "endColumn": 34
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [
+                                    {
+                                        "kind": "WHITESPACE_MINUTIAE",
+                                        "minutiae": " ",
+                                        "isInvalid": false
+                                    }
+                                ]
+                            },
+                            "source": "string ",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 28,
+                                "endLine": 9,
+                                "endColumn": 34
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "symbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "paramName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "param",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 35,
+                                "endLine": 9,
+                                "endColumn": 40
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "equalsToken": {
+                            "kind": "EqualToken",
+                            "isToken": true,
+                            "value": "=",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 41,
+                                "endLine": 9,
+                                "endColumn": 42
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "expression": {
+                            "kind": "StringLiteral",
+                            "literalToken": {
+                                "kind": "StringLiteralToken",
+                                "isToken": true,
+                                "value": "\"hell\"",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 43,
+                                    "endLine": 9,
+                                    "endColumn": 49
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "\"hell\"",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 43,
+                                "endLine": 9,
+                                "endColumn": 49
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "kind": "TYPE",
+                                    "typeKind": "string",
+                                    "signature": "string"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "string param = \"hell\"",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 28,
+                            "endLine": 9,
+                            "endColumn": 49
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "string",
+                                "signature": "string"
+                            },
+                            "symbol": {
+                                "moduleID": {
+                                    "orgName": "tharinduj",
+                                    "packageName": "proj4",
+                                    "moduleName": "proj4",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "PARAMETER",
+                                "signature": "string param"
+                            },
+                            "diagnostics": []
+                        }
+                    }
+                ],
+                "closeParenToken": {
+                    "kind": "CloseParenToken",
+                    "isToken": true,
+                    "value": ")",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 49,
+                        "endLine": 9,
+                        "endColumn": 50
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "returnTypeDesc": {
+                    "kind": "ReturnTypeDescriptor",
+                    "returnsKeyword": {
+                        "kind": "ReturnsKeyword",
+                        "isToken": true,
+                        "value": "returns",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 51,
+                            "endLine": 9,
+                            "endColumn": 58
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "annotations": [],
+                    "type": {
+                        "kind": "OptionalTypeDesc",
+                        "typeDescriptor": {
+                            "kind": "ErrorTypeDesc",
+                            "keywordToken": {
+                                "kind": "ErrorKeyword",
+                                "isToken": true,
+                                "value": "error",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 59,
+                                    "endLine": 9,
+                                    "endColumn": 64
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "error",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 59,
+                                "endLine": 9,
+                                "endColumn": 64
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "moduleID": {
+                                        "orgName": "ballerina",
+                                        "packageName": "lang.annotations",
+                                        "moduleName": "lang.annotations",
+                                        "version": "0.0.0"
+                                    },
+                                    "detailTypeDescriptor": {
+                                        "kind": "TYPE",
+                                        "typeParam": {
+                                            "name": "Cloneable",
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "packageName": "lang.value",
+                                                "moduleName": "lang.value",
+                                                "version": "0.0.0"
+                                            },
+                                            "definition": {
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "ballerina",
+                                                    "packageName": "lang.value",
+                                                    "moduleName": "lang.value",
+                                                    "version": "0.0.0"
+                                                },
+                                                "kind": "TYPE_DEFINITION",
+                                                "readonly": false,
+                                                "moduleQualifiedName": "value:Cloneable"
+                                            },
+                                            "kind": "TYPE",
+                                            "typeKind": "typeReference",
+                                            "signature": "ballerina/lang.value:0.0.0:Cloneable"
+                                        },
+                                        "typeKind": "map",
+                                        "signature": "map<ballerina/lang.value:0.0.0:Cloneable>"
+                                    },
+                                    "kind": "TYPE",
+                                    "typeKind": "error",
+                                    "signature": "error"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "questionMarkToken": {
+                            "kind": "QuestionMarkToken",
+                            "isToken": true,
+                            "value": "?",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 64,
+                                "endLine": 9,
+                                "endColumn": 65
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "error? ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 59,
+                            "endLine": 9,
+                            "endColumn": 65
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "kind": "TYPE",
+                                "typeKind": "union",
+                                "signature": "error?",
+                                "members": [
+                                    {
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "packageName": "lang.annotations",
+                                            "moduleName": "lang.annotations",
+                                            "version": "0.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "kind": "TYPE",
+                                            "typeParam": {
+                                                "name": "Cloneable",
+                                                "moduleID": {
+                                                    "orgName": "ballerina",
+                                                    "packageName": "lang.value",
+                                                    "moduleName": "lang.value",
+                                                    "version": "0.0.0"
+                                                },
+                                                "definition": {
+                                                    "deprecated": false,
+                                                    "moduleID": {
+                                                        "orgName": "ballerina",
+                                                        "packageName": "lang.value",
+                                                        "moduleName": "lang.value",
+                                                        "version": "0.0.0"
+                                                    },
+                                                    "kind": "TYPE_DEFINITION",
+                                                    "readonly": false,
+                                                    "moduleQualifiedName": "value:Cloneable"
+                                                },
+                                                "kind": "TYPE",
+                                                "typeKind": "typeReference",
+                                                "signature": "ballerina/lang.value:0.0.0:Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "signature": "map<ballerina/lang.value:0.0.0:Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "typeKind": "error",
+                                        "signature": "error"
+                                    },
+                                    {
+                                        "kind": "TYPE",
+                                        "typeKind": "nil",
+                                        "signature": "()"
+                                    }
+                                ]
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "returns error? ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 51,
+                        "endLine": 9,
+                        "endColumn": 65
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "tharinduj",
+                                "packageName": "proj4",
+                                "moduleName": "proj4",
+                                "version": "0.1.0"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "source": "(string param = \"hell\") returns error? ",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 9,
+                    "startColumn": 27,
+                    "endLine": 9,
+                    "endColumn": 65
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "deprecated": false,
+                        "moduleID": {
+                            "orgName": "tharinduj",
+                            "packageName": "proj4",
+                            "moduleName": "proj4",
+                            "version": "0.1.0"
+                        },
+                        "kind": "CLASS",
+                        "typeKind": "object",
+                        "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+                    },
+                    "diagnostics": []
+                }
+            },
+            "functionBody": {
+                "kind": "FunctionBodyBlock",
+                "openBraceToken": {
+                    "kind": "OpenBraceToken",
+                    "isToken": true,
+                    "value": "{",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 66,
+                        "endLine": 9,
+                        "endColumn": 67
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "statements": [],
+                "closeBraceToken": {
+                    "kind": "CloseBraceToken",
+                    "isToken": true,
+                    "value": "}",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "endLine": 10,
+                        "endColumn": 5
+                    },
+                    "leadingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "    ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "{\n    }\n",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 9,
+                    "startColumn": 66,
+                    "endLine": 10,
+                    "endColumn": 5
+                },
+                "typeData": {
+                    "diagnostics": []
+                },
+                "VisibleEndpoints": []
+            },
+            "source": "    resource function get .(string param = \"hell\") returns error? {\n    }\n",
+            "syntaxDiagnostics": [],
+            "leadingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                }
+            ],
+            "trailingMinutiae": [
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                }
+            ],
+            "position": {
+                "startLine": 9,
+                "startColumn": 4,
+                "endLine": 10,
+                "endColumn": 5
+            },
+            "typeData": {
+                "typeSymbol": {
+                    "kind": "TYPE",
+                    "typeKind": "function",
+                    "signature": "function (string param) returns error?"
+                },
+                "symbol": {
+                    "deprecated": false,
+                    "moduleID": {
+                        "orgName": "tharinduj",
+                        "packageName": "proj4",
+                        "moduleName": "proj4",
+                        "version": "0.1.0"
+                    },
+                    "kind": "RESOURCE_METHOD",
+                    "signature": "isolated resource function get . (string param) returns error?",
+                    "external": false
+                },
+                "diagnostics": []
+            }
+        }
+    ],
+    "closeBraceToken": {
+        "kind": "CloseBraceToken",
+        "isToken": true,
+        "value": "}",
+        "isMissing": false,
+        "position": {
+            "startLine": 11,
+            "startColumn": 0,
+            "endLine": 11,
+            "endColumn": 1
+        },
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "END_OF_LINE_MINUTIAE",
+                "minutiae": "\n",
+                "isInvalid": false
+            }
+        ]
+    },
+    "source": "\nservice /hello on new http:Listener(9090) {\n\n    // resource function get greeting(string name) {\n\n    // }\n    resource function put add/[string p](http:Request param5, http:Headers param6, http:Caller paramcall, @http:Payload string paramPay, string param1, string param2, @http:Header string param3, int param4 = 3) returns float|string|BadGatewayfloat|error? {\n    }\n    resource function get .(string param = \"hell\") returns error? {\n    }\n}\n",
+    "kind": "ServiceDeclaration",
+    "syntaxDiagnostics": [],
+    "leadingMinutiae": [
+        {
+            "kind": "END_OF_LINE_MINUTIAE",
+            "minutiae": "\n",
+            "isInvalid": false
+        }
+    ],
+    "trailingMinutiae": [
+        {
+            "kind": "END_OF_LINE_MINUTIAE",
+            "minutiae": "\n",
+            "isInvalid": false
+        }
+    ],
+    "position": {
+        "startLine": 2,
+        "startColumn": 0,
+        "endLine": 11,
+        "endColumn": 1
+    },
+    "typeData": {
+        "typeSymbol": {
+            "deprecated": false,
+            "moduleID": {
+                "orgName": "tharinduj",
+                "packageName": "proj4",
+                "moduleName": "proj4",
+                "version": "0.1.0"
+            },
+            "kind": "CLASS",
+            "typeKind": "object",
+            "signature": "isolated service object {isolated resource function put add/[string p] (ballerina/http:2.9.5:Request param5, ballerina/http:2.9.5:Headers param6, ballerina/http:2.9.5:Caller paramcall, string paramPay, string param1, string param2, string param3, int param4) returns float|string|tharinduj/proj4:0.1.0:BadGatewayfloat|error?; isolated resource function get . (string param) returns error?;}"
+        },
+        "symbol": {
+            "moduleID": {
+                "orgName": "tharinduj",
+                "packageName": "proj4",
+                "moduleName": "proj4",
+                "version": "0.1.0"
+            },
+            "kind": "SERVICE_DECLARATION"
+        },
+        "diagnostics": [
+            {
+                "message": "this function should explicitly return a value",
+                "diagnosticInfo": {
+                    "code": "BCE20350",
+                    "severity": "WARNING"
+                }
+            }
+        ]
+    },
+    "VisibleEndpoints": []
+}

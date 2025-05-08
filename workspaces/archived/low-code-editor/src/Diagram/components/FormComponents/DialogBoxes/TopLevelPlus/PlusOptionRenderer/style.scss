@@ -1,0 +1,169 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+
+.dropdown {
+    .dropdown-menu {
+        box-sizing: border-box;
+        height: fit-content;
+        width: fit-content;
+        // border: 1px solid #e6e7ec;
+        // border-radius: 8px;
+        background-color: #fff;
+        // box-shadow: 0 0 20px 0 rgba(141, 143, 160, 0.2);
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        // position: absolute;
+        margin-top: 0;
+    }
+
+    .dropdown-submenu {
+        position: relative;
+
+        .dropdown-menu {
+            visibility: hidden;
+            transition-delay: 0.5s all;
+        }
+
+        &:hover {
+            .dropdown-menu {
+                visibility: visible;
+                top: 0;
+                left: 100%;
+                margin-top: -1px;
+                transition-delay: 0.5s all;
+            }
+
+            .plus-option {
+                .plus-option-icon {
+                    .svg-sub-menu-plus-option-icon {
+                        fill: #cbcddb;
+                    }
+                }
+            }
+
+            li {
+                &:hover {
+                    .plus-option {
+                        .plus-option-icon {
+                            .svg-sub-menu-plus-option-icon {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown-submenu,
+    .dropdown-menu {
+        padding-left: 0;
+
+        li {
+            list-style-type: none;
+            border-bottom: 1px solid #e6e7ec;
+            background-color: #fff;
+
+            .plus-option {
+                .plus-option-text {
+                    color: #fff;
+                }
+
+                .plus-option-icon {
+                    .svg-plus-option-icon {
+                        fill: #cbcddb;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: #434ecb;
+
+                .plus-option {
+                    .plus-option-text {
+                        color: #fff;
+                    }
+
+                    .plus-option-icon {
+                        .svg-plus-option-icon {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    .plus-option {
+                        .plus-option-text {
+                            color: #1d2028;
+                        }
+
+                        &:hover {
+                            .plus-option-text {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .plus-option {
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+
+                .plus-option-text {
+                    color: #1d2028;
+                    font-family: inherit;
+                    font-size: 13px;
+                    padding: 15px;
+                    white-space: nowrap;
+                }
+
+                .plus-option-icon {
+                    padding: 16px 0 14px 15px;
+                }
+            }
+        }
+
+        li:nth-of-type(1) {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        li:last-of-type {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+
+.service-config-light-fill {
+    .svg-plus-option-icon {
+        fill: #cbcedb;
+    }
+}
+
+.dark-fill {
+    .svg-plus-option-icon {
+        fill: #40404b;
+    }
+}
+
+.sub-menu-dark-fill {
+    .svg-sub-menu-plus-option-icon {
+        fill: #40404b;
+    }
+}
+
+.function-config-form-fill {
+    .svg-plus-option-icon {
+        fill: #cbcedb;
+    }
+}

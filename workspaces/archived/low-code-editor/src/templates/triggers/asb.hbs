@@ -1,0 +1,18 @@
+import ballerinax/asb;
+import ballerina/log;
+
+// Initialize the azure service bus listener
+listener asb:Listener asbListener = new ();
+
+@asb:ServiceConfig {entityConfig: {
+        connectionString: "{{{CONNECTION_STRING}}}",
+        entityPath: "{{QUEUE_NAME}}"{{#if RECEIVE_MODE}},
+        receiveMode: "{{RECEIVE_MODE}}"{{/if}}
+    }
+}
+
+service asb:Service on asbListener {
+    remote function onMessage(asb:Message message) returns error? {
+        log:printInfo("Azure service bus message", message);
+    }
+}

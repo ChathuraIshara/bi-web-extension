@@ -1,0 +1,9 @@
+# .npmignore
+node_modules
+*.log
+*.lck
+.npmrc
+issue_template.md
+pull_request_template.md
+testbed
+*.tgz

@@ -1,0 +1,57 @@
+{
+    "name": "@wso2-enterprise/type-editor",
+    "version": "1.0.0",
+    "description": "Type Editor for Ballerina Integrator",
+    "files": [
+        "lib"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "watch": "tsc --pretty --watch",
+        "build": "tsc --pretty && pnpm run copy:assets",
+        "copy:assets": "copyfiles -u 1 \"src/**/*.scss\" \"src/**/*.svg\"  \"src/**/*.css\" \"src/**/*.png\" \"src/**/*.txt\" \"src/**/*.json\" lib/",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "@wso2-enterprise/ballerina-core": "workspace:*",
+        "@wso2-enterprise/syntax-tree": "workspace:*",
+        "@wso2-enterprise/ballerina-rpc-client": "workspace:*",
+        "@wso2-enterprise/ballerina-statement-editor": "workspace:*",
+        "@emotion/react": "~11.11.3",
+        "@emotion/styled": "~11.11.0",
+        "@emotion/css": "~11.11.2",
+        "@wso2-enterprise/ui-toolkit": "workspace:*",
+        "react-intl": "^5.10.19",
+        "@headlessui/react": "~1.7.18",
+        "@tanstack/react-query": "4.0.10",
+        "lodash.debounce": "^4.0.8",
+        "react-lottie": "^1.2.3",
+        "monaco-editor": "~0.46.0",
+        "vscode-uri": "~3.0.8",
+        "@vscode/webview-ui-toolkit": "~1.4.0",
+        "lodash": "~4.17.21"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.55",
+        "@types/react-dom": "^18.2.19",
+        "react-scripts-ts": "3.1.0",
+        "@types/react-lottie": "^1.2.5",
+        "@types/lodash.debounce": "^4.0.6",
+        "typescript": "^4.9.5",
+        "copyfiles": "~2.4.1",
+        "eslint": "~8.56.0",
+        "@types/lodash": "~4.17.15"
+    },
+    "author": "wso2",
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wso2-enterprise/ballerina-plugin-vscode.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
+}

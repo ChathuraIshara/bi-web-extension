@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "es2016",
+      "dom",
+    ],
+    "types": ["jest"],
+    "target": "es5",
+    "jsx": "react",
+    "strict": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "stripInternal": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "rootDirs": ["src", "stories"],
+    "outDir": "lib"
+  },
+  "exclude": ["**/tests/*.test.tsx", "build"]
+}

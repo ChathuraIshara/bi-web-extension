@@ -1,0 +1,40 @@
+.preloader-wrapper-relative {
+    position: relative;
+    height: 30px;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.preloader-wrapper-absolute {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: -15px;
+    background: #e6e7ec6e;
+    z-index: 1;
+
+    .loader-container {
+        display: flex;
+        margin: calc(50vh - 28px) auto;
+        width: fit-content;
+
+        .loader-circle {
+            border: 3px solid #edf0ff;
+            border-top: 3px solid #5463dc;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            margin-left: 15px;
+            padding-top: 5px;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+{
+  "name": "fhir-tools",
+  "displayName": "FHIR Tools",
+  "publisher": "WSO2",
+  "description": "",
+  "version": "0.0.1",
+  "repository": {
+    "url": "https://wso2.com/ballerina/vscode/docs"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onFileSystem:*.hl7",
+    "onLanguage:xml",
+    "onLanguage:plaintext"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fhir-tools.hl7v2tofhir",
+        "title": "Convert HL7v2 to FHIR",
+        "category": "Health Care",
+        "icon": "$(flame)",
+        "when": "isHL7v2"
+      },
+      {
+        "command": "fhir-tools.ccdatofhir",
+        "title": "Convert C-CDA to FHIR",
+        "category": "Health Care",
+        "when": "isCDA",
+        "icon": "$(flame)"
+      },
+      {
+        "command": "fhir-tools.copyToClipboard",
+        "title": "Copy FHIR resource",
+        "category": "Health Care",
+        "icon": "$(copy)",
+        "when": "webViewEditorFocus"
+      },
+      {
+        "command": "fhir-tools.saveToFile",
+        "title": "Save FHIR resource",
+        "category": "Health Care",
+        "icon": "$(save)",
+        "when": "webViewEditorFocus"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "fhir-tools.hl7v2tofhir",
+          "group": "navigation",
+          "when": "isHL7v2"
+        },
+        {
+          "command": "fhir-tools.ccdatofhir",
+          "group": "navigation@1",
+          "when": "isCDA"
+        },
+        {
+          "command": "fhir-tools.copyToClipboard",
+          "group": "navigation@2",
+          "when": "webViewEditorFocus"
+        },
+        {
+          "command": "fhir-tools.saveToFile",
+          "group": "navigation@3",
+          "when": "webViewEditorFocus"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "fhir-tools.hl7v2tofhir",
+          "group": "navigation",
+          "when": "isHL7v2"
+        },
+        {
+          "command": "fhir-tools.ccdatofhir",
+          "group": "navigation",
+          "when": "isCDA"
+        }
+      ]
+    },
+    "configuration": [
+      {
+        "id": "HL7v2_to_FHIR",
+        "title": "HL7v2 to FHIR",
+        "order": 0,
+        "properties": {
+          "fhir-tools › HL7v2ToFHIR.ServiceURL":{
+            "order": 0,
+            "type": "string",
+            "default": "",
+            "description": "HL7v2 to FHIR service URL"
+          }
+        }
+      },
+      {
+        "id": "C-CDA_to_FHIR",
+        "title": "C-CDA to FHIR",
+        "order": 1,
+        "properties": {
+          "fhir-tools › C-CDA ToFHIR.ServiceURL":{
+            "type": "string",
+            "default": "",
+            "description": "C-CDA to FHIR service URL"
+          }
+        }
+      },
+      {
+        "id": "Authorization",
+        "title": "Authorization for FHIR Tools",
+        "order": 2,
+        "properties": {
+          "fhir-tools.authorization.tokenEndpoint": {
+            "order": 3,
+            "type": "string",
+            "default": "",
+            "description": "Asgardeo token endpoint, used to get the access token."
+          },
+          "fhir-tools.authorization.consumerKey": {
+            "order": 1,
+            "type": "string",
+            "default": "",
+            "description": "Consumer key, used to secure the Service URL in Choreo."
+          },
+          "fhir-tools.authorization.consumerSecret": {
+            "order": 2,
+            "type": "string",
+            "default": "",
+            "description": "Consumer Secret, used to secure the Service URL in Choreo."
+          },
+          "fhir-tools.authorization.enableAuthorization": {
+            "order": 0,
+            "type": "boolean",
+            "default": true,
+            "description": "Enable Authorization"
+          }
+        }
+      }
+      
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "webpack --mode production",
+    "watch-fhir-tools": "webpack --mode none --watch",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "build": "pnpm run compile && pnpm run lint && pnpm run postbuild",
+    "package": "vsce package --no-dependencies --baseImagesUrl https://github.com/wso2/ballerina-plugin-vscode/raw/HEAD/;",
+    "copyFonts": "copyfiles -f ./node_modules/@wso2-enterprise/font-wso2-vscode/dist/* ./resources/font-wso2-vscode/dist/",
+    "rebuild": "pnpm run clean && pnpm run compile && pnpm run postbuild",
+    "postbuild": "pnpm run copyFonts && pnpm run package && pnpm run copyVSIX",
+    "copyVSIX": "copyfiles *.vsix ./vsix",
+    "copyVSIXToRoot": "copyfiles -f ./vsix/* ../../.."
+  },
+  "dependencies": {
+    "@wso2-enterprise/fhir-tools-core": "workspace:*",
+    "@types/dompurify": "^3.0.5",
+    "@types/jsdom": "^21.1.6",
+    "axios": "^1.6.7",
+    "code-highlight-linenums": "^0.2.1",
+    "dompurify": "^3.0.8",
+    "dotenv": "^16.4.4",
+    "jsdom": "^24.0.0",
+    "uuid": "^9.0.1",
+    "vscode-languageserver-types": "^3.17.5",
+    "vscode-messenger": "^0.4.5",
+    "vscode-messenger-common": "^0.4.5",
+    "vscode-uri": "^3.0.8",
+    "xstate": "^4.38.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "@types/uuid": "^9.0.8",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vscode/test-electron": "^2.3.6",
+    "@vscode/vsce": "^2.22.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.4.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.56.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-permissions-plugin": "^1.0.9"
+  }
+}

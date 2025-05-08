@@ -1,0 +1,279 @@
+/**
+ * Copyright (c) 2020, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+ $default_color :#5567d5;
+ $warning_color :#FF9D52;
+ $error_color : #FE523C;
+ $active_color : #c0ceff8a;
+
+ .connector-process-rect-styles{
+    stroke:$default_color;
+    stroke-miterlimit: 10;
+    stroke-width: 1;
+    fill: url(#ProcessLinearGradient) #fafafc;
+    filter: url(#ProcessFilterDefault) #fafafc;
+ }
+
+ .connector-process-text-styles{
+    font-weight: 500;
+    fill: #40404b;
+    font-size: 12px;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    text-anchor: middle;
+    text-align: center;
+    user-select: none;
+ }
+
+ .connector-text-styles{
+    height: 12px;
+    width: 24px;
+    fill:$default_color;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 12px;
+    font-weight: normal;
+ }
+
+ .main-connector-process-wrapper {
+    &.active-connector-processor {
+            user-select: none;
+
+            .connector-process{
+                rect {
+                    @extend .connector-process-rect-styles
+                }
+
+                .connector-process-text {
+                    tspan {
+                        @extend .connector-process-rect-styles
+                    }
+                }
+
+                .connector-process-icon {
+                    fill: $default_color;
+                }
+            }
+
+            .connector-text {
+                @extend .connector-text-styles
+            }
+        
+    }
+
+    &.connector-processor {
+        .connector-process-default{
+            user-select: none;
+
+            .connector-process{
+                rect {
+                    @extend .connector-process-rect-styles;
+                    stroke:$default_color;
+                }
+
+                .connector-process-text {
+                    tspan {
+                        @extend .connector-process-rect-styles
+                    }
+                }
+
+                .connector-process-icon {
+                    fill: #5566d5;
+                }
+            }
+
+            :hover {
+                rect {
+                    cursor: pointer;
+                    stroke:$default_color;
+                    stroke-miterlimit: 10;
+                    stroke-width: 1;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: url(#ProcessFilterHover) #fafafc;
+                }
+            }
+
+            :active {
+                rect {
+                    cursor: pointer;
+                    stroke: #c0ceff8a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 9;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: none;
+                }
+
+            }
+            .connector-text {
+                @extend .connector-text-styles
+            }
+        }
+        .connector-process-error{
+            user-select: none;
+
+            .connector-process{
+                rect {
+                    @extend .connector-process-rect-styles;
+                    stroke:$error_color;
+                }
+
+                .connector-process-text {
+                    tspan {
+                        @extend .connector-process-rect-styles
+                    }
+                }
+
+                .connector-process-icon {
+                    fill:$error_color;
+                }
+            }
+
+            :hover {
+                rect {
+                    cursor: pointer;
+                    stroke:$error_color;
+                    stroke-miterlimit: 10;
+                    stroke-width: 1;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: url(#ProcessFilterHover) #fafafc;
+                }
+            }
+
+            :active {
+                rect {
+                    cursor: pointer;
+                    stroke: #c0ceff8a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 9;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: none;
+                }
+
+                .click-effect {
+                    stroke-width: 1px !important;
+                    stroke:$default_color !important;
+                }
+            }
+            .connector-text {
+                @extend .connector-text-styles;
+                fill:$error_color;
+                
+            }
+        }
+        .connector-process-warning {
+            user-select: none;
+
+            .connector-process{
+                rect {
+                    @extend .connector-process-rect-styles;
+                    stroke:$warning_color;
+                }
+
+                .connector-process-text {
+                    tspan {
+                        @extend .connector-process-rect-styles
+                    }
+                }
+
+                .connector-process-icon {
+                    fill: $warning_color;
+                }
+            }
+
+            :hover {
+                rect {
+                    cursor: pointer;
+                    stroke:$warning_color;
+                    stroke-miterlimit: 10;
+                    stroke-width: 1;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: url(#ProcessFilterHover) #fafafc;
+                }
+            }
+
+            :active {
+                rect {
+                    cursor: pointer;
+                    stroke: #c0ceff8a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 9;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: none;
+                }
+
+                .click-effect {
+                    stroke-width: 1px !important;
+                    stroke: #5566d5 !important;
+                }
+            }
+            .connector-text {
+                @extend .connector-text-styles;
+                fill:$warning_color;
+            }
+        }
+    }
+
+    .connector-process-options-wrapper {
+        fill: none;
+        display: none;
+        width: 100px;
+        height: 30px;
+
+        .disable {
+            opacity: 0.5;
+        }
+
+        .connector-process-rect {
+            fill: #fafafc;
+            height: 15px;
+            width: 25px;
+        }
+    }
+
+    &:hover {
+        .connector-process-options-wrapper {
+            display: inline !important;
+        }
+
+        .connector-process {
+            .connector-process-active {
+                rect {
+                    cursor: pointer;
+                    stroke: #c0ceff8a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 9;
+                    fill: url(#ProcessLinearGradient) #fafafc;
+                    filter: none;
+                }
+
+                .click-effect {
+                    stroke-width: 1px !important;
+                    stroke: #5566d5 !important;
+                }
+
+                .connector-process-text {
+                    tspan {
+                        @extend .connector-process-text-styles
+                    }
+                }
+
+                .connector-process-icon {
+                    fill:$default_color;
+                }
+            }
+        }
+    }
+
+    /* stylelint-disable */
+    .assignment-text {
+        fill: #ff9d52;
+        font-family: "Droid Sans Mono";
+    }
+
+}

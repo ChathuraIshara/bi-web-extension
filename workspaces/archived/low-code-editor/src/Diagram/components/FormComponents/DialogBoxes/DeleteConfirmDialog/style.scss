@@ -1,0 +1,79 @@
+/**
+ * Copyright (c) 2020, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+.delete-container {
+    width: 227px !important;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(102, 103, 133, 0.27);
+    padding: 22px;
+    color: #222228;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute !important;
+
+    .action-button-container {
+        text-align: right;
+    }
+
+    button {
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        text-transform: capitalize;
+
+        &.deletebtn {
+            height: 32px;
+            width: 76px;
+            border-radius: 5px;
+            background: #ec4a48;
+            color: #fff;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+            padding: 0;
+
+            &:hover {
+                background: #e74946;
+                cursor: pointer !important;
+            }
+
+            &:active {
+                cursor: pointer !important;
+                background: transparent linear-gradient(180deg, #00000017 0%, #0000 100%) 0% 0% no-repeat padding-box;
+            }
+        }
+
+        &.cancelbtn {
+            height: 32px;
+            width: 70px;
+            border-radius: 5px;
+            background: #f7f8fb;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+            color: #3c3d45;
+            margin-right: 8px;
+            padding: 0;
+
+            &:hover {
+                background: #f2f3f6;
+                cursor: pointer !important;
+            }
+
+            &:active {
+                cursor: pointer !important;
+                background:
+                    transparent linear-gradient(
+                        180deg,
+                        #00000017 0%,
+                        #0000 100%
+                    ) 0% 0% no-repeat padding-box;
+            }
+        }
+    }
+}

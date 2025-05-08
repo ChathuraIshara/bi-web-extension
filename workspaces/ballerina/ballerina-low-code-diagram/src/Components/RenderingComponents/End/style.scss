@@ -1,0 +1,75 @@
+/**
+ * Copyright (c) 2020, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+.end-wrapper {
+    font-family: inherit;
+
+    user-select: none;
+
+    .end-text {
+        fill: #5567d5;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    .return-text {
+        fill: #5567d5;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    .end-options-wrapper {
+        fill: none;
+        display: none;
+        width: 100px;
+        height: 30px;
+
+        .disable {
+            pointer-events: none !important;
+            opacity: 0.5;
+
+            &:hover {
+                cursor: none !important;
+            }
+        }
+    }
+
+    &:hover {
+        .end-options-wrapper {
+            fill: #fff !important;
+            display: inline !important;
+        }
+
+        .end-rect {
+            fill: #5567d5;
+            height: 20px;
+            width: 30px;
+        }
+
+        .end-text {
+            display: none !important;
+        }
+    }
+
+    &:last-child:hover {
+        .end-text {
+            fill: #5567d5 !important;
+            display: inline !important;
+        }
+    }
+}
+
+.rect-fill {
+    fill: #dce1ff;
+}
+
+.rect-fill-none {
+    fill: url(#ReturnLinearGradient) #fafafc;
+}

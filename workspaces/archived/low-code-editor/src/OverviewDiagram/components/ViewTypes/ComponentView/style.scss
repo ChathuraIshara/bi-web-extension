@@ -1,0 +1,58 @@
+.component {
+    height: 44px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #8d91a3;   
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: left;
+    width: 200px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    transition: 0.3s;
+    color: #222228;
+    
+    .icon svg g{
+        fill: #222228;
+    }
+
+    &.not-allowed {
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        border: 1px solid #5567d5;
+        background-color: #e0e3f7;
+        color: #5567d5;
+        .icon svg g{
+            fill: #5567d5;
+        }
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .label {
+        padding: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .break {
+        flex: 1;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .file {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}

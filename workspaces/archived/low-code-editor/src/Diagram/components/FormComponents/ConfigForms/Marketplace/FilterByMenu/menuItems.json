@@ -1,0 +1,447 @@
+{
+  "mainFilters": [
+    {
+      "name": "My Organization",
+      "value": "myOrg"
+    },
+    {
+      "name": "External",
+      "value": "External"
+    }
+  ],
+  "connectorCategories": {
+    "name": "Categories",
+    "categories": [
+      {
+        "name": "Business Intelligence",
+        "children": [
+          {
+            "name": "Analytics",
+            "value": "Business Intelligence/Analytics"
+          },
+          {
+            "name": "Artificial Intelligence",
+            "value": "Business Intelligence/Artificial Intelligence"
+          },
+          {
+            "name": "Dashboards",
+            "value": "Business Intelligence/Dashboards"
+          },
+          {
+            "name": "Data Warehouse",
+            "value": "Business Intelligence/Data Warehouse"
+          },
+          {
+            "name": "Language Analysis",
+            "value": "Business Intelligence/Language Analysis"
+          },
+          {
+            "name": "Reporting",
+            "value": "Business Intelligence/Reporting"
+          },
+          {
+            "name": "Visualization",
+            "value": "Business Intelligence/Visualization"
+          }
+        ]
+      },
+      {
+        "name": "Business Management",
+        "children": [
+          {
+            "name": "ERP",
+            "value": "Business Management/ERP"
+          }
+        ]
+      },
+      {
+        "name": "Commerce",
+        "children": [
+          {
+            "name": "eCommerce",
+            "value": "Commerce/eCommerce"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "children": [
+          {
+            "name": "Phone & SMS",
+            "value": "Communication/Phone & SMS"
+          },
+          {
+            "name": "Call Tracking",
+            "value": "Communication/Call Tracking"
+          },
+          {
+            "name": "Email",
+            "value": "Communication/Email"
+          },
+          {
+            "name": "Notifications",
+            "value": "Communication/Notifications"
+          },
+          {
+            "name": "Team Chat",
+            "value": "Communication/Team Chat"
+          },
+          {
+            "name": "Video Conferncing",
+            "value": "Communication/Video Conferncing"
+          }
+        ]
+      },
+      {
+        "name": "Content & Files",
+        "children": [
+          {
+            "name": "Blogs",
+            "value": "Content & Files/Blogs"
+          },
+          {
+            "name": "Documents",
+            "value": "Content & Files/Documents"
+          },
+          {
+            "name": "File Management & Storage",
+            "value": "Content & Files/File Management & Storage"
+          },
+          {
+            "name": "Images & Design",
+            "value": "Content & Files/Images & Design"
+          },
+          {
+            "name": "Notes",
+            "value": "Content & Files/Notes"
+          },
+          {
+            "name": "Video & Audio",
+            "value": "Content & Files/Video & Audio"
+          }
+        ]
+      },
+      {
+        "name": "Education",
+        "children": [
+          {
+            "name": "Dictionary",
+            "value": "Education/Dictionary"
+          },
+          {
+            "name": "eLearning",
+            "value": "Education/eLearning"
+          },
+          {
+            "name": "Translator",
+            "value": "Education/Translator"
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "children": [
+          {
+            "name": "Accounting",
+            "value": "Finance/Accounting"
+          },
+          {
+            "name": "Asset Management",
+            "value": "Finance/Asset Management"
+          },
+          {
+            "name": "Billing",
+            "value": "Finance/Billing"
+          },
+          {
+            "name": "Cryptocurrency",
+            "value": "Finance/Cryptocurrency"
+          },
+          {
+            "name": "Payment",
+            "value": "Finance/Payment"
+          },
+          {
+            "name": "Payroll",
+            "value": "Finance/Payroll"
+          }
+        ]
+      },
+      {
+        "name": "Human Resources",
+        "children": [
+          {
+            "name": "HRMS",
+            "value": "Human Resources/HRMS"
+          },
+          {
+            "name": "Talent Acquisition",
+            "value": "Human Resources/Talent Acquisition"
+          }
+        ]
+      },
+      {
+        "name": "Internet of Things",
+        "children": [
+          {
+            "name": "Device Management",
+            "value": "Internet of Things/Device Management"
+          }
+        ]
+      },
+      {
+        "name": "IT Operations",
+        "children": [
+          {
+            "name": "Browser Tools",
+            "value": "IT Operations/Browser Tools"
+          },
+          {
+            "name": "Bug Trackers",
+            "value": "IT Operations/Bug Trackers"
+          },
+          {
+            "name": "Build Tools",
+            "value": "IT Operations/Build Tools"
+          },
+          {
+            "name": "Cloud Services",
+            "value": "IT Operations/Cloud Services"
+          },
+          {
+            "name": "Databases",
+            "value": "IT Operations/Databases"
+          },
+          {
+            "name": "Data Ingestion",
+            "value": "IT Operations/Data Ingestion"
+          },
+          {
+            "name": "Debug Tools",
+            "value": "IT Operations/Debug Tools"
+          },
+          {
+            "name": "Enterprise Architecture Tools",
+            "value": "IT Operations/Enterprise Architecture Tools"
+          },
+          {
+            "name": "Geographic Information Systems",
+            "value": "IT Operations/Geographic Information Systems"
+          },
+          {
+            "name": "Message Brokers",
+            "value": "IT Operations/Message Brokers"
+          },
+          {
+            "name": "Security & Identity Tools",
+            "value": "IT Operations/Security & Identity Tools"
+          },
+          {
+            "name": "Server Monitoring",
+            "value": "IT Operations/Server Monitoring"
+          },
+          {
+            "name": "Source Control",
+            "value": "IT Operations/Source Control"
+          },
+          {
+            "name": "Testing Tools",
+            "value": "IT Operations/Testing Tools"
+          }
+        ]
+      },
+      {
+        "name": "Lifestyle & Entertainment",
+        "children": [
+          {
+            "name": "App Store",
+            "value": "Lifestyle & Entertainment/App Store"
+          },
+          {
+            "name": "Books",
+            "value": "Lifestyle & Entertainment/Books"
+          },
+          {
+            "name": "Fitness",
+            "value": "Lifestyle & Entertainment/Fitness"
+          },
+          {
+            "name": "Gaming",
+            "value": "Lifestyle & Entertainment/Gaming"
+          },
+          {
+            "name": "News & Lifestyle",
+            "value": "Lifestyle & Entertainment/News & Lifestyle"
+          },
+          {
+            "name": "Ride-Hailing",
+            "value": "Lifestyle & Entertainment/Ride-Hailing"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "children": [
+          {
+            "name": "Ads & Conversion",
+            "value": "Marketing/Ads & Conversion"
+          },
+          {
+            "name": "Drip Emails",
+            "value": "Marketing/Drip Emails"
+          },
+          {
+            "name": "Email Newsletters",
+            "value": "Marketing/Email Newsletters"
+          },
+          {
+            "name": "Event Management",
+            "value": "Marketing/Event Management"
+          },
+          {
+            "name": "Marketing Automation",
+            "value": "Marketing/Marketing Automation"
+          },
+          {
+            "name": "Social Media Accounts",
+            "value": "Marketing/Social Media Accounts"
+          },
+          {
+            "name": "Social Media Marketing",
+            "value": "Marketing/Social Media Marketing"
+          },
+          {
+            "name": "Transactional Email",
+            "value": "Marketing/Transactional Email"
+          },
+          {
+            "name": "Url Shortener",
+            "value": "Marketing/Url Shortener"
+          },
+          {
+            "name": "Webinar",
+            "value": "Marketing/Webinar"
+          }
+        ]
+      },
+      {
+        "name": "Productivity",
+        "children": [
+          {
+            "name": "Calendars",
+            "value": "Productivity/Calendars"
+          },
+          {
+            "name": "Product Management",
+            "value": "Productivity/Product Management"
+          },
+          {
+            "name": "Project Management",
+            "value": "Productivity/Project Management"
+          },
+          {
+            "name": "Spreadsheets",
+            "value": "Productivity/Spreadsheets"
+          },
+          {
+            "name": "Task Management",
+            "value": "Productivity/Task Management"
+          },
+          {
+            "name": "Time Tracking",
+            "value": "Productivity/Time Tracking"
+          }
+        ]
+      },
+      {
+        "name": "Sales & CRM",
+        "children": [
+          {
+            "name": "Contact Management",
+            "value": "Sales & CRM/Contact Management"
+          },
+          {
+            "name": "Customer Relationship Management",
+            "value": "Sales & CRM/Customer Relationship Management"
+          },
+          {
+            "name": "Forms & Surveys",
+            "value": "Sales & CRM/Forms & Surveys"
+          },
+          {
+            "name": "Scheduling & Booking",
+            "value": "Sales & CRM/Scheduling & Booking"
+          }
+        ]
+      },
+      {
+        "name": "Support",
+        "children": [
+          {
+            "name": "Cusotmer Appreciation",
+            "value": "Support/Cusotmer Appreciation"
+          },
+          {
+            "name": "Customer Support",
+            "value": "Support/Customer Support"
+          }
+        ]
+      },
+      {
+        "name": "Vendor",
+        "children": [
+          {
+            "name": "Amazon",
+            "value": "Vendor/Amazon"
+          },
+          {
+            "name": "Google",
+            "value": "Vendor/Google"
+          },
+          {
+            "name": "Microsoft",
+            "value": "Vendor/Microsoft"
+          }
+        ]
+      },
+      {
+        "name": "Website & App Building",
+        "children": [
+          {
+            "name": "App Builders",
+            "value": "Website & App Building/App Builders"
+          },
+          {
+            "name": "SEO",
+            "value": "Website & App Building/SEO"
+          },
+          {
+            "name": "Website Builders",
+            "value": "Website & App Building/Website Builders"
+          },
+          {
+            "name": "Web Scraper",
+            "value": "Website & App Building/Web Scraper"
+          }
+        ]
+      }
+    ]
+  },
+  "pricingCategories": {
+    "name": "Price",
+    "categories": [
+      {
+        "name": "Free",
+        "value": "Cost/Free"
+      },
+      {
+        "name": "Freemium",
+        "value": "Cost/Freemium"
+      },
+      {
+        "name": "Paid",
+        "value": "Cost/Paid"
+      }
+    ]
+  }
+}

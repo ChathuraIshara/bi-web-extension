@@ -1,0 +1,15 @@
+import ballerina/log;
+import ballerinax/slack.'listener as slackL;
+
+slackL:ListenerConfiguration configuration = {
+    port: {{ PORT }},
+    verificationToken: "{{ VERIFICATION_TOKEN }}"
+};
+
+listener slackL:Listener slackListener = new (configuration);
+
+service /slack on slackListener {
+    remote function {{ EVENT }}(slackL:{{ RECORD_TYPE }} event) returns error? {
+        log:printInfo("event triggered : ", event);
+    }
+}

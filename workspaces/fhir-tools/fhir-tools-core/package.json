@@ -1,0 +1,37 @@
+{
+  "name": "@wso2-enterprise/fhir-tools-core",
+  "version": "1.0.0",
+  "description": "Contains types related to the FHIR Tools extension",
+  "main": "lib/index.js",
+  "scripts": {
+    "watch": "tsc --pretty --watch",
+    "build": "tsc --pretty",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "vscode-languageserver-types": "^3.17.5",
+    "vscode-messenger-common": "^0.4.5",
+    "@types/vscode-webview": "^1.57.3",
+    "handlebars": "~4.7.8",
+    "mousetrap": "^1.6.5",
+    "@types/mousetrap": "~1.6.11"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.1",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.52.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2"
+  },
+  "author": "WSO2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wso2-enterprise/ballerina-plugin-vscode.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

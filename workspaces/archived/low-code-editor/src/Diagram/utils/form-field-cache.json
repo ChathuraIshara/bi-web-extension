@@ -1,0 +1,2396 @@
+{
+    "ballerina_http_Client_1.0.0": {
+        "post": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "head": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "put": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "execute": [
+            {
+                "isParam": true,
+                "name": "httpVerb",
+                "type": "string",
+                "description": "HTTP verb value"
+            },
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "patch": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "delete": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An optional HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "get": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Request path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An optional HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "options": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Request path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An optional HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "forward": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "Request path"
+            },
+            {
+                "isParam": true,
+                "name": "request",
+                "typeName": "Request",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "Request"
+                },
+                "description": "An HTTP inbound request message"
+            }
+        ],
+        "submit": [
+            {
+                "isParam": true,
+                "name": "httpVerb",
+                "type": "string",
+                "description": "The HTTP verb value"
+            },
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "The resource path"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "typeName": "RequestMessage",
+                "type": "union",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "RequestMessage"
+                },
+                "isTypeDef": true,
+                "description": "An HTTP outbound request message or any payload of type `string`, `xml`, `json`, `byte[]`,\n            `io:ReadableByteChannel` or `mime:Entity[]`",
+                "isUnion": true,
+                "fields": [
+                    {
+                        "typeName": "Request",
+                        "isParam": true
+                    },
+                    {
+                        "type": "string",
+                        "isParam": true
+                    },
+                    {
+                        "type": "xml",
+                        "isParam": true
+                    },
+                    {
+                        "type": "json",
+                        "isParam": true
+                    },
+                    {
+                        "type": "collection",
+                        "isParam": true,
+                        "isArray": true
+                    },
+                    {
+                        "typeName": "ReadableByteChannel",
+                        "isParam": true
+                    },
+                    {
+                        "isParam": true,
+                        "isArray": true,
+                        "typeName": "Entity",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "mime",
+                            "version": "1.0.0",
+                            "name": "Entity"
+                        }
+                    },
+                    {
+                        "type": "nil",
+                        "isParam": true
+                    }
+                ]
+            }
+        ],
+        "getResponse": [
+            {
+                "isParam": true,
+                "name": "httpFuture",
+                "typeName": "HttpFuture",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "HttpFuture"
+                },
+                "description": "The `http:HttpFuture` related to a previous asynchronous invocation"
+            }
+        ],
+        "hasPromise": [
+            {
+                "isParam": true,
+                "name": "httpFuture",
+                "typeName": "HttpFuture",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "HttpFuture"
+                },
+                "description": "The `http:HttpFuture` relates to a previous asynchronous invocation"
+            }
+        ],
+        "getNextPromise": [
+            {
+                "isParam": true,
+                "name": "httpFuture",
+                "typeName": "HttpFuture",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "HttpFuture"
+                },
+                "description": "The `http:HttpFuture` related to a previous asynchronous invocation"
+            }
+        ],
+        "getPromisedResponse": [
+            {
+                "isParam": true,
+                "name": "promise",
+                "typeName": "PushPromise",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "PushPromise"
+                },
+                "description": "The related `http:PushPromise`"
+            }
+        ],
+        "rejectPromise": [
+            {
+                "isParam": true,
+                "name": "promise",
+                "typeName": "PushPromise",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_http_1.0.0",
+                    "version": "1.1.0",
+                    "name": "PushPromise"
+                },
+                "description": "The Push Promise to be rejected"
+            }
+        ],
+        "getCookieStore": [],
+        "init": [
+            {
+                "isParam": true,
+                "name": "url",
+                "type": "string",
+                "description": "URL of the target service"
+            },
+            {
+                "isParam": true,
+                "name": "config",
+                "isUnion": true,
+                "type": "union",
+                "fields": [
+                    {
+                        "type": "record",
+                        "typeName": "ClientConfiguration",
+                        "isParam": true,
+                        "fields": [
+                            {
+                                "isParam": true,
+                                "name": "secureSocket",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "ClientSecureSocket",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "disable",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "trustStore",
+                                                "isUnion": true,
+                                                "type": "union",
+                                                "fields": [
+                                                    {
+                                                        "type": "record",
+                                                        "typeName": "TrustStore",
+                                                        "isParam": true
+                                                    }
+                                                ],
+                                                "optional": true
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "keyStore",
+                                                "isUnion": true,
+                                                "type": "union",
+                                                "fields": [
+                                                    {
+                                                        "type": "record",
+                                                        "typeName": "KeyStore",
+                                                        "isParam": true
+                                                    }
+                                                ],
+                                                "optional": true
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "certFile",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "keyFile",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "keyPassword",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "trustedCertFile",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "protocol",
+                                                "isUnion": true,
+                                                "type": "union",
+                                                "fields": [
+                                                    {
+                                                        "type": "record",
+                                                        "typeName": "Protocols",
+                                                        "isParam": true,
+                                                        "fields": [
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "name",
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "versions",
+                                                                "isArray": true,
+                                                                "type": "collection",
+                                                                "collectionDataType": "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "optional": true
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "certValidation",
+                                                "isUnion": true,
+                                                "type": "union",
+                                                "fields": [
+                                                    {
+                                                        "type": "record",
+                                                        "typeName": "ValidateCert",
+                                                        "isParam": true,
+                                                        "fields": [
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "enable",
+                                                                "type": "boolean"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "cacheSize",
+                                                                "type": "int"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "cacheValidityPeriod",
+                                                                "type": "int"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "optional": true
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "ciphers",
+                                                "isArray": true,
+                                                "type": "collection",
+                                                "collectionDataType": "string"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "verifyHostname",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "shareSession",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "ocspStapling",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "handshakeTimeoutInSeconds",
+                                                "optional": true,
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "sessionTimeoutInSeconds",
+                                                "optional": true,
+                                                "type": "int"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "httpVersion",
+                                "type": "string"
+                            },
+                            {
+                                "isParam": true,
+                                "name": "http1Settings",
+                                "typeName": "ClientHttp1Settings",
+                                "type": "record",
+                                "typeInfo": {
+                                    "orgName": "lsbalorg",
+                                    "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                    "version": "1.1.0",
+                                    "name": "ClientHttp1Settings"
+                                },
+                                "fields": [
+                                    {
+                                        "isParam": true,
+                                        "name": "keepAlive",
+                                        "typeName": "KeepAlive",
+                                        "type": "union",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "ballerina_http_1.0.0",
+                                            "version": "1.1.0",
+                                            "name": "KeepAlive"
+                                        },
+                                        "isTypeDef": true,
+                                        "isUnion": true,
+                                        "fields": [
+                                            {
+                                                "typeName": "KEEPALIVE_AUTO",
+                                                "isParam": true
+                                            },
+                                            {
+                                                "typeName": "KEEPALIVE_ALWAYS",
+                                                "isParam": true
+                                            },
+                                            {
+                                                "typeName": "KEEPALIVE_NEVER",
+                                                "isParam": true
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "chunking",
+                                        "typeName": "Chunking",
+                                        "type": "union",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "ballerina_http_1.0.0",
+                                            "version": "1.1.0",
+                                            "name": "Chunking"
+                                        },
+                                        "isTypeDef": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "proxy",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "ProxyConfig",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "host",
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "port",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "userName",
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "password",
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    }
+                                ]
+                            },
+                            {
+                                "isParam": true,
+                                "name": "http2Settings",
+                                "typeName": "ClientHttp2Settings",
+                                "type": "record",
+                                "typeInfo": {
+                                    "orgName": "lsbalorg",
+                                    "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                    "version": "1.1.0",
+                                    "name": "ClientHttp2Settings"
+                                },
+                                "fields": [
+                                    {
+                                        "isParam": true,
+                                        "name": "http2PriorKnowledge",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "isParam": true,
+                                "name": "timeoutInMillis",
+                                "type": "int"
+                            },
+                            {
+                                "isParam": true,
+                                "name": "forwarded",
+                                "type": "string"
+                            },
+                            {
+                                "isParam": true,
+                                "name": "followRedirects",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "FollowRedirects",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "enabled",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxCount",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "allowAuthHeaders",
+                                                "type": "boolean"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "poolConfig",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "PoolConfiguration",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "maxActiveConnections",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxIdleConnections",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "waitTimeInMillis",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxActiveStreamsPerConnection",
+                                                "type": "int"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "cache",
+                                "typeName": "CacheConfig",
+                                "type": "record",
+                                "typeInfo": {
+                                    "orgName": "lsbalorg",
+                                    "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                    "version": "1.1.0",
+                                    "name": "CacheConfig"
+                                },
+                                "fields": [
+                                    {
+                                        "isParam": true,
+                                        "name": "enabled",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "isShared",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "capacity",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "evictionFactor",
+                                        "type": "float"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "policy",
+                                        "typeName": "CachingPolicy",
+                                        "type": "union",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "ballerina_http_1.0.0",
+                                            "version": "1.1.0",
+                                            "name": "CachingPolicy"
+                                        },
+                                        "isTypeDef": true,
+                                        "isUnion": true,
+                                        "fields": [
+                                            {
+                                                "typeName": "CACHE_CONTROL_AND_VALIDATORS",
+                                                "isParam": true
+                                            },
+                                            {
+                                                "typeName": "RFC_7234",
+                                                "isParam": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "isParam": true,
+                                "name": "compression",
+                                "typeName": "Compression",
+                                "type": "union",
+                                "typeInfo": {
+                                    "orgName": "lsbalorg",
+                                    "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                    "version": "1.1.0",
+                                    "name": "Compression"
+                                },
+                                "isTypeDef": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "auth",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "OutboundAuthConfig",
+                                        "isParam": true,
+                                        "fields": []
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "circuitBreaker",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "CircuitBreakerConfig",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "rollingWindow",
+                                                "typeName": "RollingWindow",
+                                                "type": "record",
+                                                "typeInfo": {
+                                                    "orgName": "lsbalorg",
+                                                    "modName": "ballerina_http_1.0.0",
+                                                    "version": "1.1.0",
+                                                    "name": "RollingWindow"
+                                                },
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "requestVolumeThreshold",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "timeWindowInMillis",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "bucketSizeInMillis",
+                                                        "type": "int"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "failureThreshold",
+                                                "type": "float"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "resetTimeInMillis",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "statusCodes",
+                                                "isArray": true,
+                                                "type": "collection",
+                                                "collectionDataType": "int"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "retryConfig",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "RetryConfig",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "count",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "intervalInMillis",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "backOffFactor",
+                                                "type": "float"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxWaitIntervalInMillis",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "statusCodes",
+                                                "isArray": true,
+                                                "type": "collection",
+                                                "collectionDataType": "int"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            },
+                            {
+                                "isParam": true,
+                                "name": "cookieConfig",
+                                "isUnion": true,
+                                "type": "union",
+                                "fields": [
+                                    {
+                                        "type": "record",
+                                        "typeName": "CookieConfig",
+                                        "isParam": true,
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "enabled",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxCookiesPerDomain",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "maxTotalCookieCount",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "blockThirdPartyCookies",
+                                                "type": "boolean"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "optional": true
+                            }
+                        ],
+                        "references": [
+                            {
+                                "isParam": true,
+                                "isReference": true,
+                                "typeName": "CommonClientConfiguration",
+                                "type": "record",
+                                "typeInfo": {
+                                    "orgName": "lsbalorg",
+                                    "modName": "ballerina_http_1.0.0",
+                                    "version": "1.1.0",
+                                    "name": "CommonClientConfiguration"
+                                },
+                                "fields": [
+                                    {
+                                        "isParam": true,
+                                        "name": "httpVersion",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "http1Settings",
+                                        "typeName": "ClientHttp1Settings",
+                                        "type": "record",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                            "version": "1.1.0",
+                                            "name": "ClientHttp1Settings"
+                                        },
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "keepAlive",
+                                                "typeName": "KeepAlive",
+                                                "type": "union",
+                                                "typeInfo": {
+                                                    "orgName": "lsbalorg",
+                                                    "modName": "ballerina_http_1.0.0",
+                                                    "version": "1.1.0",
+                                                    "name": "KeepAlive"
+                                                },
+                                                "isTypeDef": true,
+                                                "isUnion": true,
+                                                "fields": [
+                                                    {
+                                                        "typeName": "KEEPALIVE_AUTO",
+                                                        "isParam": true
+                                                    },
+                                                    {
+                                                        "typeName": "KEEPALIVE_ALWAYS",
+                                                        "isParam": true
+                                                    },
+                                                    {
+                                                        "typeName": "KEEPALIVE_NEVER",
+                                                        "isParam": true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "chunking",
+                                                "typeName": "Chunking",
+                                                "type": "union",
+                                                "typeInfo": {
+                                                    "orgName": "lsbalorg",
+                                                    "modName": "ballerina_http_1.0.0",
+                                                    "version": "1.1.0",
+                                                    "name": "Chunking"
+                                                },
+                                                "isTypeDef": true
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "proxy",
+                                                "isUnion": true,
+                                                "type": "union",
+                                                "fields": [
+                                                    {
+                                                        "type": "record",
+                                                        "typeName": "ProxyConfig",
+                                                        "isParam": true,
+                                                        "fields": [
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "host",
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "port",
+                                                                "type": "int"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "userName",
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "password",
+                                                                "type": "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "optional": true
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "http2Settings",
+                                        "typeName": "ClientHttp2Settings",
+                                        "type": "record",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                            "version": "1.1.0",
+                                            "name": "ClientHttp2Settings"
+                                        },
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "http2PriorKnowledge",
+                                                "type": "boolean"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "timeoutInMillis",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "forwarded",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "followRedirects",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "FollowRedirects",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "enabled",
+                                                        "type": "boolean"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxCount",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "allowAuthHeaders",
+                                                        "type": "boolean"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "poolConfig",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "PoolConfiguration",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxActiveConnections",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxIdleConnections",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "waitTimeInMillis",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxActiveStreamsPerConnection",
+                                                        "type": "int"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "cache",
+                                        "typeName": "CacheConfig",
+                                        "type": "record",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                            "version": "1.1.0",
+                                            "name": "CacheConfig"
+                                        },
+                                        "fields": [
+                                            {
+                                                "isParam": true,
+                                                "name": "enabled",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "isShared",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "capacity",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "evictionFactor",
+                                                "type": "float"
+                                            },
+                                            {
+                                                "isParam": true,
+                                                "name": "policy",
+                                                "typeName": "CachingPolicy",
+                                                "type": "union",
+                                                "typeInfo": {
+                                                    "orgName": "lsbalorg",
+                                                    "modName": "ballerina_http_1.0.0",
+                                                    "version": "1.1.0",
+                                                    "name": "CachingPolicy"
+                                                },
+                                                "isTypeDef": true,
+                                                "isUnion": true,
+                                                "fields": [
+                                                    {
+                                                        "typeName": "CACHE_CONTROL_AND_VALIDATORS",
+                                                        "isParam": true
+                                                    },
+                                                    {
+                                                        "typeName": "RFC_7234",
+                                                        "isParam": true
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "compression",
+                                        "typeName": "Compression",
+                                        "type": "union",
+                                        "typeInfo": {
+                                            "orgName": "lsbalorg",
+                                            "modName": "lsbalorg_ballerina_http_1.0.0_1.1.0",
+                                            "version": "1.1.0",
+                                            "name": "Compression"
+                                        },
+                                        "isTypeDef": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "auth",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "OutboundAuthConfig",
+                                                "isParam": true,
+                                                "fields": []
+                                            }
+                                        ],
+                                        "optional": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "circuitBreaker",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "CircuitBreakerConfig",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "rollingWindow",
+                                                        "typeName": "RollingWindow",
+                                                        "type": "record",
+                                                        "typeInfo": {
+                                                            "orgName": "lsbalorg",
+                                                            "modName": "ballerina_http_1.0.0",
+                                                            "version": "1.1.0",
+                                                            "name": "RollingWindow"
+                                                        },
+                                                        "fields": [
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "requestVolumeThreshold",
+                                                                "type": "int"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "timeWindowInMillis",
+                                                                "type": "int"
+                                                            },
+                                                            {
+                                                                "isParam": true,
+                                                                "name": "bucketSizeInMillis",
+                                                                "type": "int"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "failureThreshold",
+                                                        "type": "float"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "resetTimeInMillis",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "statusCodes",
+                                                        "isArray": true,
+                                                        "type": "collection",
+                                                        "collectionDataType": "int"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "retryConfig",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "RetryConfig",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "count",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "intervalInMillis",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "backOffFactor",
+                                                        "type": "float"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxWaitIntervalInMillis",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "statusCodes",
+                                                        "isArray": true,
+                                                        "type": "collection",
+                                                        "collectionDataType": "int"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    },
+                                    {
+                                        "isParam": true,
+                                        "name": "cookieConfig",
+                                        "isUnion": true,
+                                        "type": "union",
+                                        "fields": [
+                                            {
+                                                "type": "record",
+                                                "typeName": "CookieConfig",
+                                                "isParam": true,
+                                                "fields": [
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "enabled",
+                                                        "type": "boolean"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxCookiesPerDomain",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "maxTotalCookieCount",
+                                                        "type": "int"
+                                                    },
+                                                    {
+                                                        "isParam": true,
+                                                        "name": "blockThirdPartyCookies",
+                                                        "type": "boolean"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "optional": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "optional": true,
+                "description": "The configurations to be used when initializing the `client`"
+            }
+        ]
+    },
+    "ballerina_email_PopClient_0.6.0": {
+        "read": [
+            {
+                "isParam": true,
+                "name": "folder",
+                "type": "string",
+                "description": "Folder to read emails. The default value is `INBOX`"
+            }
+        ],
+        "init": [
+            {
+                "isParam": true,
+                "name": "host",
+                "type": "string",
+                "description": "Host of the POP Client"
+            },
+            {
+                "isParam": true,
+                "name": "username",
+                "type": "string",
+                "description": "Username of the POP Client"
+            },
+            {
+                "isParam": true,
+                "name": "password",
+                "type": "string",
+                "description": "Password of the POP Client"
+            },
+            {
+                "isParam": true,
+                "name": "clientConfig",
+                "typeName": "PopConfig",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_email_0.6.0",
+                    "version": "1.1.0",
+                    "name": "PopConfig"
+                },
+                "description": "Configurations for the POP Client",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "port",
+                        "type": "int"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "enableSsl",
+                        "type": "boolean"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "properties",
+                        "isUnion": true,
+                        "type": "union",
+                        "fields": [],
+                        "optional": true
+                    }
+                ]
+            }
+        ]
+    },
+    "ballerina_email_ImapClient_0.6.0": {
+        "read": [
+            {
+                "isParam": true,
+                "name": "folder",
+                "type": "string",
+                "description": "Folder to read emails. The default value is `INBOX`"
+            }
+        ],
+        "init": [
+            {
+                "isParam": true,
+                "name": "host",
+                "type": "string",
+                "description": "Host of the IMAP Client"
+            },
+            {
+                "isParam": true,
+                "name": "username",
+                "type": "string",
+                "description": "Username of the IMAP Client"
+            },
+            {
+                "isParam": true,
+                "name": "password",
+                "type": "string",
+                "description": "Password of the IMAP Client"
+            },
+            {
+                "isParam": true,
+                "name": "clientConfig",
+                "typeName": "ImapConfig",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_email_0.6.0",
+                    "version": "1.1.0",
+                    "name": "ImapConfig"
+                },
+                "description": "Configurations for the IMAP Client",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "port",
+                        "type": "int"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "enableSsl",
+                        "type": "boolean"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "properties",
+                        "isUnion": true,
+                        "type": "union",
+                        "fields": [],
+                        "optional": true
+                    }
+                ]
+            }
+        ]
+    },
+    "ballerina_email_SmtpClient_0.6.0": {
+        "send": [
+            {
+                "isParam": true,
+                "name": "email",
+                "typeName": "Email",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_email_0.6.0",
+                    "version": "1.1.0",
+                    "name": "Email"
+                },
+                "description": "An `email:Email` message, which needs to be sent to the recipient",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "to",
+                        "isArray": true,
+                        "type": "collection",
+                        "collectionDataType": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "cc",
+                        "optional": true,
+                        "isArray": true,
+                        "type": "collection",
+                        "collectionDataType": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "bcc",
+                        "optional": true,
+                        "isArray": true,
+                        "type": "collection",
+                        "collectionDataType": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "subject",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "body",
+                        "isUnion": true,
+                        "type": "union",
+                        "fields": [
+                            {
+                                "type": "string",
+                                "isParam": true
+                            },
+                            {
+                                "type": "xml",
+                                "isParam": true
+                            },
+                            {
+                                "type": "json",
+                                "isParam": true
+                            }
+                        ]
+                    },
+                    {
+                        "isParam": true,
+                        "name": "contentType",
+                        "optional": true,
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "from",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "sender",
+                        "optional": true,
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "replyTo",
+                        "optional": true,
+                        "isArray": true,
+                        "type": "collection",
+                        "collectionDataType": "string"
+                    }
+                ]
+            }
+        ],
+        "init": [
+            {
+                "isParam": true,
+                "name": "host",
+                "type": "string",
+                "description": "Host of the SMTP Client"
+            },
+            {
+                "isParam": true,
+                "name": "username",
+                "type": "string",
+                "description": "Username of the SMTP Client"
+            },
+            {
+                "isParam": true,
+                "name": "password",
+                "type": "string",
+                "description": "Password of the SMTP Client"
+            },
+            {
+                "isParam": true,
+                "name": "clientConfig",
+                "typeName": "SmtpConfig",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "lsbalorg",
+                    "modName": "ballerina_email_0.6.0",
+                    "version": "1.1.0",
+                    "name": "SmtpConfig"
+                },
+                "description": "Configurations for SMTP Client",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "port",
+                        "type": "int"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "enableSsl",
+                        "type": "boolean"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "properties",
+                        "isUnion": true,
+                        "type": "union",
+                        "fields": [],
+                        "optional": true
+                    }
+                ]
+            }
+        ]
+    },
+    "wso2_twitter_Client_0.9.26": {
+        "__init": [
+            {
+                "isParam": true,
+                "name": "twitterConfig",
+                "typeName": "TwitterConfiguration",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "wso2",
+                    "modName": "twitter",
+                    "version": "0.9.26",
+                    "name": "TwitterConfiguration"
+                },
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "accessToken",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "accessTokenSecret",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "clientId",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "clientSecret",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "clientConfig",
+                        "typeName": "ClientConfiguration",
+                        "type": "record",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "http",
+                            "version": "1.0.0",
+                            "name": "ClientConfiguration"
+                        }
+                    }
+                ]
+            }
+        ],
+        "tweet": [
+            {
+                "isParam": true,
+                "name": "status",
+                "type": "string",
+                "description": "The text of status update"
+            }
+        ],
+        "retweet": [
+            {
+                "isParam": true,
+                "name": "id",
+                "type": "int",
+                "description": "The numerical ID of the desired status"
+            }
+        ],
+        "unretweet": [
+            {
+                "isParam": true,
+                "name": "id",
+                "type": "int",
+                "description": "The numerical ID of the desired status"
+            }
+        ],
+        "search": [
+            {
+                "isParam": true,
+                "name": "queryStr",
+                "type": "string",
+                "description": "Query string to retrieve the related tweets"
+            },
+            {
+                "isParam": true,
+                "name": "searchRequest",
+                "typeName": "SearchRequest",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "wso2",
+                    "modName": "twitter",
+                    "version": "0.9.26",
+                    "name": "SearchRequest"
+                },
+                "description": "It contains optional params that is needed for search operation(tweetsCount)",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "tweetsCount",
+                        "type": "string"
+                    }
+                ]
+            }
+        ],
+        "showStatus": [
+            {
+                "isParam": true,
+                "name": "id",
+                "type": "int",
+                "description": "The numerical ID of the desired status"
+            }
+        ],
+        "destroyStatus": [
+            {
+                "isParam": true,
+                "name": "id",
+                "type": "int",
+                "description": "The numerical ID of the desired status"
+            }
+        ],
+        "getClosestTrendLocations": [
+            {
+                "isParam": true,
+                "name": "lat",
+                "type": "float",
+                "description": "Latitude of the location"
+            },
+            {
+                "isParam": true,
+                "name": "long",
+                "type": "float",
+                "description": "Longitude of the location"
+            }
+        ],
+        "getTopTrendsByPlace": [
+            {
+                "isParam": true,
+                "name": "locationId",
+                "type": "int",
+                "description": "Where On Earth ID of the location to return trending information for"
+            }
+        ]
+    },
+    "ballerinax_twilio_Client_0.99.0": {
+        "getAccountDetails": [],
+        "sendSms": [
+            {
+                "isParam": true,
+                "name": "fromNo",
+                "type": "string",
+                "description": "Mobile number which the SMS should be send from"
+            },
+            {
+                "isParam": true,
+                "name": "toNo",
+                "type": "string",
+                "description": "Mobile number which the SMS should be received to"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "type": "string",
+                "description": "Message body of the SMS"
+            }
+        ],
+        "sendWhatsAppMessage": [
+            {
+                "isParam": true,
+                "name": "fromNo",
+                "type": "string",
+                "description": "Mobile number from which the WhatsApp message should be sent"
+            },
+            {
+                "isParam": true,
+                "name": "toNo",
+                "type": "string",
+                "description": "Mobile number by which the WhatsApp message should be received"
+            },
+            {
+                "isParam": true,
+                "name": "message",
+                "type": "string",
+                "description": "Message body of the WhatsApp message"
+            }
+        ],
+        "makeVoiceCall": [
+            {
+                "isParam": true,
+                "name": "fromNo",
+                "type": "string",
+                "description": "Mobile number which the voice call should be send from"
+            },
+            {
+                "isParam": true,
+                "name": "toNo",
+                "type": "string",
+                "description": "Mobile number which the voice call should be received to"
+            },
+            {
+                "isParam": true,
+                "name": "twiml",
+                "type": "string",
+                "description": "TwiML URL which the response of the voice call is stated"
+            }
+        ],
+        "getAuthyAppDetails": [],
+        "addAuthyUser": [
+            {
+                "isParam": true,
+                "name": "email",
+                "type": "string",
+                "description": "Email of the new user"
+            },
+            {
+                "isParam": true,
+                "name": "phone",
+                "type": "string",
+                "description": "Phone number of the new user"
+            },
+            {
+                "isParam": true,
+                "name": "countryCode",
+                "type": "string",
+                "description": "Country code of the new user"
+            }
+        ],
+        "getAuthyUserStatus": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            }
+        ],
+        "deleteAuthyUser": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            }
+        ],
+        "getAuthyUserSecret": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            }
+        ],
+        "requestOtpViaSms": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            }
+        ],
+        "requestOtpViaCall": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            }
+        ],
+        "verifyOtp": [
+            {
+                "isParam": true,
+                "name": "userId",
+                "type": "string",
+                "description": "Unique identifier of the user"
+            },
+            {
+                "isParam": true,
+                "name": "token",
+                "type": "string",
+                "description": "The OTP token to be verified"
+            }
+        ],
+        "init": [
+            {
+                "isParam": true,
+                "name": "twilioConfig",
+                "typeName": "TwilioConfiguration",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "ballerinax",
+                    "modName": "twilio",
+                    "version": "0.99.0",
+                    "name": "TwilioConfiguration"
+                },
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "accountSId",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "authToken",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "xAuthyKey",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "secureSocket",
+                        "optional": true,
+                        "typeName": "ClientSecureSocket",
+                        "type": "record",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "http",
+                            "version": "1.0.0",
+                            "name": "ClientSecureSocket"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "ballerinax_sfdc_BaseClient_2.0.1": {
+        "getBulkClient": [],
+        "getSobjectClient": [],
+        "getQueryClient": [],
+        "getAvailableApiVersions": [],
+        "getResourcesByApiVersion": [
+            {
+                "isParam": true,
+                "name": "apiVersion",
+                "type": "string",
+                "description": "API version (v37)"
+            }
+        ],
+        "getOrganizationLimits": [],
+        "getRecord": [
+            {
+                "isParam": true,
+                "name": "path",
+                "type": "string",
+                "description": "resource path "
+            }
+        ],
+        "init": [
+            {
+                "isParam": true,
+                "name": "salesforceConfig",
+                "typeName": "SalesforceConfiguration",
+                "type": "record",
+                "typeInfo": {
+                    "orgName": "ballerinax",
+                    "modName": "sfdc",
+                    "version": "2.0.1",
+                    "name": "SalesforceConfiguration"
+                },
+                "description": "Salesforce Connector configuration",
+                "fields": [
+                    {
+                        "isParam": true,
+                        "name": "baseUrl",
+                        "type": "string"
+                    },
+                    {
+                        "isParam": true,
+                        "name": "clientConfig",
+                        "typeName": "DirectTokenConfig",
+                        "type": "record",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "oauth2",
+                            "version": "1.0.0",
+                            "name": "DirectTokenConfig"
+                        }
+                    },
+                    {
+                        "isParam": true,
+                        "name": "secureSocketConfig",
+                        "optional": true,
+                        "typeName": "ClientSecureSocket",
+                        "type": "record",
+                        "typeInfo": {
+                            "orgName": "ballerina",
+                            "modName": "http",
+                            "version": "1.0.0",
+                            "name": "ClientSecureSocket"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

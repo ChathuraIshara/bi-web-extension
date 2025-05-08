@@ -1,0 +1,63 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+
+.header-segment {
+    margin-right: 15px;
+}
+
+.header-segment-path {
+    margin-right: 4px;
+    font-weight: normal;
+    color: #8d91a3;
+}
+
+.header-segment-listener {
+    margin-right: 15px;
+    color: #8d91a3;
+    font-weight: normal;
+}
+
+.service-member {
+    margin: 5px 10px 10px 10px;
+    cursor: pointer;
+
+    .plus-container {
+        margin-left: 2px;
+    }
+    .function-box{
+        margin-left: 8px;
+    }
+}
+
+.service-member:nth-of-type(1) {
+    margin: 10px 10px 10px 10px;
+}
+
+.service-member:last-of-type {
+    margin: 5px 10px 10px 10px;
+}
+
+.plus-btn-wrapper {
+    .plus-text {
+        visibility: hidden;
+        color: #5567D5;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+
+    .show {
+        visibility: visible;
+    }
+
+    &:hover {
+        .plus-text {
+            visibility: visible;
+        }
+    }
+}

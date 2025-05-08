@@ -1,0 +1,93 @@
+.collaspe {
+    .collaspe-btn {
+        rect {
+            stroke: #36b475;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            fill: url(#CollapseLinearGradient);
+            filter: url(#CollapseFilterDefault);
+        }
+
+        .collaspe-icon {
+            fill: #36b475;
+            stroke-width: 0;
+        }
+    }
+
+    &:hover {
+        rect {
+            cursor: pointer;
+            stroke: #2fa86c;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            filter: url(#CollapseFilterHover);
+        }
+
+        &:hover .collaspe-icon {
+            fill: #fff;
+            stroke-width: 0;
+        }
+    }
+
+    &:active {
+        rect {
+            cursor: pointer;
+            stroke: #2fa86c;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            filter: url(#CollapseFilterClick);
+        }
+
+        &:active .collaspe-icon {
+            fill: #006b46;
+            stroke-width: 0;
+        }
+    }
+}
+
+.expand {
+    .expand-btn {
+        rect {
+            stroke: #36b475;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            fill: url(#ExpandLinearGradient);
+            filter: url(#ExpandFilterDefault);
+        }
+
+        .expand-icon {
+            fill: #36b475;
+            stroke-width: 0;
+        }
+    }
+
+    &:hover {
+        rect {
+            cursor: pointer;
+            stroke: #2fa86c;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            filter: url(#ExpandFilterHover);
+        }
+
+        &:hover .expand-icon {
+            fill: #fff;
+            stroke-width: 0;
+        }
+    }
+
+    &:active {
+        rect {
+            cursor: pointer;
+            stroke: #2fa86c;
+            stroke-miterlimit: 10;
+            stroke-width: 1;
+            filter: url(#ExpandFilterClick);
+        }
+
+        &:active .expand-icon {
+            fill: #006b46;
+            stroke-width: 0;
+        }
+    }
+}

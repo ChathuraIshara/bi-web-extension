@@ -1,0 +1,3150 @@
+{
+    "kind": "FunctionDefinition",
+    "qualifierList": [
+        {
+            "kind": "ResourceKeyword",
+            "isToken": true,
+            "value": "resource",
+            "isMissing": false,
+            "position": {
+                "startLine": 5,
+                "startColumn": 4,
+                "endLine": 5,
+                "endColumn": 12
+            },
+            "leadingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                }
+            ],
+            "trailingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": " ",
+                    "isInvalid": false
+                }
+            ]
+        }
+    ],
+    "functionKeyword": {
+        "kind": "FunctionKeyword",
+        "isToken": true,
+        "value": "function",
+        "isMissing": false,
+        "position": {
+            "startLine": 5,
+            "startColumn": 13,
+            "endLine": 5,
+            "endColumn": 21
+        },
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "WHITESPACE_MINUTIAE",
+                "minutiae": " ",
+                "isInvalid": false
+            }
+        ]
+    },
+    "functionName": {
+        "kind": "IdentifierToken",
+        "isToken": true,
+        "value": "get",
+        "isMissing": false,
+        "position": {
+            "startLine": 5,
+            "startColumn": 22,
+            "endLine": 5,
+            "endColumn": 25
+        },
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "WHITESPACE_MINUTIAE",
+                "minutiae": " ",
+                "isInvalid": false
+            }
+        ]
+    },
+    "relativeResourcePath": [
+        {
+            "kind": "DotToken",
+            "isToken": true,
+            "value": ".",
+            "isMissing": false,
+            "position": {
+                "startLine": 5,
+                "startColumn": 26,
+                "endLine": 5,
+                "endColumn": 27
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": []
+        }
+    ],
+    "functionSignature": {
+        "kind": "FunctionSignature",
+        "openParenToken": {
+            "kind": "OpenParenToken",
+            "isToken": true,
+            "value": "(",
+            "isMissing": false,
+            "position": {
+                "startLine": 5,
+                "startColumn": 27,
+                "endLine": 5,
+                "endColumn": 28
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": []
+        },
+        "parameters": [
+            {
+                "kind": "RequiredParam",
+                "annotations": [],
+                "typeName": {
+                    "kind": "QualifiedNameReference",
+                    "modulePrefix": {
+                        "kind": "IdentifierToken",
+                        "isToken": true,
+                        "value": "http",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 5,
+                            "startColumn": 28,
+                            "endLine": 5,
+                            "endColumn": 32
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "colon": {
+                        "kind": "ColonToken",
+                        "isToken": true,
+                        "value": ":",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 5,
+                            "startColumn": 32,
+                            "endLine": 5,
+                            "endColumn": 33
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "identifier": {
+                        "kind": "IdentifierToken",
+                        "isToken": true,
+                        "value": "Caller",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 5,
+                            "startColumn": 33,
+                            "endLine": 5,
+                            "endColumn": 39
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "source": "http:Caller ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 28,
+                        "endLine": 5,
+                        "endColumn": 39
+                    },
+                    "typeData": {
+                        "isEndpoint": true,
+                        "typeSymbol": {
+                            "name": "Caller",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "moduleName": "http",
+                                "version": "1.1.0-alpha8"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "moduleName": "http",
+                                    "version": "1.1.0-alpha8"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Caller"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerina/http:1.1.0-alpha8:Caller"
+                        },
+                        "symbol": {
+                            "name": "Caller",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "moduleName": "http",
+                                "version": "1.1.0-alpha8"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "moduleName": "http",
+                                    "version": "1.1.0-alpha8"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Caller"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerina/http:1.1.0-alpha8:Caller"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "paramName": {
+                    "kind": "IdentifierToken",
+                    "isToken": true,
+                    "value": "caller",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 40,
+                        "endLine": 5,
+                        "endColumn": 46
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": []
+                },
+                "source": "http:Caller caller",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [],
+                "position": {
+                    "startLine": 5,
+                    "startColumn": 28,
+                    "endLine": 5,
+                    "endColumn": 46
+                },
+                "typeData": {
+                    "isEndpoint": true,
+                    "typeSymbol": {
+                        "name": "Caller",
+                        "typeKind": "typeReference",
+                        "moduleID": {
+                            "orgName": "ballerina",
+                            "moduleName": "http",
+                            "version": "1.1.0-alpha8"
+                        },
+                        "definition": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "moduleName": "http",
+                                "version": "1.1.0-alpha8"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "Caller"
+                        },
+                        "kind": "TYPE",
+                        "signature": "ballerina/http:1.1.0-alpha8:Caller"
+                    },
+                    "symbol": {
+                        "signature": "ballerina/http:1.1.0-alpha8:Caller caller",
+                        "moduleID": {
+                            "orgName": "kavithlokuhewage",
+                            "moduleName": "fg3",
+                            "version": "0.1.0"
+                        },
+                        "kind": "PARAMETER"
+                    },
+                    "diagnostics": []
+                }
+            }
+        ],
+        "closeParenToken": {
+            "kind": "CloseParenToken",
+            "isToken": true,
+            "value": ")",
+            "isMissing": false,
+            "position": {
+                "startLine": 5,
+                "startColumn": 46,
+                "endLine": 5,
+                "endColumn": 47
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": " ",
+                    "isInvalid": false
+                }
+            ]
+        },
+        "returnTypeDesc": {
+            "kind": "ReturnTypeDescriptor",
+            "returnsKeyword": {
+                "kind": "ReturnsKeyword",
+                "isToken": true,
+                "value": "returns",
+                "isMissing": false,
+                "position": {
+                    "startLine": 5,
+                    "startColumn": 48,
+                    "endLine": 5,
+                    "endColumn": 55
+                },
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ]
+            },
+            "annotations": [],
+            "type": {
+                "kind": "OptionalTypeDesc",
+                "typeDescriptor": {
+                    "kind": "ErrorTypeDesc",
+                    "errorKeywordToken": {
+                        "kind": "ErrorKeyword",
+                        "isToken": true,
+                        "value": "error",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 5,
+                            "startColumn": 56,
+                            "endLine": 5,
+                            "endColumn": 61
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": []
+                    },
+                    "source": "error",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [],
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 56,
+                        "endLine": 5,
+                        "endColumn": 61
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "typeKind": "error",
+                            "moduleID": {
+                                "orgName": "ballerina",
+                                "moduleName": "lang.annotations",
+                                "version": "1.0.0"
+                            },
+                            "detailTypeDescriptor": {
+                                "typeParam": {
+                                    "typeKind": "union",
+                                    "kind": "TYPE",
+                                    "signature": "Cloneable"
+                                },
+                                "typeKind": "map",
+                                "kind": "TYPE",
+                                "signature": "map<Cloneable>"
+                            },
+                            "kind": "TYPE",
+                            "signature": "error"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "questionMarkToken": {
+                    "kind": "QuestionMarkToken",
+                    "isToken": true,
+                    "value": "?",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 61,
+                        "endLine": 5,
+                        "endColumn": 62
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "error? ",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [],
+                "trailingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": " ",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 5,
+                    "startColumn": 56,
+                    "endLine": 5,
+                    "endColumn": 62
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "typeKind": "union",
+                        "kind": "TYPE",
+                        "signature": "error?",
+                        "members": [
+                            {
+                                "typeKind": "error",
+                                "moduleID": {
+                                    "orgName": "ballerina",
+                                    "moduleName": "lang.annotations",
+                                    "version": "1.0.0"
+                                },
+                                "detailTypeDescriptor": {
+                                    "typeParam": {
+                                        "typeKind": "union",
+                                        "kind": "TYPE",
+                                        "signature": "Cloneable"
+                                    },
+                                    "typeKind": "map",
+                                    "kind": "TYPE",
+                                    "signature": "map<Cloneable>"
+                                },
+                                "kind": "TYPE",
+                                "signature": "error"
+                            },
+                            {
+                                "typeKind": "nil",
+                                "kind": "TYPE",
+                                "signature": "()"
+                            }
+                        ]
+                    },
+                    "diagnostics": []
+                }
+            },
+            "source": "returns error? ",
+            "syntaxDiagnostics": [],
+            "leadingMinutiae": [],
+            "trailingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": " ",
+                    "isInvalid": false
+                }
+            ],
+            "position": {
+                "startLine": 5,
+                "startColumn": 48,
+                "endLine": 5,
+                "endColumn": 62
+            },
+            "typeData": {
+                "typeSymbol": {
+                    "kind": "TYPE",
+                    "typeKind": "function",
+                    "signature": "function (ballerina/http:1.1.0-alpha8:Caller caller) returns error?"
+                },
+                "diagnostics": []
+            }
+        },
+        "source": "(http:Caller caller) returns error? ",
+        "syntaxDiagnostics": [],
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "WHITESPACE_MINUTIAE",
+                "minutiae": " ",
+                "isInvalid": false
+            }
+        ],
+        "position": {
+            "startLine": 5,
+            "startColumn": 27,
+            "endLine": 5,
+            "endColumn": 62
+        },
+        "typeData": {
+            "typeSymbol": {
+                "kind": "TYPE",
+                "typeKind": "function",
+                "signature": "function (ballerina/http:1.1.0-alpha8:Caller caller) returns error?"
+            },
+            "diagnostics": []
+        }
+    },
+    "functionBody": {
+        "kind": "FunctionBodyBlock",
+        "openBraceToken": {
+            "kind": "OpenBraceToken",
+            "isToken": true,
+            "value": "{",
+            "isMissing": false,
+            "position": {
+                "startLine": 5,
+                "startColumn": 63,
+                "endLine": 5,
+                "endColumn": 64
+            },
+            "leadingMinutiae": [],
+            "trailingMinutiae": [
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                }
+            ]
+        },
+        "statements": [
+            {
+                "kind": "LocalVarDecl",
+                "annotations": [],
+                "typedBindingPattern": {
+                    "kind": "TypedBindingPattern",
+                    "typeDescriptor": {
+                        "kind": "QualifiedNameReference",
+                        "modulePrefix": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "openweathermap",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 8,
+                                "endLine": 6,
+                                "endColumn": 22
+                            },
+                            "leadingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": "        ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "trailingMinutiae": []
+                        },
+                        "colon": {
+                            "kind": "ColonToken",
+                            "isToken": true,
+                            "value": ":",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 22,
+                                "endLine": 6,
+                                "endColumn": 23
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "identifier": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "Client",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 23,
+                                "endLine": 6,
+                                "endColumn": 29
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "        openweathermap:Client ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": "        ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 6,
+                            "startColumn": 8,
+                            "endLine": 6,
+                            "endColumn": 29
+                        },
+                        "typeData": {
+                            "isEndpoint": true,
+                            "typeSymbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "openweathermap",
+                                    "version": "0.6.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "openweathermap",
+                                        "version": "0.6.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/openweathermap:0.6.0:Client"
+                            },
+                            "symbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "openweathermap",
+                                    "version": "0.6.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "openweathermap",
+                                        "version": "0.6.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/openweathermap:0.6.0:Client"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "bindingPattern": {
+                        "kind": "CaptureBindingPattern",
+                        "variableName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "openweathermapEndpoint",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 30,
+                                "endLine": 6,
+                                "endColumn": 52
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "openweathermapEndpoint ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 6,
+                            "startColumn": 30,
+                            "endLine": 6,
+                            "endColumn": 52
+                        },
+                        "typeData": {
+                            "isEndpoint": true,
+                            "typeSymbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "openweathermap",
+                                    "version": "0.6.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "openweathermap",
+                                        "version": "0.6.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/openweathermap:0.6.0:Client"
+                            },
+                            "symbol": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "kavithlokuhewage",
+                                    "moduleName": "fg3",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "VARIABLE"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "        openweathermap:Client openweathermapEndpoint ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "        ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 8,
+                        "endLine": 6,
+                        "endColumn": 52
+                    },
+                    "typeData": {
+                        "isEndpoint": true,
+                        "typeSymbol": {
+                            "name": "Client",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "openweathermap",
+                                "version": "0.6.0"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "openweathermap",
+                                    "version": "0.6.0"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Client"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/openweathermap:0.6.0:Client"
+                        },
+                        "symbol": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "kavithlokuhewage",
+                                "moduleName": "fg3",
+                                "version": "0.1.0"
+                            },
+                            "kind": "VARIABLE"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "equalsToken": {
+                    "kind": "EqualToken",
+                    "isToken": true,
+                    "value": "=",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 53,
+                        "endLine": 6,
+                        "endColumn": 54
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "initializer": {
+                    "kind": "CheckExpression",
+                    "checkKeyword": {
+                        "kind": "CheckKeyword",
+                        "isToken": true,
+                        "value": "check",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 6,
+                            "startColumn": 55,
+                            "endLine": 6,
+                            "endColumn": 60
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "expression": {
+                        "kind": "ImplicitNewExpression",
+                        "newKeyword": {
+                            "kind": "NewKeyword",
+                            "isToken": true,
+                            "value": "new",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 61,
+                                "endLine": 6,
+                                "endColumn": 64
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "parenthesizedArgList": {
+                            "kind": "ParenthesizedArgList",
+                            "openParenToken": {
+                                "kind": "OpenParenToken",
+                                "isToken": true,
+                                "value": "(",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 6,
+                                    "startColumn": 65,
+                                    "endLine": 6,
+                                    "endColumn": 66
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "arguments": [
+                                {
+                                    "kind": "PositionalArg",
+                                    "expression": {
+                                        "kind": "MappingConstructor",
+                                        "openBrace": {
+                                            "kind": "OpenBraceToken",
+                                            "isToken": true,
+                                            "value": "{",
+                                            "isMissing": false,
+                                            "position": {
+                                                "startLine": 6,
+                                                "startColumn": 66,
+                                                "endLine": 6,
+                                                "endColumn": 67
+                                            },
+                                            "leadingMinutiae": [],
+                                            "trailingMinutiae": []
+                                        },
+                                        "fields": [
+                                            {
+                                                "kind": "SpecificField",
+                                                "fieldName": {
+                                                    "kind": "IdentifierToken",
+                                                    "isToken": true,
+                                                    "value": "apiKeys",
+                                                    "isMissing": false,
+                                                    "position": {
+                                                        "startLine": 6,
+                                                        "startColumn": 67,
+                                                        "endLine": 6,
+                                                        "endColumn": 74
+                                                    },
+                                                    "leadingMinutiae": [],
+                                                    "trailingMinutiae": []
+                                                },
+                                                "colon": {
+                                                    "kind": "ColonToken",
+                                                    "isToken": true,
+                                                    "value": ":",
+                                                    "isMissing": false,
+                                                    "position": {
+                                                        "startLine": 6,
+                                                        "startColumn": 74,
+                                                        "endLine": 6,
+                                                        "endColumn": 75
+                                                    },
+                                                    "leadingMinutiae": [],
+                                                    "trailingMinutiae": [
+                                                        {
+                                                            "kind": "WHITESPACE_MINUTIAE",
+                                                            "minutiae": " ",
+                                                            "isInvalid": false
+                                                        }
+                                                    ]
+                                                },
+                                                "valueExpr": {
+                                                    "kind": "MappingConstructor",
+                                                    "openBrace": {
+                                                        "kind": "OpenBraceToken",
+                                                        "isToken": true,
+                                                        "value": "{",
+                                                        "isMissing": false,
+                                                        "position": {
+                                                            "startLine": 6,
+                                                            "startColumn": 76,
+                                                            "endLine": 6,
+                                                            "endColumn": 77
+                                                        },
+                                                        "leadingMinutiae": [],
+                                                        "trailingMinutiae": []
+                                                    },
+                                                    "fields": [
+                                                        {
+                                                            "kind": "SpecificField",
+                                                            "fieldName": {
+                                                                "kind": "StringLiteral",
+                                                                "literalToken": {
+                                                                    "kind": "StringLiteralToken",
+                                                                    "isToken": true,
+                                                                    "value": "\"\"",
+                                                                    "isMissing": false,
+                                                                    "position": {
+                                                                        "startLine": 6,
+                                                                        "startColumn": 77,
+                                                                        "endLine": 6,
+                                                                        "endColumn": 79
+                                                                    },
+                                                                    "leadingMinutiae": [],
+                                                                    "trailingMinutiae": []
+                                                                },
+                                                                "source": "\"\"",
+                                                                "syntaxDiagnostics": [],
+                                                                "leadingMinutiae": [],
+                                                                "trailingMinutiae": [],
+                                                                "position": {
+                                                                    "startLine": 6,
+                                                                    "startColumn": 77,
+                                                                    "endLine": 6,
+                                                                    "endColumn": 79
+                                                                },
+                                                                "typeData": {
+                                                                    "typeSymbol": {
+                                                                        "typeKind": "string",
+                                                                        "kind": "TYPE",
+                                                                        "signature": "string"
+                                                                    },
+                                                                    "symbol": {
+                                                                        "name": "",
+                                                                        "typeKind": "typeReference",
+                                                                        "moduleID": {
+                                                                            "orgName": "kavithlokuhewage",
+                                                                            "moduleName": "fg3",
+                                                                            "version": "0.1.0"
+                                                                        },
+                                                                        "definition": {
+                                                                            "readonly": false,
+                                                                            "deprecated": false,
+                                                                            "moduleID": {
+                                                                                "orgName": "kavithlokuhewage",
+                                                                                "moduleName": "fg3",
+                                                                                "version": "0.1.0"
+                                                                            },
+                                                                            "kind": "TYPE_DEFINITION",
+                                                                            "moduleQualifiedName": "fg3:"
+                                                                        },
+                                                                        "kind": "TYPE",
+                                                                        "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                                                    },
+                                                                    "diagnostics": []
+                                                                }
+                                                            },
+                                                            "colon": {
+                                                                "kind": "ColonToken",
+                                                                "isToken": true,
+                                                                "value": ":",
+                                                                "isMissing": false,
+                                                                "position": {
+                                                                    "startLine": 6,
+                                                                    "startColumn": 79,
+                                                                    "endLine": 6,
+                                                                    "endColumn": 80
+                                                                },
+                                                                "leadingMinutiae": [],
+                                                                "trailingMinutiae": [
+                                                                    {
+                                                                        "kind": "WHITESPACE_MINUTIAE",
+                                                                        "minutiae": " ",
+                                                                        "isInvalid": false
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "valueExpr": {
+                                                                "kind": "StringLiteral",
+                                                                "literalToken": {
+                                                                    "kind": "StringLiteralToken",
+                                                                    "isToken": true,
+                                                                    "value": "\"\"",
+                                                                    "isMissing": false,
+                                                                    "position": {
+                                                                        "startLine": 6,
+                                                                        "startColumn": 81,
+                                                                        "endLine": 6,
+                                                                        "endColumn": 83
+                                                                    },
+                                                                    "leadingMinutiae": [],
+                                                                    "trailingMinutiae": []
+                                                                },
+                                                                "source": "\"\"",
+                                                                "syntaxDiagnostics": [],
+                                                                "leadingMinutiae": [],
+                                                                "trailingMinutiae": [],
+                                                                "position": {
+                                                                    "startLine": 6,
+                                                                    "startColumn": 81,
+                                                                    "endLine": 6,
+                                                                    "endColumn": 83
+                                                                },
+                                                                "typeData": {
+                                                                    "typeSymbol": {
+                                                                        "typeKind": "string",
+                                                                        "kind": "TYPE",
+                                                                        "signature": "string"
+                                                                    },
+                                                                    "symbol": {
+                                                                        "name": "",
+                                                                        "typeKind": "typeReference",
+                                                                        "moduleID": {
+                                                                            "orgName": "kavithlokuhewage",
+                                                                            "moduleName": "fg3",
+                                                                            "version": "0.1.0"
+                                                                        },
+                                                                        "definition": {
+                                                                            "readonly": false,
+                                                                            "deprecated": false,
+                                                                            "moduleID": {
+                                                                                "orgName": "kavithlokuhewage",
+                                                                                "moduleName": "fg3",
+                                                                                "version": "0.1.0"
+                                                                            },
+                                                                            "kind": "TYPE_DEFINITION",
+                                                                            "moduleQualifiedName": "fg3:"
+                                                                        },
+                                                                        "kind": "TYPE",
+                                                                        "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                                                    },
+                                                                    "diagnostics": []
+                                                                }
+                                                            },
+                                                            "source": "\"\": \"\"",
+                                                            "syntaxDiagnostics": [],
+                                                            "leadingMinutiae": [],
+                                                            "trailingMinutiae": [],
+                                                            "position": {
+                                                                "startLine": 6,
+                                                                "startColumn": 77,
+                                                                "endLine": 6,
+                                                                "endColumn": 83
+                                                            },
+                                                            "typeData": {
+                                                                "typeSymbol": {
+                                                                    "typeKind": "string",
+                                                                    "kind": "TYPE",
+                                                                    "signature": "string"
+                                                                },
+                                                                "symbol": {
+                                                                    "name": "",
+                                                                    "typeKind": "typeReference",
+                                                                    "moduleID": {
+                                                                        "orgName": "kavithlokuhewage",
+                                                                        "moduleName": "fg3",
+                                                                        "version": "0.1.0"
+                                                                    },
+                                                                    "definition": {
+                                                                        "readonly": false,
+                                                                        "deprecated": false,
+                                                                        "moduleID": {
+                                                                            "orgName": "kavithlokuhewage",
+                                                                            "moduleName": "fg3",
+                                                                            "version": "0.1.0"
+                                                                        },
+                                                                        "kind": "TYPE_DEFINITION",
+                                                                        "moduleQualifiedName": "fg3:"
+                                                                    },
+                                                                    "kind": "TYPE",
+                                                                    "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                                                },
+                                                                "diagnostics": []
+                                                            }
+                                                        }
+                                                    ],
+                                                    "closeBrace": {
+                                                        "kind": "CloseBraceToken",
+                                                        "isToken": true,
+                                                        "value": "}",
+                                                        "isMissing": false,
+                                                        "position": {
+                                                            "startLine": 6,
+                                                            "startColumn": 83,
+                                                            "endLine": 6,
+                                                            "endColumn": 84
+                                                        },
+                                                        "leadingMinutiae": [],
+                                                        "trailingMinutiae": []
+                                                    },
+                                                    "source": "{\"\": \"\"}",
+                                                    "syntaxDiagnostics": [],
+                                                    "leadingMinutiae": [],
+                                                    "trailingMinutiae": [],
+                                                    "position": {
+                                                        "startLine": 6,
+                                                        "startColumn": 76,
+                                                        "endLine": 6,
+                                                        "endColumn": 84
+                                                    },
+                                                    "typeData": {
+                                                        "typeSymbol": {
+                                                            "typeParam": {
+                                                                "typeKind": "string",
+                                                                "kind": "TYPE",
+                                                                "signature": "string"
+                                                            },
+                                                            "typeKind": "map",
+                                                            "kind": "TYPE",
+                                                            "signature": "map<string>"
+                                                        },
+                                                        "symbol": {
+                                                            "name": "",
+                                                            "typeKind": "typeReference",
+                                                            "moduleID": {
+                                                                "orgName": "kavithlokuhewage",
+                                                                "moduleName": "fg3",
+                                                                "version": "0.1.0"
+                                                            },
+                                                            "definition": {
+                                                                "readonly": false,
+                                                                "deprecated": false,
+                                                                "moduleID": {
+                                                                    "orgName": "kavithlokuhewage",
+                                                                    "moduleName": "fg3",
+                                                                    "version": "0.1.0"
+                                                                },
+                                                                "kind": "TYPE_DEFINITION",
+                                                                "moduleQualifiedName": "fg3:"
+                                                            },
+                                                            "kind": "TYPE",
+                                                            "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                                        },
+                                                        "diagnostics": []
+                                                    }
+                                                },
+                                                "source": "apiKeys: {\"\": \"\"}",
+                                                "syntaxDiagnostics": [],
+                                                "leadingMinutiae": [],
+                                                "trailingMinutiae": [],
+                                                "position": {
+                                                    "startLine": 6,
+                                                    "startColumn": 67,
+                                                    "endLine": 6,
+                                                    "endColumn": 84
+                                                },
+                                                "typeData": {
+                                                    "typeSymbol": {
+                                                        "typeParam": {
+                                                            "typeKind": "string",
+                                                            "kind": "TYPE",
+                                                            "signature": "string"
+                                                        },
+                                                        "typeKind": "map",
+                                                        "kind": "TYPE",
+                                                        "signature": "map<string>"
+                                                    },
+                                                    "symbol": {
+                                                        "name": "",
+                                                        "typeKind": "typeReference",
+                                                        "moduleID": {
+                                                            "orgName": "kavithlokuhewage",
+                                                            "moduleName": "fg3",
+                                                            "version": "0.1.0"
+                                                        },
+                                                        "definition": {
+                                                            "readonly": false,
+                                                            "deprecated": false,
+                                                            "moduleID": {
+                                                                "orgName": "kavithlokuhewage",
+                                                                "moduleName": "fg3",
+                                                                "version": "0.1.0"
+                                                            },
+                                                            "kind": "TYPE_DEFINITION",
+                                                            "moduleQualifiedName": "fg3:"
+                                                        },
+                                                        "kind": "TYPE",
+                                                        "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                                    },
+                                                    "diagnostics": []
+                                                }
+                                            }
+                                        ],
+                                        "closeBrace": {
+                                            "kind": "CloseBraceToken",
+                                            "isToken": true,
+                                            "value": "}",
+                                            "isMissing": false,
+                                            "position": {
+                                                "startLine": 6,
+                                                "startColumn": 84,
+                                                "endLine": 6,
+                                                "endColumn": 85
+                                            },
+                                            "leadingMinutiae": [],
+                                            "trailingMinutiae": []
+                                        },
+                                        "source": "{apiKeys: {\"\": \"\"}}",
+                                        "syntaxDiagnostics": [],
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": [],
+                                        "position": {
+                                            "startLine": 6,
+                                            "startColumn": 66,
+                                            "endLine": 6,
+                                            "endColumn": 85
+                                        },
+                                        "typeData": {
+                                            "typeSymbol": {
+                                                "name": "ApiKeysConfig",
+                                                "typeKind": "typeReference",
+                                                "moduleID": {
+                                                    "orgName": "ballerinax",
+                                                    "moduleName": "openweathermap",
+                                                    "version": "0.6.0"
+                                                },
+                                                "definition": {
+                                                    "readonly": false,
+                                                    "deprecated": false,
+                                                    "moduleID": {
+                                                        "orgName": "ballerinax",
+                                                        "moduleName": "openweathermap",
+                                                        "version": "0.6.0"
+                                                    },
+                                                    "kind": "TYPE_DEFINITION",
+                                                    "moduleQualifiedName": "openweathermap:ApiKeysConfig"
+                                                },
+                                                "kind": "TYPE",
+                                                "signature": "ballerinax/openweathermap:0.6.0:ApiKeysConfig"
+                                            },
+                                            "symbol": {
+                                                "name": "",
+                                                "typeKind": "typeReference",
+                                                "moduleID": {
+                                                    "orgName": "kavithlokuhewage",
+                                                    "moduleName": "fg3",
+                                                    "version": "0.1.0"
+                                                },
+                                                "definition": {
+                                                    "readonly": false,
+                                                    "deprecated": false,
+                                                    "moduleID": {
+                                                        "orgName": "kavithlokuhewage",
+                                                        "moduleName": "fg3",
+                                                        "version": "0.1.0"
+                                                    },
+                                                    "kind": "TYPE_DEFINITION",
+                                                    "moduleQualifiedName": "fg3:"
+                                                },
+                                                "kind": "TYPE",
+                                                "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                            },
+                                            "diagnostics": []
+                                        }
+                                    },
+                                    "source": "{apiKeys: {\"\": \"\"}}",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [],
+                                    "position": {
+                                        "startLine": 6,
+                                        "startColumn": 66,
+                                        "endLine": 6,
+                                        "endColumn": 85
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "name": "ApiKeysConfig",
+                                            "typeKind": "typeReference",
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "openweathermap",
+                                                "version": "0.6.0"
+                                            },
+                                            "definition": {
+                                                "readonly": false,
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "ballerinax",
+                                                    "moduleName": "openweathermap",
+                                                    "version": "0.6.0"
+                                                },
+                                                "kind": "TYPE_DEFINITION",
+                                                "moduleQualifiedName": "openweathermap:ApiKeysConfig"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "ballerinax/openweathermap:0.6.0:ApiKeysConfig"
+                                        },
+                                        "symbol": {
+                                            "name": "",
+                                            "typeKind": "typeReference",
+                                            "moduleID": {
+                                                "orgName": "kavithlokuhewage",
+                                                "moduleName": "fg3",
+                                                "version": "0.1.0"
+                                            },
+                                            "definition": {
+                                                "readonly": false,
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "kavithlokuhewage",
+                                                    "moduleName": "fg3",
+                                                    "version": "0.1.0"
+                                                },
+                                                "kind": "TYPE_DEFINITION",
+                                                "moduleQualifiedName": "fg3:"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "kavithlokuhewage/fg3:0.1.0:"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                }
+                            ],
+                            "closeParenToken": {
+                                "kind": "CloseParenToken",
+                                "isToken": true,
+                                "value": ")",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 6,
+                                    "startColumn": 85,
+                                    "endLine": 6,
+                                    "endColumn": 86
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "({apiKeys: {\"\": \"\"}})",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 6,
+                                "startColumn": 65,
+                                "endLine": 6,
+                                "endColumn": 86
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "typeKind": "union",
+                                    "kind": "TYPE",
+                                    "signature": "ballerinax/openweathermap:0.6.0:Client|error",
+                                    "members": [
+                                        {
+                                            "name": "Client",
+                                            "typeKind": "typeReference",
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "openweathermap",
+                                                "version": "0.6.0"
+                                            },
+                                            "definition": {
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "ballerinax",
+                                                    "moduleName": "openweathermap",
+                                                    "version": "0.6.0"
+                                                },
+                                                "kind": "CLASS",
+                                                "typeKind": "object",
+                                                "signature": "Client"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "ballerinax/openweathermap:0.6.0:Client"
+                                        },
+                                        {
+                                            "typeKind": "error",
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "moduleName": "lang.annotations",
+                                                "version": "1.0.0"
+                                            },
+                                            "detailTypeDescriptor": {
+                                                "typeParam": {
+                                                    "typeKind": "union",
+                                                    "kind": "TYPE",
+                                                    "signature": "Cloneable"
+                                                },
+                                                "typeKind": "map",
+                                                "kind": "TYPE",
+                                                "signature": "map<Cloneable>"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "error"
+                                        }
+                                    ]
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "new ({apiKeys: {\"\": \"\"}})",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 6,
+                            "startColumn": 61,
+                            "endLine": 6,
+                            "endColumn": 86
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "typeKind": "union",
+                                "kind": "TYPE",
+                                "signature": "ballerinax/openweathermap:0.6.0:Client|error",
+                                "members": [
+                                    {
+                                        "name": "Client",
+                                        "typeKind": "typeReference",
+                                        "moduleID": {
+                                            "orgName": "ballerinax",
+                                            "moduleName": "openweathermap",
+                                            "version": "0.6.0"
+                                        },
+                                        "definition": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "openweathermap",
+                                                "version": "0.6.0"
+                                            },
+                                            "kind": "CLASS",
+                                            "typeKind": "object",
+                                            "signature": "Client"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "ballerinax/openweathermap:0.6.0:Client"
+                                    },
+                                    {
+                                        "typeKind": "error",
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "moduleName": "lang.annotations",
+                                            "version": "1.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "typeParam": {
+                                                "typeKind": "union",
+                                                "kind": "TYPE",
+                                                "signature": "Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "kind": "TYPE",
+                                            "signature": "map<Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "error"
+                                    }
+                                ]
+                            },
+                            "symbol": {
+                                "name": "",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "kavithlokuhewage",
+                                    "moduleName": "fg3",
+                                    "version": "0.1.0"
+                                },
+                                "definition": {
+                                    "readonly": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "kavithlokuhewage",
+                                        "moduleName": "fg3",
+                                        "version": "0.1.0"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "moduleQualifiedName": "fg3:"
+                                },
+                                "kind": "TYPE",
+                                "signature": "kavithlokuhewage/fg3:0.1.0:"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "check new ({apiKeys: {\"\": \"\"}})",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [],
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 55,
+                        "endLine": 6,
+                        "endColumn": 86
+                    },
+                    "typeData": {
+                        "isEndpoint": true,
+                        "typeSymbol": {
+                            "name": "Client",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "openweathermap",
+                                "version": "0.6.0"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "openweathermap",
+                                    "version": "0.6.0"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Client"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/openweathermap:0.6.0:Client"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "semicolonToken": {
+                    "kind": "SemicolonToken",
+                    "isToken": true,
+                    "value": ";",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 86,
+                        "endLine": 6,
+                        "endColumn": 87
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "        openweathermap:Client openweathermapEndpoint = check new ({apiKeys: {\"\": \"\"}});\n",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": "        ",
+                        "isInvalid": false
+                    }
+                ],
+                "trailingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 6,
+                    "startColumn": 8,
+                    "endLine": 6,
+                    "endColumn": 87
+                },
+                "typeData": {
+                    "isEndpoint": true,
+                    "typeSymbol": {
+                        "name": "Client",
+                        "typeKind": "typeReference",
+                        "moduleID": {
+                            "orgName": "ballerinax",
+                            "moduleName": "openweathermap",
+                            "version": "0.6.0"
+                        },
+                        "definition": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "openweathermap",
+                                "version": "0.6.0"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "Client"
+                        },
+                        "kind": "TYPE",
+                        "signature": "ballerinax/openweathermap:0.6.0:Client"
+                    },
+                    "symbol": {
+                        "deprecated": false,
+                        "moduleID": {
+                            "orgName": "kavithlokuhewage",
+                            "moduleName": "fg3",
+                            "version": "0.1.0"
+                        },
+                        "kind": "VARIABLE"
+                    },
+                    "diagnostics": []
+                }
+            },
+            {
+                "kind": "LocalVarDecl",
+                "annotations": [],
+                "typedBindingPattern": {
+                    "kind": "TypedBindingPattern",
+                    "typeDescriptor": {
+                        "kind": "QualifiedNameReference",
+                        "modulePrefix": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "covid19",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 8,
+                                "endLine": 8,
+                                "endColumn": 15
+                            },
+                            "leadingMinutiae": [
+                                {
+                                    "kind": "END_OF_LINE_MINUTIAE",
+                                    "minutiae": "\n",
+                                    "isInvalid": false
+                                },
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": "        ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "trailingMinutiae": []
+                        },
+                        "colon": {
+                            "kind": "ColonToken",
+                            "isToken": true,
+                            "value": ":",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 15,
+                                "endLine": 8,
+                                "endColumn": 16
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "identifier": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "Client",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 16,
+                                "endLine": 8,
+                                "endColumn": 22
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "\n        covid19:Client ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [
+                            {
+                                "kind": "END_OF_LINE_MINUTIAE",
+                                "minutiae": "\n",
+                                "isInvalid": false
+                            },
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": "        ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 8,
+                            "startColumn": 8,
+                            "endLine": 8,
+                            "endColumn": 22
+                        },
+                        "typeData": {
+                            "isEndpoint": true,
+                            "typeSymbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:Client"
+                            },
+                            "symbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:Client"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "bindingPattern": {
+                        "kind": "CaptureBindingPattern",
+                        "variableName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "covid19Endpoint",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 23,
+                                "endLine": 8,
+                                "endColumn": 38
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "covid19Endpoint ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 8,
+                            "startColumn": 23,
+                            "endLine": 8,
+                            "endColumn": 38
+                        },
+                        "typeData": {
+                            "isEndpoint": true,
+                            "typeSymbol": {
+                                "name": "Client",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "CLASS",
+                                    "typeKind": "object",
+                                    "signature": "Client"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:Client"
+                            },
+                            "symbol": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "kavithlokuhewage",
+                                    "moduleName": "fg3",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "VARIABLE"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "\n        covid19:Client covid19Endpoint ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        },
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "        ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 8,
+                        "endLine": 8,
+                        "endColumn": 38
+                    },
+                    "typeData": {
+                        "isEndpoint": true,
+                        "typeSymbol": {
+                            "name": "Client",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Client"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/covid19:0.7.0:Client"
+                        },
+                        "symbol": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "kavithlokuhewage",
+                                "moduleName": "fg3",
+                                "version": "0.1.0"
+                            },
+                            "kind": "VARIABLE"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "equalsToken": {
+                    "kind": "EqualToken",
+                    "isToken": true,
+                    "value": "=",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 39,
+                        "endLine": 8,
+                        "endColumn": 40
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "initializer": {
+                    "kind": "CheckExpression",
+                    "checkKeyword": {
+                        "kind": "CheckKeyword",
+                        "isToken": true,
+                        "value": "check",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 8,
+                            "startColumn": 41,
+                            "endLine": 8,
+                            "endColumn": 46
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "expression": {
+                        "kind": "ImplicitNewExpression",
+                        "newKeyword": {
+                            "kind": "NewKeyword",
+                            "isToken": true,
+                            "value": "new",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 47,
+                                "endLine": 8,
+                                "endColumn": 50
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "parenthesizedArgList": {
+                            "kind": "ParenthesizedArgList",
+                            "openParenToken": {
+                                "kind": "OpenParenToken",
+                                "isToken": true,
+                                "value": "(",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 8,
+                                    "startColumn": 51,
+                                    "endLine": 8,
+                                    "endColumn": 52
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "arguments": [],
+                            "closeParenToken": {
+                                "kind": "CloseParenToken",
+                                "isToken": true,
+                                "value": ")",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 8,
+                                    "startColumn": 52,
+                                    "endLine": 8,
+                                    "endColumn": 53
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "()",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 8,
+                                "startColumn": 51,
+                                "endLine": 8,
+                                "endColumn": 53
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "typeKind": "union",
+                                    "kind": "TYPE",
+                                    "signature": "ballerinax/covid19:0.7.0:Client|error",
+                                    "members": [
+                                        {
+                                            "name": "Client",
+                                            "typeKind": "typeReference",
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "covid19",
+                                                "version": "0.7.0"
+                                            },
+                                            "definition": {
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "ballerinax",
+                                                    "moduleName": "covid19",
+                                                    "version": "0.7.0"
+                                                },
+                                                "kind": "CLASS",
+                                                "typeKind": "object",
+                                                "signature": "Client"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "ballerinax/covid19:0.7.0:Client"
+                                        },
+                                        {
+                                            "typeKind": "error",
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "moduleName": "lang.annotations",
+                                                "version": "1.0.0"
+                                            },
+                                            "detailTypeDescriptor": {
+                                                "typeParam": {
+                                                    "typeKind": "union",
+                                                    "kind": "TYPE",
+                                                    "signature": "Cloneable"
+                                                },
+                                                "typeKind": "map",
+                                                "kind": "TYPE",
+                                                "signature": "map<Cloneable>"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "error"
+                                        }
+                                    ]
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "source": "new ()",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 8,
+                            "startColumn": 47,
+                            "endLine": 8,
+                            "endColumn": 53
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "typeKind": "union",
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:Client|error",
+                                "members": [
+                                    {
+                                        "name": "Client",
+                                        "typeKind": "typeReference",
+                                        "moduleID": {
+                                            "orgName": "ballerinax",
+                                            "moduleName": "covid19",
+                                            "version": "0.7.0"
+                                        },
+                                        "definition": {
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "covid19",
+                                                "version": "0.7.0"
+                                            },
+                                            "kind": "CLASS",
+                                            "typeKind": "object",
+                                            "signature": "Client"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "ballerinax/covid19:0.7.0:Client"
+                                    },
+                                    {
+                                        "typeKind": "error",
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "moduleName": "lang.annotations",
+                                            "version": "1.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "typeParam": {
+                                                "typeKind": "union",
+                                                "kind": "TYPE",
+                                                "signature": "Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "kind": "TYPE",
+                                            "signature": "map<Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "error"
+                                    }
+                                ]
+                            },
+                            "symbol": {
+                                "name": "",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "kavithlokuhewage",
+                                    "moduleName": "fg3",
+                                    "version": "0.1.0"
+                                },
+                                "definition": {
+                                    "readonly": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "kavithlokuhewage",
+                                        "moduleName": "fg3",
+                                        "version": "0.1.0"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "moduleQualifiedName": "fg3:"
+                                },
+                                "kind": "TYPE",
+                                "signature": "kavithlokuhewage/fg3:0.1.0:"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "check new ()",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [],
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 41,
+                        "endLine": 8,
+                        "endColumn": 53
+                    },
+                    "typeData": {
+                        "isEndpoint": true,
+                        "typeSymbol": {
+                            "name": "Client",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "definition": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "kind": "CLASS",
+                                "typeKind": "object",
+                                "signature": "Client"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/covid19:0.7.0:Client"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "semicolonToken": {
+                    "kind": "SemicolonToken",
+                    "isToken": true,
+                    "value": ";",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 53,
+                        "endLine": 8,
+                        "endColumn": 54
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "\n        covid19:Client covid19Endpoint = check new ();\n",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    },
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": "        ",
+                        "isInvalid": false
+                    }
+                ],
+                "trailingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 8,
+                    "startColumn": 8,
+                    "endLine": 8,
+                    "endColumn": 54
+                },
+                "typeData": {
+                    "isEndpoint": true,
+                    "typeSymbol": {
+                        "name": "Client",
+                        "typeKind": "typeReference",
+                        "moduleID": {
+                            "orgName": "ballerinax",
+                            "moduleName": "covid19",
+                            "version": "0.7.0"
+                        },
+                        "definition": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "kind": "CLASS",
+                            "typeKind": "object",
+                            "signature": "Client"
+                        },
+                        "kind": "TYPE",
+                        "signature": "ballerinax/covid19:0.7.0:Client"
+                    },
+                    "symbol": {
+                        "deprecated": false,
+                        "moduleID": {
+                            "orgName": "kavithlokuhewage",
+                            "moduleName": "fg3",
+                            "version": "0.1.0"
+                        },
+                        "kind": "VARIABLE"
+                    },
+                    "diagnostics": []
+                }
+            },
+            {
+                "kind": "LocalVarDecl",
+                "annotations": [],
+                "typedBindingPattern": {
+                    "kind": "TypedBindingPattern",
+                    "typeDescriptor": {
+                        "kind": "QualifiedNameReference",
+                        "modulePrefix": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "covid19",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 8,
+                                "endLine": 9,
+                                "endColumn": 15
+                            },
+                            "leadingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": "        ",
+                                    "isInvalid": false
+                                }
+                            ],
+                            "trailingMinutiae": []
+                        },
+                        "colon": {
+                            "kind": "ColonToken",
+                            "isToken": true,
+                            "value": ":",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 15,
+                                "endLine": 9,
+                                "endColumn": 16
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "identifier": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "CovidCountry",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 16,
+                                "endLine": 9,
+                                "endColumn": 28
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "        covid19:CovidCountry ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": "        ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 8,
+                            "endLine": 9,
+                            "endColumn": 28
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "name": "CovidCountry",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "readonly": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "moduleQualifiedName": "covid19:CovidCountry"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                            },
+                            "symbol": {
+                                "name": "CovidCountry",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "readonly": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "moduleQualifiedName": "covid19:CovidCountry"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "bindingPattern": {
+                        "kind": "CaptureBindingPattern",
+                        "variableName": {
+                            "kind": "IdentifierToken",
+                            "isToken": true,
+                            "value": "getStatusByCountryResponse",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 29,
+                                "endLine": 9,
+                                "endColumn": 55
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [
+                                {
+                                    "kind": "WHITESPACE_MINUTIAE",
+                                    "minutiae": " ",
+                                    "isInvalid": false
+                                }
+                            ]
+                        },
+                        "source": "getStatusByCountryResponse ",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ],
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 29,
+                            "endLine": 9,
+                            "endColumn": 55
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "name": "CovidCountry",
+                                "typeKind": "typeReference",
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "definition": {
+                                    "readonly": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "TYPE_DEFINITION",
+                                    "moduleQualifiedName": "covid19:CovidCountry"
+                                },
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                            },
+                            "symbol": {
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "kavithlokuhewage",
+                                    "moduleName": "fg3",
+                                    "version": "0.1.0"
+                                },
+                                "kind": "VARIABLE"
+                            },
+                            "diagnostics": []
+                        }
+                    },
+                    "source": "        covid19:CovidCountry getStatusByCountryResponse ",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": "        ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ],
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 8,
+                        "endLine": 9,
+                        "endColumn": 55
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "name": "CovidCountry",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "definition": {
+                                "readonly": false,
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "kind": "TYPE_DEFINITION",
+                                "moduleQualifiedName": "covid19:CovidCountry"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                        },
+                        "symbol": {
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "kavithlokuhewage",
+                                "moduleName": "fg3",
+                                "version": "0.1.0"
+                            },
+                            "kind": "VARIABLE"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "equalsToken": {
+                    "kind": "EqualToken",
+                    "isToken": true,
+                    "value": "=",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 56,
+                        "endLine": 9,
+                        "endColumn": 57
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "WHITESPACE_MINUTIAE",
+                            "minutiae": " ",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "initializer": {
+                    "kind": "CheckAction",
+                    "checkKeyword": {
+                        "kind": "CheckKeyword",
+                        "isToken": true,
+                        "value": "check",
+                        "isMissing": false,
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 58,
+                            "endLine": 9,
+                            "endColumn": 63
+                        },
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [
+                            {
+                                "kind": "WHITESPACE_MINUTIAE",
+                                "minutiae": " ",
+                                "isInvalid": false
+                            }
+                        ]
+                    },
+                    "expression": {
+                        "kind": "RemoteMethodCallAction",
+                        "expression": {
+                            "kind": "SimpleNameReference",
+                            "name": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "covid19Endpoint",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 64,
+                                    "endLine": 9,
+                                    "endColumn": 79
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "covid19Endpoint",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 64,
+                                "endLine": 9,
+                                "endColumn": 79
+                            },
+                            "typeData": {
+                                "isEndpoint": true,
+                                "typeSymbol": {
+                                    "name": "Client",
+                                    "typeKind": "typeReference",
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "definition": {
+                                        "deprecated": false,
+                                        "moduleID": {
+                                            "orgName": "ballerinax",
+                                            "moduleName": "covid19",
+                                            "version": "0.7.0"
+                                        },
+                                        "kind": "CLASS",
+                                        "typeKind": "object",
+                                        "signature": "Client"
+                                    },
+                                    "kind": "TYPE",
+                                    "signature": "ballerinax/covid19:0.7.0:Client"
+                                },
+                                "symbol": {
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "kavithlokuhewage",
+                                        "moduleName": "fg3",
+                                        "version": "0.1.0"
+                                    },
+                                    "kind": "VARIABLE"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "rightArrowToken": {
+                            "kind": "RightArrowToken",
+                            "isToken": true,
+                            "value": "->",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 79,
+                                "endLine": 9,
+                                "endColumn": 81
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "methodName": {
+                            "kind": "SimpleNameReference",
+                            "name": {
+                                "kind": "IdentifierToken",
+                                "isToken": true,
+                                "value": "getStatusByCountry",
+                                "isMissing": false,
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 81,
+                                    "endLine": 9,
+                                    "endColumn": 99
+                                },
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": []
+                            },
+                            "source": "getStatusByCountry",
+                            "syntaxDiagnostics": [],
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": [],
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 81,
+                                "endLine": 9,
+                                "endColumn": 99
+                            },
+                            "typeData": {
+                                "typeSymbol": {
+                                    "typeKind": "union",
+                                    "kind": "TYPE",
+                                    "signature": "ballerinax/covid19:0.7.0:CovidCountry|error",
+                                    "members": [
+                                        {
+                                            "name": "CovidCountry",
+                                            "typeKind": "typeReference",
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "covid19",
+                                                "version": "0.7.0"
+                                            },
+                                            "definition": {
+                                                "readonly": false,
+                                                "deprecated": false,
+                                                "moduleID": {
+                                                    "orgName": "ballerinax",
+                                                    "moduleName": "covid19",
+                                                    "version": "0.7.0"
+                                                },
+                                                "kind": "TYPE_DEFINITION",
+                                                "moduleQualifiedName": "covid19:CovidCountry"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                                        },
+                                        {
+                                            "typeKind": "error",
+                                            "moduleID": {
+                                                "orgName": "ballerina",
+                                                "moduleName": "lang.annotations",
+                                                "version": "1.0.0"
+                                            },
+                                            "detailTypeDescriptor": {
+                                                "typeParam": {
+                                                    "typeKind": "union",
+                                                    "kind": "TYPE",
+                                                    "signature": "Cloneable"
+                                                },
+                                                "typeKind": "map",
+                                                "kind": "TYPE",
+                                                "signature": "map<Cloneable>"
+                                            },
+                                            "kind": "TYPE",
+                                            "signature": "error"
+                                        }
+                                    ]
+                                },
+                                "symbol": {
+                                    "external": false,
+                                    "deprecated": false,
+                                    "moduleID": {
+                                        "orgName": "ballerinax",
+                                        "moduleName": "covid19",
+                                        "version": "0.7.0"
+                                    },
+                                    "kind": "METHOD",
+                                    "signature": "isolated remote function getStatusByCountry(string country, string? yesterday, string? twoDaysAgo, string? strict, string? allowNull) returns ballerinax/covid19:0.7.0:CovidCountry|error"
+                                },
+                                "diagnostics": []
+                            }
+                        },
+                        "openParenToken": {
+                            "kind": "OpenParenToken",
+                            "isToken": true,
+                            "value": "(",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 99,
+                                "endLine": 9,
+                                "endColumn": 100
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "arguments": [
+                            {
+                                "kind": "PositionalArg",
+                                "expression": {
+                                    "kind": "StringLiteral",
+                                    "literalToken": {
+                                        "kind": "StringLiteralToken",
+                                        "isToken": true,
+                                        "value": "\"\"",
+                                        "isMissing": false,
+                                        "position": {
+                                            "startLine": 9,
+                                            "startColumn": 100,
+                                            "endLine": 9,
+                                            "endColumn": 102
+                                        },
+                                        "leadingMinutiae": [],
+                                        "trailingMinutiae": []
+                                    },
+                                    "source": "\"\"",
+                                    "syntaxDiagnostics": [],
+                                    "leadingMinutiae": [],
+                                    "trailingMinutiae": [],
+                                    "position": {
+                                        "startLine": 9,
+                                        "startColumn": 100,
+                                        "endLine": 9,
+                                        "endColumn": 102
+                                    },
+                                    "typeData": {
+                                        "typeSymbol": {
+                                            "typeKind": "string",
+                                            "kind": "TYPE",
+                                            "signature": "string"
+                                        },
+                                        "diagnostics": []
+                                    }
+                                },
+                                "source": "\"\"",
+                                "syntaxDiagnostics": [],
+                                "leadingMinutiae": [],
+                                "trailingMinutiae": [],
+                                "position": {
+                                    "startLine": 9,
+                                    "startColumn": 100,
+                                    "endLine": 9,
+                                    "endColumn": 102
+                                },
+                                "typeData": {
+                                    "typeSymbol": {
+                                        "typeKind": "string",
+                                        "kind": "TYPE",
+                                        "signature": "string"
+                                    },
+                                    "diagnostics": []
+                                }
+                            }
+                        ],
+                        "closeParenToken": {
+                            "kind": "CloseParenToken",
+                            "isToken": true,
+                            "value": ")",
+                            "isMissing": false,
+                            "position": {
+                                "startLine": 9,
+                                "startColumn": 102,
+                                "endLine": 9,
+                                "endColumn": 103
+                            },
+                            "leadingMinutiae": [],
+                            "trailingMinutiae": []
+                        },
+                        "source": "covid19Endpoint->getStatusByCountry(\"\")",
+                        "syntaxDiagnostics": [],
+                        "leadingMinutiae": [],
+                        "trailingMinutiae": [],
+                        "position": {
+                            "startLine": 9,
+                            "startColumn": 64,
+                            "endLine": 9,
+                            "endColumn": 103
+                        },
+                        "typeData": {
+                            "typeSymbol": {
+                                "typeKind": "union",
+                                "kind": "TYPE",
+                                "signature": "ballerinax/covid19:0.7.0:CovidCountry|error",
+                                "members": [
+                                    {
+                                        "name": "CovidCountry",
+                                        "typeKind": "typeReference",
+                                        "moduleID": {
+                                            "orgName": "ballerinax",
+                                            "moduleName": "covid19",
+                                            "version": "0.7.0"
+                                        },
+                                        "definition": {
+                                            "readonly": false,
+                                            "deprecated": false,
+                                            "moduleID": {
+                                                "orgName": "ballerinax",
+                                                "moduleName": "covid19",
+                                                "version": "0.7.0"
+                                            },
+                                            "kind": "TYPE_DEFINITION",
+                                            "moduleQualifiedName": "covid19:CovidCountry"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                                    },
+                                    {
+                                        "typeKind": "error",
+                                        "moduleID": {
+                                            "orgName": "ballerina",
+                                            "moduleName": "lang.annotations",
+                                            "version": "1.0.0"
+                                        },
+                                        "detailTypeDescriptor": {
+                                            "typeParam": {
+                                                "typeKind": "union",
+                                                "kind": "TYPE",
+                                                "signature": "Cloneable"
+                                            },
+                                            "typeKind": "map",
+                                            "kind": "TYPE",
+                                            "signature": "map<Cloneable>"
+                                        },
+                                        "kind": "TYPE",
+                                        "signature": "error"
+                                    }
+                                ]
+                            },
+                            "symbol": {
+                                "external": false,
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "kind": "METHOD",
+                                "signature": "isolated remote function getStatusByCountry(string country, string? yesterday, string? twoDaysAgo, string? strict, string? allowNull) returns ballerinax/covid19:0.7.0:CovidCountry|error"
+                            },
+                            "diagnostics": [],
+                            "isEndpoint": true
+                        }
+                    },
+                    "source": "check covid19Endpoint->getStatusByCountry(\"\")",
+                    "syntaxDiagnostics": [],
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [],
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 58,
+                        "endLine": 9,
+                        "endColumn": 103
+                    },
+                    "typeData": {
+                        "typeSymbol": {
+                            "name": "CovidCountry",
+                            "typeKind": "typeReference",
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "definition": {
+                                "readonly": false,
+                                "deprecated": false,
+                                "moduleID": {
+                                    "orgName": "ballerinax",
+                                    "moduleName": "covid19",
+                                    "version": "0.7.0"
+                                },
+                                "kind": "TYPE_DEFINITION",
+                                "moduleQualifiedName": "covid19:CovidCountry"
+                            },
+                            "kind": "TYPE",
+                            "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                        },
+                        "diagnostics": []
+                    }
+                },
+                "semicolonToken": {
+                    "kind": "SemicolonToken",
+                    "isToken": true,
+                    "value": ";",
+                    "isMissing": false,
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 103,
+                        "endLine": 9,
+                        "endColumn": 104
+                    },
+                    "leadingMinutiae": [],
+                    "trailingMinutiae": [
+                        {
+                            "kind": "END_OF_LINE_MINUTIAE",
+                            "minutiae": "\n",
+                            "isInvalid": false
+                        }
+                    ]
+                },
+                "source": "        covid19:CovidCountry getStatusByCountryResponse = check covid19Endpoint->getStatusByCountry(\"\");\n",
+                "syntaxDiagnostics": [],
+                "leadingMinutiae": [
+                    {
+                        "kind": "WHITESPACE_MINUTIAE",
+                        "minutiae": "        ",
+                        "isInvalid": false
+                    }
+                ],
+                "trailingMinutiae": [
+                    {
+                        "kind": "END_OF_LINE_MINUTIAE",
+                        "minutiae": "\n",
+                        "isInvalid": false
+                    }
+                ],
+                "position": {
+                    "startLine": 9,
+                    "startColumn": 8,
+                    "endLine": 9,
+                    "endColumn": 104
+                },
+                "typeData": {
+                    "typeSymbol": {
+                        "name": "CovidCountry",
+                        "typeKind": "typeReference",
+                        "moduleID": {
+                            "orgName": "ballerinax",
+                            "moduleName": "covid19",
+                            "version": "0.7.0"
+                        },
+                        "definition": {
+                            "readonly": false,
+                            "deprecated": false,
+                            "moduleID": {
+                                "orgName": "ballerinax",
+                                "moduleName": "covid19",
+                                "version": "0.7.0"
+                            },
+                            "kind": "TYPE_DEFINITION",
+                            "moduleQualifiedName": "covid19:CovidCountry"
+                        },
+                        "kind": "TYPE",
+                        "signature": "ballerinax/covid19:0.7.0:CovidCountry"
+                    },
+                    "symbol": {
+                        "deprecated": false,
+                        "moduleID": {
+                            "orgName": "kavithlokuhewage",
+                            "moduleName": "fg3",
+                            "version": "0.1.0"
+                        },
+                        "kind": "VARIABLE"
+                    },
+                    "diagnostics": []
+                }
+            }
+        ],
+        "closeBraceToken": {
+            "kind": "CloseBraceToken",
+            "isToken": true,
+            "value": "}",
+            "isMissing": false,
+            "position": {
+                "startLine": 10,
+                "startColumn": 4,
+                "endLine": 10,
+                "endColumn": 5
+            },
+            "leadingMinutiae": [
+                {
+                    "kind": "WHITESPACE_MINUTIAE",
+                    "minutiae": "    ",
+                    "isInvalid": false
+                }
+            ],
+            "trailingMinutiae": [
+                {
+                    "kind": "END_OF_LINE_MINUTIAE",
+                    "minutiae": "\n",
+                    "isInvalid": false
+                }
+            ]
+        },
+        "source": "{\n        openweathermap:Client openweathermapEndpoint = check new ({apiKeys: {\"\": \"\"}});\n\n        covid19:Client covid19Endpoint = check new ();\n        covid19:CovidCountry getStatusByCountryResponse = check covid19Endpoint->getStatusByCountry(\"\");\n    }\n",
+        "syntaxDiagnostics": [],
+        "leadingMinutiae": [],
+        "trailingMinutiae": [
+            {
+                "kind": "END_OF_LINE_MINUTIAE",
+                "minutiae": "\n",
+                "isInvalid": false
+            }
+        ],
+        "position": {
+            "startLine": 5,
+            "startColumn": 63,
+            "endLine": 10,
+            "endColumn": 5
+        },
+        "typeData": {
+            "diagnostics": []
+        },
+        "VisibleEndpoints": [
+            {
+                "name": "caller",
+                "isCaller": true,
+                "typeName": "Caller",
+                "orgName": "ballerina",
+                "moduleName": "http",
+                "isModuleVar": false
+            },
+            {
+                "name": "openweathermapEndpoint",
+                "isCaller": false,
+                "typeName": "Client",
+                "orgName": "ballerinax",
+                "moduleName": "openweathermap",
+                "isModuleVar": false
+            },
+            {
+                "name": "openweathermapEndpoint",
+                "isCaller": false,
+                "typeName": "Client",
+                "orgName": "ballerinax",
+                "moduleName": "openweathermap",
+                "isModuleVar": false
+            },
+            {
+                "name": "covid19Endpoint",
+                "isCaller": false,
+                "typeName": "Client",
+                "orgName": "ballerinax",
+                "moduleName": "covid19",
+                "isModuleVar": false
+            },
+            {
+                "name": "covid19Endpoint",
+                "isCaller": false,
+                "typeName": "Client",
+                "orgName": "ballerinax",
+                "moduleName": "covid19",
+                "isModuleVar": false
+            }
+        ]
+    },
+    "source": "    resource function get .(http:Caller caller) returns error? {\n        openweathermap:Client openweathermapEndpoint = check new ({apiKeys: {\"\": \"\"}});\n\n        covid19:Client covid19Endpoint = check new ();\n        covid19:CovidCountry getStatusByCountryResponse = check covid19Endpoint->getStatusByCountry(\"\");\n    }\n",
+    "syntaxDiagnostics": [],
+    "leadingMinutiae": [
+        {
+            "kind": "WHITESPACE_MINUTIAE",
+            "minutiae": "    ",
+            "isInvalid": false
+        }
+    ],
+    "trailingMinutiae": [
+        {
+            "kind": "END_OF_LINE_MINUTIAE",
+            "minutiae": "\n",
+            "isInvalid": false
+        }
+    ],
+    "position": {
+        "startLine": 5,
+        "startColumn": 4,
+        "endLine": 10,
+        "endColumn": 5
+    },
+    "typeData": {
+        "typeSymbol": {
+            "kind": "TYPE",
+            "typeKind": "function",
+            "signature": "function (ballerina/http:1.1.0-alpha8:Caller caller) returns error?"
+        },
+        "symbol": {
+            "deprecated": false,
+            "moduleID": {
+                "orgName": "kavithlokuhewage",
+                "moduleName": "fg3",
+                "version": "0.1.0"
+            },
+            "kind": "RESOURCE_METHOD",
+            "signature": "isolated resource function get . (ballerina/http:1.1.0-alpha8:Caller caller) returns error?",
+            "external": false
+        },
+        "diagnostics": []
+    }
+}

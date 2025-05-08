@@ -1,0 +1,27 @@
+.dropdown-container {
+    border: 10px solid black;
+}
+
+.swagger-ui .info {
+    margin: 15px 0 !important;
+}
+
+.swagger-ui .info .title {
+    font-size: 28px !important;
+    text-align: center !important;
+}
+
+.swagger-ui .scheme-container {
+    padding: 0 !important;
+}
+
+.swagger-ui .info .title small {
+    border-radius: 57px !important;
+    margin: 0 0 0 5px !important;
+    padding: 0px 6px !important;
+    top: 3px !important;
+}
+
+.swagger-ui .info pre {
+    font-size: 12px !important;
+}

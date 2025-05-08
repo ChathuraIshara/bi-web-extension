@@ -1,0 +1,22 @@
+.view-container {
+    padding: 4px 15px 15px;
+
+    .empty-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        font-size: 16px;
+    }
+}
+
+.overview-action-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px;
+}
+
+.label {
+    margin-right: 5px;
+}
+

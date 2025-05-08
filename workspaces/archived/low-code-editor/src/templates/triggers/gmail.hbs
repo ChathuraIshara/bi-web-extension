@@ -1,0 +1,27 @@
+import ballerina/log;
+import ballerinax/googleapis.gmail as gmail;
+import ballerinax/googleapis.gmail.'listener as gmailListener;
+
+configurable string {{ CLIENT_ID }} = ?;
+configurable string {{ CLIENT_SECRET }} = ?;
+configurable string {{ REFRESH_TOKEN }} = ?;
+
+configurable string project = ?;
+configurable string pushEndpoint = ?;
+
+gmail:GmailConfiguration gmailConfig = {
+    oauthClientConfig: {
+        refreshUrl: gmail:REFRESH_URL,
+        refreshToken: {{ REFRESH_TOKEN }},
+        clientId: {{ CLIENT_ID }},
+        clientSecret: {{ CLIENT_SECRET }}
+    }
+};
+
+listener gmailListener:Listener gmailEventListener = new({{ PORT }}, gmailConfig,  project, pushEndpoint);
+
+service / on gmailEventListener {
+    remote function {{ EVENT }}({{ EVENT_TYPE }} {{ EVENT_VAR}}) returns error? {
+        log:printInfo("event triggered : " , {{ EVENT_VAR}});
+    }   
+}

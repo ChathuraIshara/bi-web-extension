@@ -1,0 +1,67 @@
+{
+  "name": "@wso2-enterprise/ballerina-service-designer",
+  "version": "1.0.0",
+  "description": "Design ballerina services & resources",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "watch": "tsc --pretty --watch",
+    "copy-font": "copyfiles -u 1 node_modules/@wso2-enterprise/font-wso2-vscode/dist/* .storybook/fonts/ && copyfiles -u 1 node_modules/@vscode/codicons/dist/* .storybook/fonts/",
+    "build": "tsc --pretty && npm run copy-font",
+    "storybook": "sb dev --port 6007",
+    "build-storybook": "sb build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.200",
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.10.5",
+    "@vscode/webview-ui-toolkit": "^1.2.0",
+    "@wso2-enterprise/ballerina-core": "workspace:*",
+    "@wso2-enterprise/ballerina-rpc-client": "workspace:*",
+    "@wso2-enterprise/font-wso2-vscode": "workspace:*",
+    "@vscode/codicons": "0.0.33",
+    "@wso2-enterprise/syntax-tree": "workspace:*",
+    "@wso2-enterprise/ui-toolkit": "workspace:*",
+    "@wso2-enterprise/ballerina-side-panel": "workspace:*",
+    "@headlessui/react": "^1.7.15",
+    "handlebars": "^4.7.8",
+    "lodash": "^4.17.21",
+    "monaco-editor": "0.44.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vscode-messenger-common": "^0.4.5",
+    "vscode-messenger-webview": "^0.4.5",
+    "vscode-uri": "^3.0.8"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "~7.4.0",
+    "@storybook/addon-essentials": "~7.4.0",
+    "@storybook/addon-links": "~7.4.0",
+    "@storybook/cli": "^7.6.10",
+    "@storybook/react": "~7.4.0",
+    "@storybook/react-webpack5": "~7.4.0",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.52.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2"
+  },
+  "author": "wso2",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wso2-enterprise/ballerina-plugin-vscode.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

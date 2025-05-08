@@ -1,0 +1,30 @@
+/**
+ * Copyright (c) 2021, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+.statement-wrapper {
+    .statement-name {
+        tspan {
+            fill: #36b475;
+            font-size: 9px;
+            font-family: "Droid Sans Mono";
+        }
+    }
+
+    .statement-text-wrapper {
+        fill: none;
+        stroke: #36b475;
+        stroke-width: 0.75;
+    }
+
+    .dottedText {
+        fill: #36b475;
+        font-size: 9px;
+        font-family: "Droid Sans Mono";
+        letter-spacing: -2px;
+    }
+}

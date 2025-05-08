@@ -1,0 +1,43 @@
+.edit-disable-wrapper {
+    display: flex;
+    padding-left: 1rem;
+    width: 60%;
+
+    .disable-edit-wrapper {
+        width: inherit;
+    }
+
+    .MuiInput-underline::before {
+        border: 0 !important;
+    }
+
+    input.MuiInputBase-input.MuiInput-input.Mui-disabled.Mui-disabled {
+        font-size: 15px;
+        border: 0 !important;
+        padding: 0.125rem 0 0 0;
+        color: #222228;
+    }
+}
+
+.editable-label-wrapper {
+    display: "block";
+}
+
+.edit-input-title {
+    margin-top: 1rem;
+}
+
+.default-input-title {
+    display: flex;
+    margin-top: 1rem;
+
+    .editable-label {
+        margin: 0.65rem 0 0 0;
+    }
+}
+
+.delete-icon {
+    position: relative;
+    top: -33px;
+    right: -92%;
+}

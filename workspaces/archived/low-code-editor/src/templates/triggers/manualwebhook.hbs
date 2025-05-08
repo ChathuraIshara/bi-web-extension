@@ -1,0 +1,7 @@
+import ballerina/http;
+
+service on new http:Listener({{ PORT }}) {
+    resource function {{{ METHODS }}} {{#if RES_PATH}}{{{ RES_PATH }}}{{else}}.{{/if}}(http:Caller caller, http:Request req) returns error? {
+
+    }
+}

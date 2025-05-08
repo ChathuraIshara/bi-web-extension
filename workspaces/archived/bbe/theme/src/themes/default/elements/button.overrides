@@ -1,0 +1,51 @@
+/**
+ * Copyright (c) 2019, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 LLC. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content.
+ */
+
+.ui.button.svg {
+    cursor: pointer;
+    text {
+       fill: @textColor;
+       text-anchor: middle;
+       dominant-baseline: central;
+ 
+       &.icon {
+          font-size: 50%;
+          font-family: @iconFont;
+       }
+    }
+    rect,
+    circle {
+       fill: @background;
+    }
+    &.primary {
+       text {
+          fill: @primaryTextColor;
+          text-shadow: @primaryTextShadow;
+       }
+       rect,
+       circle {
+          fill: @primaryColor;
+       }
+    }
+    &:hover {
+       text {
+          fill: @hoverColor;
+       }
+       rect,
+       circle {
+          fill: @hoverBackgroundColor;
+       }
+       &.primary {
+          rect,
+          circle {
+                fill: @primaryColorHover;
+          }
+       }
+    }
+ }

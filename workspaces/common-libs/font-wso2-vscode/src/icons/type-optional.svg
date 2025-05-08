@@ -1,0 +1,16 @@
+<!--
+ ~   Copyright (c) 2025, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.
+ ~   
+ ~   This software is the property of WSO2 LLC. and its suppliers, if any.
+ ~   Dissemination of any information or reproduction of any material contained
+ ~   herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ ~   You may not alter or remove any copyright or other notice from copies of this content.
+-->
+
+<svg viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+    <path
+        fill="currentColor"
+        d="M 0 30 a 5 5 0 0 0 10 0 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -20 20 h -5 v 25 h 10 v -15 A 30 30 0 0 0 60 30 a 30 30 0 0 0 -60 0 Z"
+    />
+    <circle cx="30" cy="85" r="5" fill="currentColor" />
+</svg>
