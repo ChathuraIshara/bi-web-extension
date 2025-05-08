@@ -8,7 +8,13 @@ To run the web extension, follow these steps:
    rush install
    ```
 
-2. **Start the Web Extension**:
+2. **Build All Packages**:
+   After installing dependencies, build all packages by running the following command:
+   ```bash
+   rush build
+   ```
+
+3. **Start the Web Extension**:
    Use the following command in the ballerina-extension directory to start the web extension in a browser-compatible environment:
    ```bash
    pnpm run start-web
