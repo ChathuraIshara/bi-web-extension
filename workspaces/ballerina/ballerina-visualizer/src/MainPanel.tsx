@@ -157,7 +157,7 @@ const MainPanel = () => {
     const fetchContext = () => {
         setNavActive(true);
         rpcClient.getVisualizerLocation().then((value) => {
-            let defaultFunctionsFile = Utils.joinPath(URI.file(value.projectUri), 'functions.bal').fsPath;
+            let defaultFunctionsFile = "";
             if (value.documentUri) {
                 defaultFunctionsFile = value.documentUri
             }

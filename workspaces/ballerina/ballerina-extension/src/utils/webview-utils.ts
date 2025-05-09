@@ -15,11 +15,13 @@ export const RESOURCES_CDN = `https://choreo-shared-codeserver-cdne.azureedge.ne
 const isDevMode = process.env.WEB_VIEW_WATCH_MODE === "true";
 
 function getWebViewResourceRoot(): string {
+    console.log("getWebViewResourceRoot", (ballerinaExtInstance.context as ExtensionContext).extensionPath);
     return join((ballerinaExtInstance.context as ExtensionContext).extensionPath,
         'resources');
 }
 
 function getNodeModulesRoot(): string {
+    console.log("getNodeModulesRoot", (ballerinaExtInstance.context as ExtensionContext).extensionPath);
     return join((ballerinaExtInstance.context as ExtensionContext).extensionPath,
         'node_modules');
 }
@@ -115,7 +117,7 @@ export function getLibraryWebViewContent(options: WebViewOptions, webView: Webvi
         `;
 }
 
-function getComposerURI(webView: Webview): string {
+function getComposerURI(webView: Webview): string { 
     return getVSCodeResourceURI(join((ballerinaExtInstance.context as ExtensionContext).extensionPath, 'resources',
         'jslibs'), webView);
 }

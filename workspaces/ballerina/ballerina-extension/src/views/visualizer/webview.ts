@@ -91,6 +91,7 @@ export class VisualizerWebview {
     }
 
     public getWebview(): vscode.WebviewPanel | undefined {
+        console.log("going to return this._panel",this._panel);
         return this._panel;
     }
 

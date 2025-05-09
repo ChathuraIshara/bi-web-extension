@@ -35,6 +35,7 @@ import { registerTestManagerRpcHandlers } from './rpc-managers/test-manager/rpc-
 import { registerIcpServiceRpcHandlers } from './rpc-managers/icp-service/rpc-handler';
 import { ballerinaExtInstance } from './core';
 import { registerAgentChatRpcHandlers } from './rpc-managers/agent-chat/rpc-handler';
+import * as vscode from 'vscode';
 
 export class RPCLayer {
     static _messenger: Messenger = new Messenger();
@@ -94,7 +95,9 @@ export class RPCLayer {
 }
 
 async function getContext(): Promise<VisualizerLocation> {
+
     const context = StateMachine.context();
+    console.log("record file path",vscode.Uri.joinPath(vscode.Uri.parse(context.projectUri), "types.bal").path);
     return new Promise((resolve) => {
         resolve({
             documentUri: context.documentUri,
@@ -111,8 +114,8 @@ async function getContext(): Promise<VisualizerLocation> {
             metadata: {
                 isBISupported: context.isBISupported,
                 haveLS: StateMachine.langClient() && true,
-                recordFilePath: path.join(context.projectUri, "types.bal"),
-                enableSequenceDiagram: ballerinaExtInstance.enableSequenceDiagramView(),
+                recordFilePath: vscode.Uri.joinPath(vscode.Uri.parse(context.projectUri), "types.bal").path,
+                enableSequenceDiagram: true,
                 target: context.metadata?.target
             },
             scope: context.scope,
