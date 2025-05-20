@@ -168,7 +168,7 @@ const MainPanel = () => {
                     case MACHINE_VIEW.Overview:
                         setViewComponent(
                             <OverviewBI
-                                projectPath='/home/my-project/Cloud-editor/bal-server-for-web/repos/DharshiBalasubramaniyam/RESTful-API-with-Ballerina'
+                                projectPath={value.projectUri}
                             />
                         );
                         break;
