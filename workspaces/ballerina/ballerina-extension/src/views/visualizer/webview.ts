@@ -83,10 +83,10 @@ export class VisualizerWebview {
             }
         );
         const biExtension = vscode.extensions.getExtension('wso2.ballerina-integrator');
-        panel.iconPath = {
-            light: vscode.Uri.file(path.join(extension.context.extensionPath, 'resources', 'icons', biExtension ? 'light-icon.svg' : 'ballerina.svg')),
-            dark: vscode.Uri.file(path.join(extension.context.extensionPath, 'resources', 'icons', biExtension ? 'dark-icon.svg' : 'ballerina-inverse.svg'))
-        };
+       panel.iconPath = {
+    light: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'light-icon.svg' : 'ballerina.svg'),
+    dark: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'dark-icon.svg' : 'ballerina-inverse.svg')
+};
         return panel;
     }
 
