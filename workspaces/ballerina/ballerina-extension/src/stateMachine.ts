@@ -94,7 +94,8 @@ const stateMachine = createMachine<MachineContext>(
                         target: "activateFS",
                         actions: assign({
                             langClient: (context, event) => event.data.langClient,
-                            isBISupported: (context, event) => event.data.isBISupported
+                            isBISupported: (context, event) => event.data.isBISupported,
+                            
                         })
                     },
                     onError: {
@@ -108,7 +109,7 @@ const stateMachine = createMachine<MachineContext>(
                     onDone: {
                         target: "fetchProjectStructure",
                          actions: assign({
-                            projectUri: (context, event) => getProjectUri("web-bala:/DharshiBalasubramaniyam/RESTful-API-with-Ballerina/main.bal"),
+                            projectUri: (context, event) => getProjectUriForArtifacts()
                         })
                  
                     }
@@ -503,6 +504,16 @@ export const StateMachine = {
         stateService.send({ type: 'RESET_TO_EXTENSION_READY' });
     },
 };
+
+function getProjectUriForArtifacts():string {
+    const workspaceFolders = workspace.workspaceFolders;
+    if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error("No workspace folders found");
+    }
+    const projectUri = workspaceFolders[0].uri.toString();
+    return projectUri;
+}
+
 function getProjectUri(filePath: string) : string {
     console.log("parameter file path",filePath);
     const workspaceFolders = workspace.workspaceFolders;
