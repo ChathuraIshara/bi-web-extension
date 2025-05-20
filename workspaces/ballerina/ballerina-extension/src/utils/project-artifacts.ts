@@ -35,6 +35,7 @@ export async function buildProjectArtifactsStructure(projectDir: string, langCli
         }
     };
     const designArtifacts = await langClient.getProjectArtifacts({ projectPath: projectDir });
+    console.log("before design artifacts");
     console.log("designArtifacts", designArtifacts);
     if (designArtifacts?.artifacts) {
         traverseComponents(designArtifacts.artifacts, result);
@@ -63,6 +64,7 @@ export async function forceUpdateProjectArtifacts() {
         };
         const langClient = StateMachine.context().langClient;
         const projectDir = StateMachine.context().projectUri;
+        console.log("inside force update project artifacts");
         const designArtifacts = await langClient.getProjectArtifacts({ projectPath: projectDir });
         if (designArtifacts?.artifacts) {
             traverseComponents(designArtifacts.artifacts, result);

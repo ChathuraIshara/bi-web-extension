@@ -1,4 +1,3 @@
-
 import { ballerinaExtInstance, ExtendedLangClient } from './core';
 import { createMachine, assign, interpret } from 'xstate';
 import { activateBallerina } from './extension';
@@ -107,7 +106,11 @@ const stateMachine = createMachine<MachineContext>(
                 invoke: {
                     src: 'activateFileSystemProvider',
                     onDone: {
-                        target: "extensionReady",
+                        target: "fetchProjectStructure",
+                         actions: assign({
+                            projectUri: (context, event) => getProjectUri("web-bala:/DharshiBalasubramaniyam/RESTful-API-with-Ballerina/main.bal"),
+                        })
+                 
                     }
                 }
             },
@@ -142,7 +145,8 @@ const stateMachine = createMachine<MachineContext>(
                             serviceType: (context, event) => event.viewLocation.serviceType,
                             type: (context, event) => event.viewLocation?.type,
                             isGraphql: (context, event) => event.viewLocation?.isGraphql,
-                            metadata: (context, event) => event.viewLocation?.metadata
+                            metadata: (context, event) => event.viewLocation?.metadata,
+                            projectUri: (context, event) => getProjectUri(event.viewLocation.documentUri),
                         })
                     }
                 }
@@ -266,6 +270,10 @@ const stateMachine = createMachine<MachineContext>(
                     try {
                         console.log('activating fs');
                         await activateFileSystemProvider();
+                        // Execute the openGithubRepository command after activating FS
+                       const result= await commands.executeCommand('ballerina.openGithubRepository');
+                        await new Promise(resolve => setTimeout(resolve, 2000));
+                        console.log("after delay");
                         resolve(true);
                     } catch (error) {
                         throw new Error("FS Activation failed.");
@@ -290,6 +298,7 @@ const stateMachine = createMachine<MachineContext>(
                         // Register the event driven listener to get the artifact changes
                         context.langClient.registerPublishArtifacts();
                         // Initial Project Structure
+                        console.log("inside register project artifacts structure");
                         const projectStructure = await buildProjectArtifactsStructure(context.projectUri, context.langClient);
                         resolve({ projectStructure });
                     } else {
@@ -494,6 +503,27 @@ export const StateMachine = {
         stateService.send({ type: 'RESET_TO_EXTENSION_READY' });
     },
 };
+function getProjectUri(filePath: string) : string {
+    console.log("parameter file path",filePath);
+    const workspaceFolders = workspace.workspaceFolders;
+    console.log("workspace folders: ", workspaceFolders);
+    if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error("No workspace folders found");
+    }
+    const projectUri = workspaceFolders.find((folder) => {
+        const folderUri = folder.uri.toString();
+        console.log("folder uri: ", folderUri);
+        return filePath?.includes(folderUri) && filePath.startsWith(folderUri);
+    });
+    console.log("finding project uri: ", {
+        "filepath": filePath,
+        "project uri": projectUri
+    });
+    if (!projectUri) {
+        throw new Error(`No matching workspace folder found for the given file path: ${filePath}`);
+    }
+    return projectUri.uri.toString();
+}
 
 export function openView(type: EVENT_TYPE, viewLocation: VisualizerLocation, resetHistory = false) {
     StateMachine.setReadyMode();
@@ -525,6 +555,7 @@ function getLastHistory() {
 }
 
 async function checkForProjects(): Promise<{ isBI: boolean, projectPath: string, scope?: SCOPE }> {
+    console.log("hi this is checkforprojects");
     const workspaceFolders = workspace.workspaceFolders;
 
     if (!workspaceFolders) {

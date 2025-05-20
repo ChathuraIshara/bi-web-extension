@@ -18,7 +18,8 @@ export function activateFileSystemProvider() {
     // Register the command to open a github repository
     ballerinaExtInstance.context.subscriptions.push(vscode.commands.registerCommand('ballerina.openGithubRepository', async () => {
         console.log("openGithubRepository command triggered");
-        const repoUrl = await vscode.window.showInputBox({ placeHolder: 'Enter repository URL' });
+       // const repoUrl = await vscode.window.showInputBox({ placeHolder: 'Enter repository URL' });
+         const repoUrl = "https://github.com/DharshiBalasubramaniyam/RESTful-API-with-Ballerina";
         if (!repoUrl) {
             return;
         }
