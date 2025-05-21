@@ -17,6 +17,7 @@ import { extension } from "../../BalExtensionContext";
 import { StateMachine, updateView } from "../../stateMachine";
 import { LANGUAGE } from "../../core";
 
+
 export class VisualizerWebview {
     public static currentPanel: VisualizerWebview | undefined;
     public static readonly viewType = "ballerina.visualizer";
@@ -67,6 +68,11 @@ export class VisualizerWebview {
     }
 
     public static get webviewTitle(): string {
+        // If running in web mode, always use biTitle
+        if (extension.isWebMode) {
+            return VisualizerWebview.biTitle;
+        }
+        // Otherwise, check for the presence of the BI extension
         const biExtension = vscode.extensions.getExtension('wso2.ballerina-integrator');
         return biExtension ? VisualizerWebview.biTitle : VisualizerWebview.ballerinaTitle;
     }
@@ -82,16 +88,17 @@ export class VisualizerWebview {
                 retainContextWhenHidden: true,
             }
         );
-        const biExtension = vscode.extensions.getExtension('wso2.ballerina-integrator');
-       panel.iconPath = {
-    light: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'light-icon.svg' : 'ballerina.svg'),
-    dark: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'dark-icon.svg' : 'ballerina-inverse.svg')
-};
+        // Use BI icons if in web mode, or if BI extension is present in desktop
+        const useBiIcons = extension.isWebMode || vscode.extensions.getExtension('wso2.ballerina-integrator');
+        panel.iconPath = {
+            light: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', useBiIcons ? 'light-icon.svg' : 'ballerina.svg'),
+            dark: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', useBiIcons ? 'dark-icon.svg' : 'ballerina-inverse.svg')
+        };
         return panel;
     }
 
     public getWebview(): vscode.WebviewPanel | undefined {
-        console.log("going to return this._panel",this._panel);
+        console.log("going to return this._panel", this._panel);
         return this._panel;
     }
 
