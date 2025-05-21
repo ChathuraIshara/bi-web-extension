@@ -242,7 +242,7 @@ function getViewByArtifacts(documentUri: string, position: NodePosition, project
 function findViewByArtifact(dir: ProjectStructureArtifactResponse, position: NodePosition, documentUri: string, projectUri?: string) {
     // In windows the documentUri might contain drive letter
     const driveLetterRegex = /^[a-zA-Z]:/;
-    const normalizedDocumentUri = documentUri.replace(driveLetterRegex, '');
+    const normalizedDocumentUri = documentUri.replace(driveLetterRegex, '').replace(/^web-bala:/, '');
     const normalizedDirPath = dir.path.replace(driveLetterRegex, '');
     const normalizedProjectUri = projectUri?.replace(driveLetterRegex, '');
     if (normalizedDirPath === normalizedDocumentUri && isPositionWithinRange(position, dir.position)) {

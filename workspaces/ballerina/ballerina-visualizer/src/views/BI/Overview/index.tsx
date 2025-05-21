@@ -34,6 +34,7 @@ import { IOpenInConsoleCmdParams, CommandIds as PlatformExtCommandIds } from "@w
 import { AlertBoxWithClose } from "../../AIPanel/AlertBoxWithClose";
 import { findScopeByModule } from "./utils";
 
+
 const SpinnerContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -506,6 +507,7 @@ export function Overview(props: ComponentDiagramProps) {
 
 
     const fetchContext = () => {
+       // StateMachine.context().view= "overview";
         rpcClient
             .getBIDiagramRpcClient()
             .getProjectStructure()
