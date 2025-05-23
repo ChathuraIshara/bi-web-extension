@@ -346,20 +346,22 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
         let position: NodePosition;
         const sortedTextEdits = Object.entries(params.textEdits).sort((a, b) => b[0].length - a[0].length);
         for (const [key, value] of sortedTextEdits) {
-            const fileUri = Uri.file(key);
+            const fileUri = extension.isWebMode
+                ? vscode.Uri.parse(`web-bala:${key}`)
+                : Uri.file(key);
             const fileUriString = fileUri.toString();
-            if (!existsSync(fileUri.fsPath)) {
-                writeFileSync(fileUri.fsPath, '');
-                await new Promise(resolve => setTimeout(resolve, 500)); // Add small delay to ensure file is created
-                await StateMachine.langClient().didOpen({
-                    textDocument: {
-                        uri: fileUriString,
-                        text: '',
-                        languageId: 'ballerina',
-                        version: 1
-                    }
-                });
-            }
+            // if (!existsSync(fileUri.fsPath)) {
+            //     writeFileSync(fileUri.fsPath, '');
+            //     await new Promise(resolve => setTimeout(resolve, 500)); // Add small delay to ensure file is created
+            //     await StateMachine.langClient().didOpen({
+            //         textDocument: {
+            //             uri: fileUriString,
+            //             text: '',
+            //             languageId: 'ballerina',
+            //             version: 1
+            //         }
+            //     });
+            // }
             const edits = value;
 
             if (edits && edits.length > 0) {
@@ -383,7 +385,7 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 if (modificationRequests[fileUriString]) {
                     modificationRequests[fileUriString].modifications.push(...modificationList);
                 } else {
-                    modificationRequests[fileUriString] = { filePath: fileUri.fsPath, modifications: modificationList };
+                    modificationRequests[fileUriString] = { filePath: extension.isWebMode?fileUriString:fileUri.fsPath, modifications: modificationList };
                 }
             }
         }
@@ -397,7 +399,7 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 })) as SyntaxTree;
 
                 if (parseSuccess) {
-                    const fileUri = Uri.file(request.filePath);
+                    const fileUri = extension.isWebMode?vscode.Uri.parse(request.filePath):Uri.file(request.filePath);
                     const workspaceEdit = new vscode.WorkspaceEdit();
                     workspaceEdit.replace(
                         fileUri,

@@ -19,9 +19,10 @@ export function activateFileSystemProvider() {
     ballerinaExtInstance.context.subscriptions.push(vscode.commands.registerCommand('ballerina.openGithubRepository', async () => {
         console.log("openGithubRepository command triggered");
        // const repoUrl = await vscode.window.showInputBox({ placeHolder: 'Enter repository URL' });
-         const repoUrl = "https://github.com/ChathuraIshara/ballerina-rest-api-demo";
+        // const repoUrl = "https://github.com/ChathuraIshara/ballerina-rest-api-demo";
+         const repoUrl= "https://github.com/ChathuraIshara/post-intergration";
         if (!repoUrl) {
-            return;
+            return; 
         }
         const repoInfo = extractGitHubRepoInfo(repoUrl);
         if (!repoInfo) {
