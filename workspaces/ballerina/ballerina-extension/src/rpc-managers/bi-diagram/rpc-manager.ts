@@ -219,7 +219,9 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
             flowNode: flowNode as FlowNode
         });
         for (const [key, value] of Object.entries(params.textEdits)) {
-            const fileUri = Uri.file(key);
+             const fileUri = extension.isWebMode
+                ? vscode.Uri.parse(`web-bala:${key}`)
+                : Uri.file(key);
             const fileUriString = fileUri.toString();
             const edits = value;
 
@@ -244,7 +246,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                 if (modificationRequests[fileUriString]) {
                     modificationRequests[fileUriString].modifications.push(...modificationList);
                 } else {
-                    modificationRequests[fileUriString] = { filePath: fileUri.fsPath, modifications: modificationList };
+                    modificationRequests[fileUriString] = { filePath: extension.isWebMode?fileUriString:fileUri.fsPath, modifications: modificationList };
                 }
             }
         }
@@ -258,7 +260,9 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                 })) as SyntaxTree;
 
                 if (parseSuccess) {
-                    const fileUri = Uri.file(request.filePath);
+                   const fileUri = extension.isWebMode
+                ? vscode.Uri.parse(request.filePath)
+                : Uri.file(request.filePath);
                     const workspaceEdit = new vscode.WorkspaceEdit();
                     workspaceEdit.replace(
                         fileUri,
@@ -360,11 +364,11 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         params.forceAssign = true; // TODO: remove this
 
         // Check if the file exists
-        if (!fs.existsSync(params.filePath)) {
-            // Create the file if it does not exist
-            fs.writeFileSync(params.filePath, "");
-            console.log(`>>> Created file at ${params.filePath}`);
-        }
+        // if (!fs.existsSync(params.filePath)) {
+        //     // Create the file if it does not exist
+        //     fs.writeFileSync(params.filePath, "");
+        //     console.log(`>>> Created file at ${params.filePath}`);
+        // }
 
         return new Promise((resolve) => {
             StateMachine.langClient()
@@ -1011,7 +1015,9 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
     async formDidOpen(params: FormDidOpenParams): Promise<void> {
         return new Promise(async (resolve, reject) => {
             const { filePath } = params;
-            const fileUri = Uri.file(filePath);
+            const fileUri = extension.isWebMode
+                ? vscode.Uri.parse(`web-bala:${filePath}`)
+                : Uri.file(filePath);
             const exprFileSchema = fileUri.with({ scheme: 'expr' });
 
             let languageId: string;
