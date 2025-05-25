@@ -1287,7 +1287,9 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         StateMachine.setTempData({
             identifier: params.newName
         });
-        const fileUri = Uri.file(filePath).toString();
+        const fileUri = extension.isWebMode
+                ? vscode.Uri.parse(filePath).toString()
+                : Uri.file(filePath).toString();
         const request: RenameRequest = {
             textDocument: {
                 uri: fileUri
@@ -1329,7 +1331,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                         if (modificationRequests[fileUri]) {
                             modificationRequests[fileUri].modifications.push(...modificationList);
                         } else {
-                            modificationRequests[fileUri] = { filePath: Uri.parse(fileUri).fsPath, modifications: modificationList };
+                            modificationRequests[fileUri] = { filePath: extension.isWebMode?fileUri:Uri.parse(fileUri).fsPath, modifications: modificationList };
                         }
                     }
                 }
@@ -1342,7 +1344,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                         })) as SyntaxTree;
 
                         if (parseSuccess) {
-                            const fileUri = Uri.file(request.filePath);
+                            const fileUri = extension.isWebMode?Uri.parse(request.filePath):Uri.file(request.filePath);
                             const workspaceEdit = new vscode.WorkspaceEdit();
                             workspaceEdit.replace(
                                 fileUri,
