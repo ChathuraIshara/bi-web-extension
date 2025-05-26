@@ -633,12 +633,15 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         return new Promise(async (resolve) => {
             const req: UpdateConfigVariableRequest = params;
 
-            if (!fs.existsSync(params.configFilePath)) {
+            if (!extension.isWebMode) {
+                if (!fs.existsSync(params.configFilePath)) {
 
-                // Create config.bal if it doesn't exist
-                writeBallerinaFileDidOpen(params.configFilePath, "\n");
+                    // Create config.bal if it doesn't exist
+                    writeBallerinaFileDidOpen(params.configFilePath, "\n");
+                }
+
             }
-
+            //config update request is not sent to ls
             const response = await StateMachine.langClient().updateConfigVariables(req) as BISourceCodeResponse;
             await this.updateSource(response, undefined, false);
             resolve(response);
