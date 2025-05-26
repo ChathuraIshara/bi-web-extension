@@ -219,7 +219,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
             flowNode: flowNode as FlowNode
         });
         for (const [key, value] of Object.entries(params.textEdits)) {
-             const fileUri = extension.isWebMode
+            const fileUri = extension.isWebMode
                 ? vscode.Uri.parse(`web-bala:${key}`)
                 : Uri.file(key);
             const fileUriString = fileUri.toString();
@@ -246,7 +246,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                 if (modificationRequests[fileUriString]) {
                     modificationRequests[fileUriString].modifications.push(...modificationList);
                 } else {
-                    modificationRequests[fileUriString] = { filePath: extension.isWebMode?fileUriString:fileUri.fsPath, modifications: modificationList };
+                    modificationRequests[fileUriString] = { filePath: extension.isWebMode ? fileUriString : fileUri.fsPath, modifications: modificationList };
                 }
             }
         }
@@ -260,9 +260,9 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                 })) as SyntaxTree;
 
                 if (parseSuccess) {
-                   const fileUri = extension.isWebMode
-                ? vscode.Uri.parse(request.filePath)
-                : Uri.file(request.filePath);
+                    const fileUri = extension.isWebMode
+                        ? vscode.Uri.parse(request.filePath)
+                        : Uri.file(request.filePath);
                     const workspaceEdit = new vscode.WorkspaceEdit();
                     workspaceEdit.replace(
                         fileUri,
@@ -562,7 +562,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         console.log(">>> requesting bi delete node from ls", params);
         // Clean project diagnostics before deleting flow node
         await cleanAndValidateProject(StateMachine.langClient(), StateMachine.context().projectUri);
-        
+
         return new Promise((resolve) => {
             StateMachine.langClient()
                 .deleteFlowNode(params)
@@ -1288,8 +1288,8 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
             identifier: params.newName
         });
         const fileUri = extension.isWebMode
-                ? vscode.Uri.parse(filePath).toString()
-                : Uri.file(filePath).toString();
+            ? vscode.Uri.parse(filePath).toString()
+            : Uri.file(filePath).toString();
         const request: RenameRequest = {
             textDocument: {
                 uri: fileUri
@@ -1331,7 +1331,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                         if (modificationRequests[fileUri]) {
                             modificationRequests[fileUri].modifications.push(...modificationList);
                         } else {
-                            modificationRequests[fileUri] = { filePath: extension.isWebMode?fileUri:Uri.parse(fileUri).fsPath, modifications: modificationList };
+                            modificationRequests[fileUri] = { filePath: extension.isWebMode ? fileUri : Uri.parse(fileUri).fsPath, modifications: modificationList };
                         }
                     }
                 }
@@ -1344,7 +1344,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
                         })) as SyntaxTree;
 
                         if (parseSuccess) {
-                            const fileUri = extension.isWebMode?Uri.parse(request.filePath):Uri.file(request.filePath);
+                            const fileUri = extension.isWebMode ? Uri.parse(request.filePath) : Uri.file(request.filePath);
                             const workspaceEdit = new vscode.WorkspaceEdit();
                             workspaceEdit.replace(
                                 fileUri,
@@ -1658,18 +1658,49 @@ export async function fetchWithToken(url: string, options: RequestInit) {
 
 export async function getBallerinaFiles(dir: string): Promise<string[]> {
     let files: string[] = [];
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
 
-    for (const entry of entries) {
-        const entryPath = path.join(dir, entry.name);
-        if (entry.isDirectory()) {
-            files = files.concat(await getBallerinaFiles(entryPath));
-        } else if (entry.isFile() && entry.name.endsWith(".bal")) {
-            files.push(entryPath);
+    if (extension.isWebMode) {
+        const workspaceFolders = vscode.workspace.workspaceFolders;
+        if (!workspaceFolders || workspaceFolders.length === 0) {
+            console.error("No workspace folder is open.");
+            return files;
+        }
+
+        const rootUri = workspaceFolders[0].uri;
+        const entries = await vscode.workspace.fs.readDirectory(rootUri);
+
+        for (const [name, type] of entries) {
+            if (name === '.git' || name === '.vscode') { continue; }
+
+            const entryPath = `${rootUri}/${name}`;
+            if (type === vscode.FileType.Directory) {
+                const subFiles = await getBallerinaFiles(entryPath);
+                files.push(...subFiles);
+            } else if (type === vscode.FileType.File && name.endsWith('.bal')) {
+                files.push(entryPath);
+            }
+        }
+
+    } else {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+        for (const entry of entries) {
+            if (entry.name === '.git' || entry.name === '.vscode') { continue; }
+
+            const entryPath = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+                const subFiles = await getBallerinaFiles(entryPath);
+                files.push(...subFiles);
+            } else if (entry.isFile() && entry.name.endsWith('.bal')) {
+                files.push(entryPath);
+            }
         }
     }
+
     return files;
 }
+
+
 
 export async function extractImports(content: string, filePath: string): Promise<ImportStatements> {
     const withoutSingleLineComments = content.replace(/\/\/.*$/gm, "");
