@@ -157,8 +157,20 @@ const MainPanel = () => {
     const fetchContext = () => {
         setNavActive(true);
         rpcClient.getVisualizerLocation().then((value) => {
-            let defaultFunctionsFile = "";
-            if (value.documentUri) {
+            //need to check isWeb is false in desktop mode
+            const isWeb = typeof window !== 'undefined' && window.location.protocol.startsWith('http');
+            let defaultFunctionsFile: string;
+            if (isWeb) {
+                // Use web-bala scheme for web
+                defaultFunctionsFile = URI.parse(`${value.projectUri}/functions.bal`).toString();
+                if (value.documentUri) {
+                    const parsedUri = URI.parse(value.documentUri);
+                    value.documentUri = parsedUri.with({ scheme: 'web-bala' }).toString();
+                }
+            } else {
+                // Use file scheme for desktop
+                defaultFunctionsFile = Utils.joinPath(URI.file(value.projectUri), 'functions.bal').fsPath;
+            } if (value.documentUri) {
                 defaultFunctionsFile = value.documentUri
             }
             if (!value?.view) {

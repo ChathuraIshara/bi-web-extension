@@ -247,8 +247,8 @@ export const useDMMetaData = (langServerRpcClient: LangClientRpcClient): {
 } => {
     const fetchDMMetaData = async () => {
         try {
-            const ballerinaVersion = (await langServerRpcClient.getBallerinaVersion()).version;
-            const dMSupported = isDMSupported(ballerinaVersion);
+            const ballerinaVersion = "2201.12.4 ";
+            const dMSupported = isDMSupported(ballerinaVersion); 
             const dMUnsupportedMessage = `The current ballerina version ${ballerinaVersion.replace(
                 "(swan lake)", "").trim()
             } does not support the Data Mapper feature. Please update your Ballerina versions to 2201.1.2, 2201.2.1, or higher version.`;

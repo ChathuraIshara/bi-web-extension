@@ -16,12 +16,13 @@ import {
     NodePosition,
     traversNode
 } from "@wso2-enterprise/syntax-tree";
-
 import { IDataMapperContext } from "../../../utils/DataMapperContext/DataMapperContext";
 import { isPositionsEquals } from "../../../utils/st-utils";
 import { FnDefPositions, TypeFindingVisitor } from "../visitors/TypeFindingVisitor";
 import { LangClientRpcClient } from "@wso2-enterprise/ballerina-rpc-client";
 import { URI } from "vscode-uri";
+
+
 
 export enum TypeStoreStatus {
     Init,
@@ -69,8 +70,14 @@ export class TypeDescriptorStore {
         const symbolNodesPositions = visitor.getSymbolNodesPositions();
 
         const noOfTypes = this.getNoOfTypes(visitor.getNoOfParams(), expressionNodesRanges.length, symbolNodesPositions.length);
-        const fileUri = URI.file(context.currentFile.path).toString();
-
+        let fileUri: string;
+        //need to check isWebMode is false in desktop mode
+        const isWebMode = typeof window !== 'undefined' && typeof window.document !== 'undefined';
+        if (typeof isWebMode !== 'undefined' && isWebMode) {
+            fileUri = URI.parse(context.currentFile.path).toString();
+        } else {
+            fileUri = URI.file(context.currentFile.path).toString();
+        }
         const promises = [
             await this.setTypesForFnParamsAndReturnType(fileUri, fnDefPositions, langServerRpcClient),
             await this.setTypesForSymbol(fileUri, symbolNodesPositions, langServerRpcClient),
