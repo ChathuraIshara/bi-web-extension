@@ -16,7 +16,7 @@ import {
     LibraryDataResponse,
     LibrarySearchResponse
 } from "@wso2-enterprise/ballerina-core";
-import { getAllResources, getLibrariesList, getLibraryData } from "../../features/library-browser";
+import { getAllResources, getLibrariesList, getLibraryData } from "../../web-activators/library-browser";
 
 export class LibraryBrowserRpcManager implements LibraryBrowserAPI {
     async getLibrariesList(params: LibrariesListRequest): Promise<LibrariesListResponse> {
@@ -28,6 +28,7 @@ export class LibraryBrowserRpcManager implements LibraryBrowserAPI {
     }
 
     async getLibraryData(params: LibraryDataRequest): Promise<LibraryDataResponse> {
+         console.log("getting libaray data..");
         return getLibraryData(params.orgName, params.moduleName, params.version);
     }
 }
