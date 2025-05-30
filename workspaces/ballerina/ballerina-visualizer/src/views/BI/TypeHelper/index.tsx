@@ -77,7 +77,7 @@ const TypeHelperEl = (props: TypeHelperProps) => {
     const [loading, setLoading] = useState<boolean>(false);
     const [loadingTypeBrowser, setLoadingTypeBrowser] = useState<boolean>(false);
 
-    const [basicTypes, setBasicTypes] = useState<TypeHelperCategory[] | undefined>(undefined);
+    const [basicTypes, setBasicTypes] = useState<TypeHelperCategory[]>([]);
     const [importedTypes, setImportedTypes] = useState<TypeHelperCategory[] | undefined>(undefined);
     const [filteredBasicTypes, setFilteredBasicTypes] = useState<TypeHelperCategory[]>([]);
     const [filteredOperators, setFilteredOperators] = useState<TypeHelperOperator[]>([]);
@@ -85,7 +85,7 @@ const TypeHelperEl = (props: TypeHelperProps) => {
 
     const debouncedSearchTypeHelper = useCallback(
         debounce((searchText: string, isType: boolean) => {
-            if (isType && basicTypes === undefined) {
+            if (isType && basicTypes.length === 0) {
                 if (rpcClient) {
                     rpcClient
                         .getBIDiagramRpcClient()
