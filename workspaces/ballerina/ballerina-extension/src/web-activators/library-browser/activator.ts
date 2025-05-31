@@ -120,24 +120,28 @@ export async function fetchAndCacheLibraryData() {
         const langLibs = await getLibrariesList(LibraryKind.langLib);
         if (langLibs && langLibs.librariesList.length > 0) {
             cachedLibrariesList.set(LANG_LIB_LIST_CACHE, langLibs);
+            console.log("Cached lang lib list successfully.",cachedLibrariesList.get(LANG_LIB_LIST_CACHE));
         }
 
         // Cache the std lib list
         const stdLibs = await getLibrariesList(LibraryKind.stdLib);
         if (stdLibs && stdLibs.librariesList.length > 0) {
             cachedLibrariesList.set(STD_LIB_LIST_CACHE, stdLibs);
+            console.log("Cached std lib list successfully.",cachedLibrariesList.get(STD_LIB_LIST_CACHE));
         }
 
         // Cache the distribution lib list
         const distLibs = await getLibrariesList();
         if (distLibs && distLibs.librariesList.length > 0) {
             cachedLibrariesList.set(DIST_LIB_LIST_CACHE, distLibs);
+            console.log("Cached distribution lib list successfully.",cachedLibrariesList.get(DIST_LIB_LIST_CACHE));
         }
 
         // Cache the library search data
         const searchData = await getAllResources();
         if (searchData && searchData.modules.length > 0) {
             cachedSearchList.set(LIBRARY_SEARCH_CACHE, searchData);
+            console.log("Cached library search data successfully.", cachedSearchList.get(LIBRARY_SEARCH_CACHE));    
         }
 
         console.log("Library data caching completed successfully!");
