@@ -67,6 +67,7 @@ export const EXTENSION_ID = 'wso2.ballerina';
 const PREV_EXTENSION_ID = 'ballerina.ballerina';
 export enum LANGUAGE {
     BALLERINA = 'ballerina',
+    BAL_TOML = 'Ballerina.toml',
     TOML = 'toml'
 }
 

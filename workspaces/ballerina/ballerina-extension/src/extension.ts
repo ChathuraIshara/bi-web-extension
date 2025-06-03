@@ -20,6 +20,7 @@ import { activate as activateProjectFeatures } from './features/project';
 import { activate as activateEditorSupport } from './features/editor-support';
 import { activate as activateTesting } from './features/testing/activator';
 import { activate as activateBITesting } from './features/test-explorer/activator';
+import { activateEditorSupport as activateWebEditorSupport } from './web-activators/editer-support/activator';
 import { StaticFeature, DocumentSelector, ServerCapabilities, InitializeParams, FeatureState } from 'vscode-languageclient';
 import { ExtendedLangClient } from './core/extended-language-client';
 import { activate as activateNotebook } from './views/notebook';
@@ -106,6 +107,7 @@ export async function activate(context: ExtensionContext) {
     RPCLayer.init();
     // Wait for the ballerina extension to be ready
     await StateMachine.initialize();
+  
     // Then return the ballerina extension context
     return { ballerinaExtInstance, projectPath: StateMachine.context().projectUri };
 }
@@ -130,8 +132,13 @@ export async function activateBallerina(): Promise<BallerinaExtension> {
         activateDebugConfigProvider(ballerinaExtInstance);
 
         // Activate editor support
-        activateEditorSupport(ballerinaExtInstance);
-
+        if(extension.isWebMode)
+        {
+           activateWebEditorSupport(ballerinaExtInstance);
+        }
+        else{
+            activateEditorSupport(ballerinaExtInstance);
+        }
         // <------------ MAIN FEATURES ----------->
         // Enable Ballerina by examples
         activateBBE(ballerinaExtInstance);
