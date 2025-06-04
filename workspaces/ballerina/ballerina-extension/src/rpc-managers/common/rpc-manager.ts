@@ -88,7 +88,7 @@ export class CommonRpcManager implements CommonRPCAPI {
     async getBallerinaDiagnostics(params: BallerinaDiagnosticsRequest): Promise<BallerinaDiagnosticsResponse> {
         return new Promise(async (resolve) => {
             // Get the current working document Uri
-            const documentUri = URI.file(StateMachine.context().documentUri).toString();
+            const documentUri = Uri.parse(StateMachine.context().documentUri).toString();
 
             const fullST = await StateMachine.langClient().getSyntaxTree({
                 documentIdentifier: { uri: documentUri }

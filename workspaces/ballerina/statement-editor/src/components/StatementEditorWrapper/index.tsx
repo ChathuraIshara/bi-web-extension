@@ -150,7 +150,7 @@ export function StatementEditorWrapper(props: StatementEditorWrapperProps) {
             };
 
             const fullST = await langServerRpcClient.getST({
-                documentIdentifier: { uri: URI.file(currentFile.path).toString() }
+                documentIdentifier: { uri: URI.parse(currentFile.path).toString() }
             });
             setFullSource(fullST.syntaxTree.source);
 

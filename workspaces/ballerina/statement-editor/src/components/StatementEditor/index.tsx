@@ -120,7 +120,7 @@ export function StatementEditor(props: StatementEditorProps) {
         updateEditor
     } = editorManager;
 
-    const fileURI = URI.file(currentFile.path).toString();
+    const fileURI = URI.parse(currentFile.path).toString();
     const initSymbolInfo : DocumentationInfo = {
         modelPosition: null,
         documentation: {}

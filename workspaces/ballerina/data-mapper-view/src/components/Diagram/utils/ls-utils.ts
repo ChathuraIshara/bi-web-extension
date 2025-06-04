@@ -35,7 +35,7 @@ export async function getDiagnostics(docUri: string, langServerRpcClient: LangCl
 
 export const handleDiagnostics = async (fileURI: string, langServerRpcClient: LangClientRpcClient):
     Promise<Diagnostic[]> => {
-    const diagResp = await getDiagnostics(URI.file(fileURI).toString(), langServerRpcClient);
+    const diagResp = await getDiagnostics(URI.parse(fileURI).toString(), langServerRpcClient);
     const diag = diagResp[0]?.diagnostics ? diagResp[0].diagnostics : [];
     return diag;
 }
@@ -104,7 +104,7 @@ export async function getRenameEdits(fileURI: string,
     langServerRpcClient: LangClientRpcClient): Promise<WorkspaceEdit> {
 
     const renameEdits = await langServerRpcClient.rename({
-        textDocument: { uri: URI.file(fileURI).toString() },
+        textDocument: { uri: URI.parse(fileURI).toString() },
         position: {
             line: position.startLine,
             character: position?.startColumn
@@ -120,7 +120,7 @@ export const handleCodeActions = async (fileURI: string,
     let codeActions: CodeAction[] = []
 
     for (const diagnostic of diagnostics) {
-        const codeAction = await getCodeAction(URI.file(fileURI).toString(), diagnostic, langServerRpcClient)
+        const codeAction = await getCodeAction(URI.parse(fileURI).toString(), diagnostic, langServerRpcClient)
         codeActions = [...codeActions, ...codeAction]
     }
     return codeActions;
@@ -200,7 +200,7 @@ export async function getTypesForExpressions(fileURI: string,
     : Promise<ResolvedTypeForExpression[]> {
     const typesFromExpression = await langServerRpcClient.getTypeFromExpression({
         documentIdentifier: {
-            uri: URI.file(fileURI).toString()
+            uri: URI.parse(fileURI).toString()
         },
         expressionRanges: expressionNodesRanges
     });
@@ -215,7 +215,7 @@ export async function getDefinitionPosition(fileURI: string,
     const definitionPosition = await langServerRpcClient.getDefinitionPosition(
         {
             textDocument: {
-                uri: URI.file(fileURI).toString()
+                uri: URI.parse(fileURI).toString()
             },
             position: {
                 line: position.line,
