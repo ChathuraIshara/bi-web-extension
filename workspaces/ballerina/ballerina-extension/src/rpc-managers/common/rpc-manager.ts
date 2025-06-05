@@ -39,6 +39,7 @@ import { StateMachine } from "../../stateMachine";
 import { goToSource } from "../../utils";
 import { askFilePath, askProjectPath, BALLERINA_INTEGRATOR_ISSUES_URL, getUpdatedSource } from "./utils";
 import path from 'path';
+import {extension} from "../../BalExtensionContext"
 
 export class CommonRpcManager implements CommonRPCAPI {
     async getTypeCompletions(): Promise<TypeResponse> {
@@ -88,7 +89,7 @@ export class CommonRpcManager implements CommonRPCAPI {
     async getBallerinaDiagnostics(params: BallerinaDiagnosticsRequest): Promise<BallerinaDiagnosticsResponse> {
         return new Promise(async (resolve) => {
             // Get the current working document Uri
-            const documentUri = Uri.parse(StateMachine.context().documentUri).toString();
+            const documentUri = extension.isWebMode?Uri.parse(StateMachine.context().documentUri).toString():URI.file(StateMachine.context().documentUri).toString();
 
             const fullST = await StateMachine.langClient().getSyntaxTree({
                 documentIdentifier: { uri: documentUri }
