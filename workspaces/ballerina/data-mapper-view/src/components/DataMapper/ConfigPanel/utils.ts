@@ -289,6 +289,10 @@ export async function getDiagnosticsForFnName(name: string,
     return getSelectedDiagnostics(diagnostics, diagTargetPosition, 0, name.length);
 }
 
+export function isWebMode(): boolean {
+    return typeof window !== "undefined" && !!(window as any).vscodeWebExtension;
+}
+
 export async function getDefaultFnName(
     filePath: string,
     targetPosition: NodePosition,
@@ -296,7 +300,7 @@ export async function getDefaultFnName(
 ): Promise<string> {
     const completionParams: CompletionParams = {
         textDocument: {
-            uri: URI.parse(filePath).toString()
+            uri:isWebMode? URI.parse(filePath).toString():URI.file(filePath).toString()
         },
         position: {
             character: targetPosition.endColumn,
@@ -325,7 +329,7 @@ async function getVirtualDiagnostics(filePath: string,
                                      currentFileContent: string,
                                      newContent: string,
                                      langServerRpcClient: LangClientRpcClient): Promise<Diagnostic[]> {
-    const docUri = URI.parse(filePath).toString();
+    const docUri =isWebMode? URI.parse(filePath).toString():URI.file(filePath).toString();
     langServerRpcClient.didChange({
         contentChanges: [
             {
