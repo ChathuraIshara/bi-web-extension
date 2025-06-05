@@ -52,6 +52,7 @@ import { URI } from "vscode-uri";
 import { ballerinaExtInstance } from "../../core";
 import { StateMachine } from "../../stateMachine";
 import { modifyFileContent } from "../../utils/modification";
+import {extension} from "../../BalExtensionContext";
 
 export class LangClientRpcManager implements LangClientAPI {
     
@@ -59,7 +60,7 @@ export class LangClientRpcManager implements LangClientAPI {
         return new Promise(async (resolve) => {
             const context = StateMachine.context();
             const req: BallerinaSTParams = {
-                documentIdentifier: { uri: Uri.parse(context.documentUri).toString() },
+                documentIdentifier: { uri: extension.isWebMode?Uri.parse(context.documentUri).toString():URI.file(context.documentUri).toString()},
                 lineRange: {
                     start: {
                         line: context.position.startLine,
