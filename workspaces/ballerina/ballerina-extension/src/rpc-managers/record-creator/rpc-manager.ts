@@ -19,6 +19,7 @@ import {
 import { StateMachine } from "../../stateMachine";
 import path from "path";
 import { Uri } from "vscode";
+import { extension } from "../../BalExtensionContext";
 
 export class RecordCreatorRpcManager implements RecordCreatorAPI {
     async convertJsonToRecord(params: JsonToRecordParams): Promise<JsonToRecord> {
@@ -36,8 +37,11 @@ export class RecordCreatorRpcManager implements RecordCreatorAPI {
     }
 
     async convertJsonToRecordType(params: JsonToRecordParams): Promise<TypeDataWithReferences> {
-        const projectUri = Uri.parse(StateMachine.context().projectUri);
-        const filePathUri = Uri.joinPath(projectUri, 'types.bal').toString();
+        const context = StateMachine.context();
+        const projectUri = context.projectUri;
+        const filePathUri = extension.isWebMode
+            ? Uri.joinPath(Uri.parse(projectUri), 'types.bal').toString()
+            : path.join(projectUri, 'types.bal');
         return new Promise(async (resolve) => {
             const response = await StateMachine.langClient().convertJsonToRecordType({
                 ...params,
