@@ -39,7 +39,7 @@ import { StateMachine } from "../../stateMachine";
 import { goToSource } from "../../utils";
 import { askFilePath, askProjectPath, BALLERINA_INTEGRATOR_ISSUES_URL, getUpdatedSource } from "./utils";
 import path from 'path';
-import {extension} from "../../BalExtensionContext"
+import {extension} from "../../BalExtensionContext";
 
 export class CommonRpcManager implements CommonRPCAPI {
     async getTypeCompletions(): Promise<TypeResponse> {

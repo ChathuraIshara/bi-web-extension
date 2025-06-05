@@ -22,6 +22,7 @@ import { URI } from "vscode-uri";
 import { CompletionResponseWithModule } from "../../DataMapper/ConfigPanel/TypeBrowser";
 import { EXPR_SCHEME, FILE_SCHEME } from "../../DataMapper/ConfigPanel/utils";
 import { LangClientRpcClient } from "@wso2-enterprise/ballerina-rpc-client";
+import { isWebMode } from "../../DataMapper/ConfigPanel/utils";
 
 export async function getDiagnostics(docUri: string, langServerRpcClient: LangClientRpcClient): Promise<DiagnosticData[]> {
     const diagnostics = await langServerRpcClient.getDiagnostics({
@@ -35,7 +36,7 @@ export async function getDiagnostics(docUri: string, langServerRpcClient: LangCl
 
 export const handleDiagnostics = async (fileURI: string, langServerRpcClient: LangClientRpcClient):
     Promise<Diagnostic[]> => {
-    const diagResp = await getDiagnostics(URI.parse(fileURI).toString(), langServerRpcClient);
+    const diagResp = await getDiagnostics(isWebMode?URI.parse(fileURI).toString():URI.file(fileURI).toString(), langServerRpcClient);
     const diag = diagResp[0]?.diagnostics ? diagResp[0].diagnostics : [];
     return diag;
 }
@@ -104,7 +105,7 @@ export async function getRenameEdits(fileURI: string,
     langServerRpcClient: LangClientRpcClient): Promise<WorkspaceEdit> {
 
     const renameEdits = await langServerRpcClient.rename({
-        textDocument: { uri: URI.parse(fileURI).toString() },
+        textDocument: { uri: isWebMode?URI.parse(fileURI).toString():URI.file(fileURI).toString() },
         position: {
             line: position.startLine,
             character: position?.startColumn
@@ -120,7 +121,7 @@ export const handleCodeActions = async (fileURI: string,
     let codeActions: CodeAction[] = []
 
     for (const diagnostic of diagnostics) {
-        const codeAction = await getCodeAction(URI.parse(fileURI).toString(), diagnostic, langServerRpcClient)
+        const codeAction = await getCodeAction(isWebMode?URI.parse(fileURI).toString():URI.file(fileURI).toString(), diagnostic, langServerRpcClient)
         codeActions = [...codeActions, ...codeAction]
     }
     return codeActions;
@@ -200,7 +201,7 @@ export async function getTypesForExpressions(fileURI: string,
     : Promise<ResolvedTypeForExpression[]> {
     const typesFromExpression = await langServerRpcClient.getTypeFromExpression({
         documentIdentifier: {
-            uri: URI.parse(fileURI).toString()
+            uri:isWebMode?URI.parse(fileURI).toString():URI.file(fileURI).toString()
         },
         expressionRanges: expressionNodesRanges
     });
@@ -215,7 +216,7 @@ export async function getDefinitionPosition(fileURI: string,
     const definitionPosition = await langServerRpcClient.getDefinitionPosition(
         {
             textDocument: {
-                uri: URI.parse(fileURI).toString()
+                uri: isWebMode?URI.parse(fileURI).toString(): URI.file(fileURI).toString()
             },
             position: {
                 line: position.line,

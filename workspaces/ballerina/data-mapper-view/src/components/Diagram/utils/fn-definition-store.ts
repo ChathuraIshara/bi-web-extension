@@ -18,6 +18,7 @@ import { IDataMapperContext } from "../../../utils/DataMapperContext/DataMapperC
 import { getFnDefsForFnCalls } from "../../../utils/st-utils";
 import { FunctionCallFindingVisitor } from "../visitors/FunctionCallFindingVisitor";
 import { LangClientRpcClient } from "@wso2-enterprise/ballerina-rpc-client";
+import { isWebMode } from "../../DataMapper/ConfigPanel/utils";
 
 export interface FnDefInfo {
     fnCallPosition: LinePosition;
@@ -49,7 +50,7 @@ export class FunctionDefinitionStore {
         langServerRpcClient: LangClientRpcClient) {
 
         this.fnDefinitions.clear();
-        const fileUri = URI.parse(context.currentFile.path).toString();
+        const fileUri = isWebMode?URI.parse(context.currentFile.path).toString():URI.file(context.currentFile.path).toString();
         const visitor = new FunctionCallFindingVisitor();
         traversNode(stNode, visitor);
 
