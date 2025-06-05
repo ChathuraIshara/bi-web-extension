@@ -86,8 +86,10 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
         return new Promise(async (resolve) => {
             const context = StateMachine.context();
             try {
-                const projectDir =Uri.parse(StateMachine.context().projectUri);
-                const targetFile = Uri.joinPath(projectDir, `main.bal`).toString();
+                const projectDir = context.projectUri;
+                const targetFile = extension.isWebMode
+                    ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                    : path.join(projectDir, 'main.bal');
                 this.ensureFileExists(targetFile);
                 params.filePath = targetFile;
                 const res: ListenersResponse = await context.langClient.getListeners(params);
@@ -152,8 +154,10 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
         return new Promise(async (resolve) => {
             const context = StateMachine.context();
             try {
-                const projectDir = Uri.parse((StateMachine.context().projectUri));
-                const targetFile = Uri.joinPath(projectDir, `main.bal`).toString();
+                const projectDir = context.projectUri;
+                const targetFile = extension.isWebMode
+                    ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                    : path.join(projectDir, 'main.bal');
                 this.ensureFileExists(targetFile);
                 params.filePath = targetFile;
                 const res: ListenerSourceCodeResponse = await context.langClient.updateListenerSourceCode(params);
@@ -173,8 +177,10 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
         return new Promise(async (resolve) => {
             const context = StateMachine.context();
             try {
-                const projectDir = Uri.parse(StateMachine.context().projectUri);
-                const targetFile = Uri.joinPath(projectDir, `main.bal`).toString();
+                const projectDir = context.projectUri;
+                const targetFile = extension.isWebMode
+                    ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                    : path.join(projectDir, 'main.bal');
                 this.ensureFileExists(targetFile);
                 params.filePath = targetFile;
                 const res: ServiceModelResponse = await context.langClient.getServiceModel(params);
@@ -194,8 +200,10 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
             });
             const context = StateMachine.context();
             try {
-                const projectDir = Uri.parse((StateMachine.context().projectUri));
-                const targetFile = Uri.joinPath(projectDir, `main.bal`).toString();
+                const projectDir = context.projectUri;
+                const targetFile = extension.isWebMode
+                    ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                    : path.join(projectDir, 'main.bal');
                 this.ensureFileExists(targetFile);
                 params.filePath = targetFile;
                 const identifiers = [];
@@ -238,8 +246,10 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 serviceModel: params.service
             });
             try {
-                const projectDir = Uri.parse((StateMachine.context().projectUri));
-                const targetFile =Uri.joinPath(projectDir, `main.bal`).toString();
+                const projectDir = context.projectUri;
+                const targetFile = extension.isWebMode
+                    ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                    : path.join(projectDir, 'main.bal');
                 this.ensureFileExists(targetFile);
                 params.filePath = targetFile;
                 const identifiers = [];
@@ -293,9 +303,11 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 serviceModel: params.service
             });
             try {
-                const projectDir = Uri.parse((StateMachine.context().projectUri));
+                const projectDir = context.projectUri;
                 if (!params.filePath) {
-                    const targetFile = Uri.joinPath(projectDir, `main.bal`).toString();
+                    const targetFile = extension.isWebMode
+                        ? Uri.joinPath(Uri.parse(projectDir), 'main.bal').toString()
+                        : path.join(projectDir, 'main.bal');
                     this.ensureFileExists(targetFile);
                     params.filePath = targetFile;
                 }
@@ -385,7 +397,7 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 if (modificationRequests[fileUriString]) {
                     modificationRequests[fileUriString].modifications.push(...modificationList);
                 } else {
-                    modificationRequests[fileUriString] = { filePath: extension.isWebMode?fileUriString:fileUri.fsPath, modifications: modificationList };
+                    modificationRequests[fileUriString] = { filePath: extension.isWebMode ? fileUriString : fileUri.fsPath, modifications: modificationList };
                 }
             }
         }
@@ -399,7 +411,7 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 })) as SyntaxTree;
 
                 if (parseSuccess) {
-                    const fileUri = extension.isWebMode?vscode.Uri.parse(request.filePath):Uri.file(request.filePath);
+                    const fileUri = extension.isWebMode ? vscode.Uri.parse(request.filePath) : Uri.file(request.filePath);
                     const workspaceEdit = new vscode.WorkspaceEdit();
                     workspaceEdit.replace(
                         fileUri,
