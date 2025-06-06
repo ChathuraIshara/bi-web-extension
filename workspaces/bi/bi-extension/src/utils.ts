@@ -35,6 +35,7 @@ export function fetchProjectInfo(): ProjectInfo {
     // Check each workspace folder's configuration for 'isBI'
     for (const uri of workspaceUris) {
         const isBallerina = checkIsBallerina(uri);
+        console.log("isBallerina", isBallerina, uri);
         if (isBallerina) {
             isBalCount++;
             if (checkIsBI(uri)) {
@@ -68,6 +69,9 @@ export function checkIsBI(uri: Uri): boolean {
 
 export function checkIsBallerina(uri: Uri): boolean {
     console.log("Checking if the workspace is a Ballerina project at:", uri);
-    const ballerinaTomlPath = path.join(uri.fsPath, 'Ballerina.toml');
-    return fs.existsSync(ballerinaTomlPath);
+    const ballerinaTomlPath = isWebMode?Uri.joinPath(uri,'Ballerina.toml'):path.join(uri.fsPath, 'Ballerina.toml');
+    console.log("Ballerina.toml path:", ballerinaTomlPath);
+    return fs.existsSync(ballerinaTomlPath.toString());
 }
+
+

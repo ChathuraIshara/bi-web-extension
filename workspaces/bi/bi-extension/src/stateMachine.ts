@@ -75,5 +75,6 @@ export const StateMachine = {
 };
 
 async function findProjectInfo(): Promise<ProjectInfo> {
+    console.log("Fetching project info...");
     return fetchProjectInfo();
 };
