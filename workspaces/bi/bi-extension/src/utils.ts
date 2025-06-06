@@ -11,6 +11,7 @@ import { Uri, Webview, workspace } from "vscode";
 import * as fs from 'fs';
 import * as path from 'path';
 import { extension } from "./biExtentionContext";
+import { isWebMode } from "./project-explorer/activate";
 
 export interface ProjectInfo {
     isBI: boolean;
@@ -27,6 +28,7 @@ export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) 
 
 export function fetchProjectInfo(): ProjectInfo {
     const workspaceUris = workspace.workspaceFolders ? workspace.workspaceFolders.map(folder => folder.uri) : [];
+    console.log("workspace uris",workspaceUris);
     let isBICount = 0; // Counter for workspaces with isBI set to true
     let isBalCount = 0; // Counter for workspaces with Ballerina project
 
@@ -65,6 +67,7 @@ export function checkIsBI(uri: Uri): boolean {
 }
 
 export function checkIsBallerina(uri: Uri): boolean {
+    console.log("Checking if the workspace is a Ballerina project at:", uri);
     const ballerinaTomlPath = path.join(uri.fsPath, 'Ballerina.toml');
     return fs.existsSync(ballerinaTomlPath);
 }

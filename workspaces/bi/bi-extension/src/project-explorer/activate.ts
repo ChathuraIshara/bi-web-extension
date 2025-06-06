@@ -19,6 +19,10 @@ interface ExplorerActivationConfig {
 	isMultiRoot?: boolean;
 }
 
+export function isWebMode():boolean{
+	return typeof window !== "undefined" && !!(window as any).vscodeWebExtension;
+}
+
 export function activateProjectExplorer(config: ExplorerActivationConfig) {
 	const { context, isBI, isBallerina, isMultiRoot } = config;
 
@@ -69,15 +73,15 @@ async function handleVisibilityChange(res: { visible: boolean }, dataProvider: P
 }
 
 function handleNonBallerinaVisibility() {
-	if (extension.langClient) {
-		if (!extension.biSupported) {
-			commands.executeCommand('setContext', 'BI.status', 'updateNeed');
-		} else {
-			commands.executeCommand('setContext', 'BI.status', 'unknownProject');
-		}
-	} else {
-		commands.executeCommand('setContext', 'BI.status', 'noLS');
-	}
+	// if (extension.langClient) {
+	// 	if (!extension.biSupported) {
+	// 		commands.executeCommand('setContext', 'BI.status', 'updateNeed');
+	// 	} else {
+	// 		commands.executeCommand('setContext', 'BI.status', 'unknownProject');
+	// 	}
+	// } else {
+	// 	commands.executeCommand('setContext', 'BI.status', 'noLS');
+	// }
 	commands.executeCommand(SHARED_COMMANDS.OPEN_BI_WELCOME);
 }
 

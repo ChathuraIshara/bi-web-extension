@@ -11,8 +11,9 @@ import * as vscode from 'vscode';
 import { extension } from './biExtentionContext';
 import { StateMachine } from './stateMachine';
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
 	const ballerinaExt = vscode.extensions.getExtension('wso2.ballerina');
+	console.log('Ballerina Integrator extension activated',ballerinaExt);
 	if (ballerinaExt) {
 		extension.context = context;
 		extension.langClient = ballerinaExt.exports.ballerinaExtInstance.langClient;

@@ -373,6 +373,9 @@ importers:
       toml:
         specifier: ^3.0.0
         version: 3.0.0
+      uuid:
+        specifier: ^11.1.0
+        version: 11.1.0
       vscode-debugadapter:
         specifier: ^1.51.0
         version: 1.51.0
@@ -440,9 +443,18 @@ importers:
       adm-zip:
         specifier: ^0.5.16
         version: 0.5.16
+      assert:
+        specifier: ^2.0.0
+        version: 2.1.0
       axios:
         specifier: ^1.6.0
         version: 1.7.3
+      browserify-zlib:
+        specifier: ^0.2.0
+        version: 0.2.0
+      buffer:
+        specifier: ^6.0.3
+        version: 6.0.3
       chai:
         specifier: ^4.3.10
         version: 4.5.0
@@ -455,6 +467,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      crypto-browserify:
+        specifier: ^3.12.0
+        version: 3.12.0
       decache:
         specifier: ^4.6.2
         version: 4.6.2
@@ -464,6 +479,9 @@ importers:
       express:
         specifier: ^4.18.2
         version: 4.19.2(supports-color@5.5.0)
+      https-browserify:
+        specifier: ^1.0.0
+        version: 1.0.0
       istanbul:
         specifier: ^0.4.5
         version: 0.4.5
@@ -485,9 +503,15 @@ importers:
       node-loader:
         specifier: ^2.1.0
         version: 2.1.0(webpack@5.93.0)
+      os-browserify:
+        specifier: ^0.3.0
+        version: 0.3.0
       pako:
         specifier: ^2.1.0
         version: 2.1.0
+      path-browserify:
+        specifier: ^1.0.1
+        version: 1.0.1
       pkce-challenge:
         specifier: ^3.1.0
         version: 3.1.0
@@ -500,6 +524,9 @@ importers:
       stream-browserify:
         specifier: ^3.0.0
         version: 3.0.0
+      stream-http:
+        specifier: ^3.2.0
+        version: 3.2.0
       tcp-port-used:
         specifier: ^1.0.2
         version: 1.0.2
@@ -515,6 +542,9 @@ importers:
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
+      url:
+        specifier: ^0.11.0
+        version: 0.11.4
       util:
         specifier: ^0.12.5
         version: 0.12.5
@@ -526,7 +556,7 @@ importers:
         version: 5.10.0(mocha@10.7.0)(typescript@4.9.5)
       webpack:
         specifier: ^5.89.0
-        version: 5.93.0(webpack-cli@5.1.4)
+        version: 5.93.0(webpack-cli@4.10.0)
       webpack-cli:
         specifier: ^4.10.0
         version: 4.10.0(webpack@5.93.0)
@@ -2609,6 +2639,15 @@ importers:
       '@wso2-enterprise/font-wso2-vscode':
         specifier: workspace:*
         version: link:../../common-libs/font-wso2-vscode
+      buffer:
+        specifier: ^6.0.3
+        version: 6.0.3
+      process:
+        specifier: ~0.11.10
+        version: 0.11.10
+      stream-browserify:
+        specifier: ^3.0.0
+        version: 3.0.0
       xstate:
         specifier: ^4.38.3
         version: 4.38.3
@@ -23865,7 +23904,7 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       webpack: 5.93.0(webpack-cli@4.10.0)
-      webpack-cli: 4.10.0(webpack-dev-server@4.15.2)(webpack@5.93.0)
+      webpack-cli: 4.10.0(webpack@5.93.0)
 
   /@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.88.2):
     resolution: {integrity: sha512-wy0mglZpDSiSS0XHrVR+BAdId2+yxPSoJW8fsna3ZpYSlufjvxnP4YbKTCBZnNIcGN4r6ZPXV55X4mYExOfLmw==}
@@ -23893,7 +23932,7 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       envinfo: 7.13.0
-      webpack-cli: 4.10.0(webpack-dev-server@4.15.2)(webpack@5.93.0)
+      webpack-cli: 4.10.0(webpack@5.93.0)
 
   /@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.88.2):
     resolution: {integrity: sha512-zLHQdI/Qs1UyT5UBdWNqsARasIA+AaF8t+4u2aS2nEpBQh2mWIVb8qAklq0eUENnC5mOItrIB4LiS9xMtph18A==}
@@ -23925,7 +23964,6 @@ packages:
         optional: true
     dependencies:
       webpack-cli: 4.10.0(webpack@5.93.0)
-    dev: true
 
   /@webpack-cli/serve@1.7.0(webpack-cli@4.10.0)(webpack-dev-server@4.15.2):
     resolution: {integrity: sha512-oxnCNGj88fL+xzV+dacXs44HcDwf1ovs3AuEzvP7mqXw7fQntqIhQ1BRmynh4qEKQSSSRSWVyXRjmTbZIX9V2Q==}
@@ -40656,7 +40694,7 @@ packages:
       webpack: ^5.0.0
     dependencies:
       loader-utils: 2.0.4
-      webpack: 5.93.0(webpack-cli@5.1.4)
+      webpack: 5.93.0(webpack-cli@4.10.0)
     dev: true
 
   /node-notifier@5.4.5:
@@ -47558,7 +47596,6 @@ packages:
     dependencies:
       inherits: 2.0.4
       readable-stream: 3.6.2
-    dev: true
 
   /stream-each@1.2.3:
     resolution: {integrity: sha512-vlMC2f8I2u/bZGqkdfLQW/13Zihpej/7PmSiMQsbYddxuTsJp8vRe2x2FvVExZg7FaOds43ROAuFJwPR4MTZLw==}
@@ -47574,6 +47611,15 @@ packages:
       inherits: 2.0.4
       readable-stream: 2.3.8
       to-arraybuffer: 1.0.1
+      xtend: 4.0.2
+    dev: true
+
+  /stream-http@3.2.0:
+    resolution: {integrity: sha512-Oq1bLqisTyK3TSCXpPbT4sdeYNdmyZJv1LxpEm2vu1ZhK89kSE5YXwZc3cWk0MagGaKriBh9mCFbVGtO+vY29A==}
+    dependencies:
+      builtin-status-codes: 3.0.0
+      inherits: 2.0.4
+      readable-stream: 3.6.2
       xtend: 4.0.2
     dev: true
 
@@ -50933,6 +50979,11 @@ packages:
     deprecated: Package no longer supported and required. Use the uuid package or crypto.randomUUID instead
     dev: true
 
+  /uuid@11.1.0:
+    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
+    hasBin: true
+    dev: false
+
   /uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
@@ -51610,7 +51661,6 @@ packages:
       rechoir: 0.7.1
       webpack: 5.93.0(webpack-cli@4.10.0)
       webpack-merge: 5.10.0
-    dev: true
 
   /webpack-cli@5.1.4(webpack-dev-server@4.15.2)(webpack@5.88.2):
     resolution: {integrity: sha512-pIDJHIEI9LR0yxHXQ+Qh95k2EvXpWzZ5l+d+jIo+RdSm9MiHfzazIxwwni/p7+x4eJZuvG1AJwgC4TNQ7NRgsg==}
@@ -52387,7 +52437,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.10(webpack@5.93.0)
       watchpack: 2.4.1
-      webpack-cli: 4.10.0(webpack-dev-server@4.15.2)(webpack@5.93.0)
+      webpack-cli: 4.10.0(webpack@5.93.0)
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'

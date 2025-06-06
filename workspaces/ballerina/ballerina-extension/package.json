@@ -1070,6 +1070,7 @@
     },
     "main": "./dist/extension",
     "browser": "./dist/web/extension.js",
+    "extensionKind": ["workspace"],
     "scripts": {
         "clean": "del-cli ./dist ./out ./ballerina-*.vsix ./coverage ./.nyc_output",
         "compile": "webpack --mode production",
