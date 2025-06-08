@@ -12,6 +12,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { extension } from "./biExtentionContext";
 import { isWebMode } from "./project-explorer/activate";
+import * as vscode from 'vscode';
 
 export interface ProjectInfo {
     isBI: boolean;
@@ -26,15 +27,15 @@ export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) 
     return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
 }
 
-export function fetchProjectInfo(): ProjectInfo {
+export async function fetchProjectInfo(): Promise<ProjectInfo> {
     const workspaceUris = workspace.workspaceFolders ? workspace.workspaceFolders.map(folder => folder.uri) : [];
-    console.log("workspace uris",workspaceUris);
+    console.log("workspace uris", workspaceUris);
     let isBICount = 0; // Counter for workspaces with isBI set to true
     let isBalCount = 0; // Counter for workspaces with Ballerina project
 
     // Check each workspace folder's configuration for 'isBI'
     for (const uri of workspaceUris) {
-        const isBallerina = checkIsBallerina(uri);
+        const isBallerina = await checkIsBallerina(uri);
         console.log("isBallerina", isBallerina, uri);
         if (isBallerina) {
             isBalCount++;
@@ -54,7 +55,13 @@ export function fetchProjectInfo(): ProjectInfo {
 export function checkIsBI(uri: Uri): boolean {
     const config = workspace.getConfiguration('ballerina', uri);
     const inspected = config.inspect<boolean>('isBI');
+    //manually true the biSupported value only for webmode
+    if(extension.isWebMode)
+    {
+      extension.biSupported = true;
+    }
     const isBISupported = extension.biSupported;
+    
 
     if (inspected && isBISupported) { // Added a check to see if the current version of ballerina supports bi
         const valuesToCheck = [
@@ -67,11 +74,52 @@ export function checkIsBI(uri: Uri): boolean {
     return false; // Return false if isBI is not set
 }
 
-export function checkIsBallerina(uri: Uri): boolean {
+export async function checkIsBallerina(uri: Uri): Promise<boolean> {
+     
     console.log("Checking if the workspace is a Ballerina project at:", uri);
-    const ballerinaTomlPath = isWebMode?Uri.joinPath(uri,'Ballerina.toml'):path.join(uri.fsPath, 'Ballerina.toml');
-    console.log("Ballerina.toml path:", ballerinaTomlPath);
-    return fs.existsSync(ballerinaTomlPath.toString());
+    const ballerinaTomlPath = extension.isWebMode ? Uri.joinPath(uri, 'Ballerina.toml') : path.join(uri.fsPath, 'Ballerina.toml');
+    if (extension.isWebMode) {
+        return await listDirectoryContents(Uri.parse(uri.toString()), Uri.parse(ballerinaTomlPath.toString()));
+    } else {
+        return fs.existsSync(ballerinaTomlPath.toString());
+    }
 }
+
+export function checkBallerinTomlPath(tomlUri:string):boolean{
+    const workspaceUris = workspace.workspaceFolders ? workspace.workspaceFolders.map(folder => folder.uri) : [];
+      for (const uri of workspaceUris) {
+          console.log("uri in workspace",uri);
+          if(uri.toString()==tomlUri)
+          {
+            return true;
+          }
+        }
+      return false;
+}
+
+
+
+export async function listDirectoryContents(Baseuri: vscode.Uri,targetUri:vscode.Uri): Promise<boolean> {
+  try {
+    // Read directory entries (files + folders)
+    const entries = await vscode.workspace.fs.readDirectory(Baseuri);
+    const targetUriString = Uri.parse(targetUri.toString());
+
+    for (const [name, type] of entries) {
+      const fullPath = vscode.Uri.joinPath(Baseuri, name).toString();
+      if(targetUriString.toString() === fullPath) {
+        return true;
+      }
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error reading ${Baseuri.toString()}:`, error);
+  }
+}
+
+
+
+
+
 
 

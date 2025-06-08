@@ -484,6 +484,9 @@ function startMachine(): Promise<void> {
             if (state.value === "extensionReady") {
                 resolve();
             }
+             if (state.matches('lsError')) {
+                reject(new Error("Language server initialization failed"));
+            }
         });
     });
 }

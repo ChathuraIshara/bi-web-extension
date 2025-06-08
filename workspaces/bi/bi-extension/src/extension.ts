@@ -13,20 +13,26 @@ import { StateMachine } from './stateMachine';
 
 export async function activate(context: vscode.ExtensionContext) {
 	const ballerinaExt = vscode.extensions.getExtension('wso2.ballerina');
-	console.log('Ballerina Integrator extension activated',ballerinaExt);
-	if (ballerinaExt) {
-		await ballerinaExt.activate(); 
+	console.log('Ballerina Integrator extension activated');
+	try {
+		await ballerinaExt.activate();
+		if (ballerinaExt.exports.ballerinaExtInstance) {
+			extension.context = context;
+			extension.langClient = ballerinaExt.exports.ballerinaExtInstance.langClient;
+			extension.biSupported = ballerinaExt.exports.ballerinaExtInstance.biSupported;
+			extension.isNPSupported = ballerinaExt.exports.ballerinaExtInstance.isNPSupported;
+			extension.projectPath = ballerinaExt.exports.projectPath;
+			extension.isWebMode = ballerinaExt.exports.isWebMode;
+
+			await StateMachine.initialize();
+
+		} else {
+			console.log('ballerinaExtInstance is undefined/falsy');
+		}
+	} catch (error) {
+		console.error('Activation failed:', error);
+		vscode.window.showErrorMessage(`Activation failed: ${error instanceof Error ? error.message : String(error)}`);
 	}
-	if (ballerinaExt) {
-		extension.context = context;
-		extension.langClient = ballerinaExt.exports.ballerinaExtInstance.langClient;
-		extension.biSupported = ballerinaExt.exports.ballerinaExtInstance.biSupported;
-		extension.isNPSupported = ballerinaExt.exports.ballerinaExtInstance.isNPSupported;
-		extension.projectPath = ballerinaExt.exports.projectPath;
-		StateMachine.initialize();
-		return;
-	}
-	vscode.window.showErrorMessage('Ballerina extension is required to operate Ballerina Integrator extension effectively. Please install it from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=wso2.ballerina).');
 }
 
 export function deactivate() { }

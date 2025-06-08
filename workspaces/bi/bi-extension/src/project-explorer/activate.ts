@@ -9,7 +9,7 @@
 import { SHARED_COMMANDS, BI_COMMANDS } from '@wso2-enterprise/ballerina-core';
 
 import { ProjectExplorerEntry, ProjectExplorerEntryProvider } from './project-explorer-provider';
-import { ExtensionContext, TreeView, commands, window, workspace } from 'vscode';
+import { ExtensionContext, TreeView, commands, window, workspace,env,UIKind } from 'vscode';
 import { extension } from '../biExtentionContext';
 
 interface ExplorerActivationConfig {
@@ -19,8 +19,14 @@ interface ExplorerActivationConfig {
 	isMultiRoot?: boolean;
 }
 
-export function isWebMode():boolean{
-	return typeof window !== "undefined" && !!(window as any).vscodeWebExtension;
+export function isWebMode(): boolean {
+    try {
+        return env.uiKind === UIKind.Web;
+    } catch (error) {
+        // Fallback for cases where vscode API isn't available
+        console.debug('Failed to check UI kind:', error);
+        return false;
+    }
 }
 
 export function activateProjectExplorer(config: ExplorerActivationConfig) {
@@ -74,6 +80,7 @@ async function handleVisibilityChange(res: { visible: boolean }, dataProvider: P
 
 function handleNonBallerinaVisibility() {
 	if (extension.langClient) {
+		console.log("inside non ballerina visibility",extension.langClient);
 		if (!extension.biSupported) {
 			commands.executeCommand('setContext', 'BI.status', 'updateNeed');
 		} else {

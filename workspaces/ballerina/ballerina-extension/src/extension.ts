@@ -100,16 +100,25 @@ function onBeforeInit(langClient: ExtendedLangClient) {
 
 export async function activate(context: ExtensionContext) {
     extension.context = context;
-   // console.log('extension path',ballerinaExtInstance.context.extensionPath);
+    extension.isWebMode = env.uiKind === UIKind.Web ? true : false;
+    console.log("is webmode in ballerina extension", extension.isWebMode);
     
-    extension.isWebMode = env.uiKind === UIKind.Web?true:false; // Indicates if the extension is running in web mode
     // Init RPC Layer methods
     RPCLayer.init();
+    
     // Wait for the ballerina extension to be ready
-    await StateMachine.initialize();
-  
-    // Then return the ballerina extension context
-    return { ballerinaExtInstance, projectPath: StateMachine.context().projectUri };
+    try {
+        await StateMachine.initialize();
+        console.log('ballerinaExtInstance', ballerinaExtInstance, 'context', StateMachine.context());
+        return { 
+            ballerinaExtInstance, 
+            projectPath: StateMachine.context().projectUri,
+            isWebMode: extension.isWebMode,
+        };
+    } catch (error) {
+        console.error('Failed to initialize state machine:', error);
+        throw error;
+    }
 }
 
 export async function activateBallerina(): Promise<BallerinaExtension> {
