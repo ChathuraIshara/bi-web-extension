@@ -31,6 +31,7 @@ export function isWebMode(): boolean {
 
 export function activateProjectExplorer(config: ExplorerActivationConfig) {
 	const { context, isBI, isBallerina, isMultiRoot } = config;
+	console.log('inside activateProjectExplorer', isBI, isBallerina, isMultiRoot);	
 
 	if (extension.langClient && extension.biSupported) {
 		setLoadingStatus();
@@ -38,6 +39,8 @@ export function activateProjectExplorer(config: ExplorerActivationConfig) {
 
 	const projectExplorerDataProvider = new ProjectExplorerEntryProvider();
 	const projectTree = createProjectTree(projectExplorerDataProvider);
+	console.log('Project Explorer Data Provider created:', projectExplorerDataProvider);
+	console.log('Project  Tree created:', projectTree);
 
 	if (isBallerina) {
 		registerBallerinaCommands(projectExplorerDataProvider, isBI, isMultiRoot);

@@ -20,6 +20,7 @@
     ],
     "main": "./out/extension",
     "browser": "./dist/web/extension.js",
+    "enabledApiProposals": ["treeViewActiveItem"],
     "contributes": {
         "viewsContainers": {
             "activitybar": [
