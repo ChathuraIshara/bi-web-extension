@@ -518,6 +518,9 @@ function getProjectUriForArtifacts():string {
 }
 
 function getProjectUri(filePath: string) : string {
+    if(extension.isWebMode && !filePath.startsWith('web-bala:')) {
+        filePath= `web-bala:${filePath}`;
+    }
     console.log("parameter file path",filePath);
     const workspaceFolders = workspace.workspaceFolders;
     console.log("workspace folders: ", workspaceFolders);

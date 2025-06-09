@@ -35,13 +35,22 @@ export class ProjectExplorerEntry extends vscode.TreeItem {
     ) {
         super(label, collapsibleState);
         this.tooltip = `${this.label}`;
-        this.info = info;
+        if (extension.isWebMode) {
+            if (!info) {
+                this.info = null;
+            } else {
+                this.info = info.startsWith('web-bala:') ? info : `web-bala:${info}`;
+            }
+        }
+        else{
+            this.info = info;
+        }
         if (icon && isCodicon) {
             this.iconPath = new vscode.ThemeIcon(icon);
         } else if (icon) {
             this.iconPath = {
-                light: path.join(extension.context.extensionPath, 'assets', `light-${icon}.svg`),
-                dark: path.join(extension.context.extensionPath, 'assets', `dark-${icon}.svg`)
+                light: extension.isWebMode?vscode.Uri.joinPath(extension.context.extensionUri, 'assets', `light-${icon}.svg`):path.join(extension.context.extensionPath, 'assets', `light-${icon}.svg`),
+                dark: extension.isWebMode?vscode.Uri.joinPath(extension.context.extensionUri, 'assets', `dark-${icon}.svg`):path.join(extension.context.extensionPath, 'assets', `dark-${icon}.svg`)
             };
         }
     }
@@ -125,14 +134,13 @@ async function getProjectStructureData(): Promise<ProjectExplorerEntry[]> {
         const data: ProjectExplorerEntry[] = [];
         if (extension.langClient && extension.projectPath) {
             let workspace;
-            if(extension.isWebMode)
-            {
+            if (extension.isWebMode) {
                 workspace = vscode
-                .workspace
-                .workspaceFolders
-                .find(folder => Uri.parse(folder.uri.toString()).toString() === extension.projectPath);
+                    .workspace
+                    .workspaceFolders
+                    .find(folder => Uri.parse(folder.uri.toString()).toString() === extension.projectPath);
             }
-            else{
+            else {
                 workspace = vscode
                     .workspace
                     .workspaceFolders
@@ -159,7 +167,7 @@ async function getProjectStructureData(): Promise<ProjectExplorerEntry[]> {
 }
 
 function generateTreeData(project: vscode.WorkspaceFolder, components: ProjectStructureResponse): ProjectExplorerEntry | undefined {
-    const projectRootPath = project.uri.fsPath;
+    const projectRootPath =extension.isWebMode? Uri.parse(project.uri.toString()).toString():project.uri.fsPath;
     const projectRootEntry = new ProjectExplorerEntry(
         `${project.name}`,
         vscode.TreeItemCollapsibleState.Expanded,
