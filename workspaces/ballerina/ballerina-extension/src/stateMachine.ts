@@ -233,19 +233,6 @@ const stateMachine = createMachine<MachineContext>(
         activateLanguageServer: (context, event) => {
             console.log("tring to activate LS");
             return new Promise(async (resolve, reject) => {
-                // if(extension.isWebMode)
-                // {
-                //     console.log("Activating LS in web mode");
-                //     try {
-                //         const langClient = await activateLanguageServer();
-                //         // StateMachineAI.initialize();
-                //         // StateMachinePopup.initialize();
-                //         resolve(langClient);
-                //     } catch (error) {
-                //         throw new Error("LS Activation failed.");
-                //     }
-                // }
-                // else{
                     try {
                         commands.executeCommand('setContext', 'BI.status', 'loadingLS');
                         const ls = await activateBallerina();
@@ -581,7 +568,6 @@ function getLastHistory() {
 }
 
 async function checkForProjects(): Promise<{ isBI: boolean, projectPath: string, scope?: SCOPE }> {
-    console.log("hi this is checkforprojects");
     const workspaceFolders = workspace.workspaceFolders;
 
     if (!workspaceFolders) {

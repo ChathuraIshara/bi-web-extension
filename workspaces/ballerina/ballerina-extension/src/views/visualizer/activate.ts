@@ -49,7 +49,7 @@ export function activateSubscriptions() {
            // console.log("path.tostring()", path.toString());
             console.log("vscode.window.activeTextEditor?.document.uri.fsPath",vscode.window.activeTextEditor?.document.uri.fsPath);
             if (StateMachine.langClient()) { // This is added since we can't fetch new diagram data without bi supported ballerina version
-                openView(EVENT_TYPE.OPEN_VIEW, { documentUri:path?path.toString():documentPath.toString(), position:position?position:tempPosition }, resetHistory);
+                openView(EVENT_TYPE.OPEN_VIEW, { documentUri:extension.isWebMode?(path?path.toString():documentPath.toString()):(documentPath || vscode.window.activeTextEditor?.document.uri.fsPath), position:position?position:tempPosition }, resetHistory);
             } else {
                 openView(EVENT_TYPE.OPEN_VIEW, { view: MACHINE_VIEW.BallerinaUpdateView }); // Redirect user to the ballerina update available page
             }
