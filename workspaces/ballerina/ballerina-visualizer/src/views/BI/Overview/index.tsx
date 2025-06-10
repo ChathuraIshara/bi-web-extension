@@ -32,7 +32,7 @@ import ReactMarkdown from "react-markdown";
 import { useQuery } from '@tanstack/react-query'
 import { IOpenInConsoleCmdParams, CommandIds as PlatformExtCommandIds } from "@wso2-enterprise/wso2-platform-core";
 import { AlertBoxWithClose } from "../../AIPanel/AlertBoxWithClose";
-import { findScopeByModule } from "./utils";
+import { findScopeByModule,isWebMode } from "./utils";
 
 
 const SpinnerContainer = styled.div`
@@ -518,8 +518,7 @@ export function Overview(props: ComponentDiagramProps) {
             .getBIDiagramRpcClient()
             .getWorkspaces()
             .then((res) => {
-                //const workspace = res.workspaces.find(workspace => workspace.fsPath === projectPath);
-                const workspace=res.workspaces[0];
+                const workspace = isWebMode?res.workspaces[0]:res.workspaces.find(workspace => workspace.fsPath === projectPath);
                 if (workspace) {
                     setWorkspaceName(workspace.name);
                 }
