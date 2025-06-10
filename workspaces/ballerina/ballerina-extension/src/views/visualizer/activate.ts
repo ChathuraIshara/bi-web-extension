@@ -43,16 +43,16 @@ export function activateSubscriptions() {
         vscode.commands.registerCommand(SHARED_COMMANDS.SHOW_VISUALIZER, (path: string | vscode.Uri, position, resetHistory = false) => {
             console.log("path in the command",path);
             console.log("is bi supported", StateMachine.context().isBISupported);
-            const documentPath = path ? (typeof path === "string" ? path : path.fsPath) : "";
+            const documentPath = path ? (typeof path === "string" ? path : path.fsPath) : "web-bala:/ChathuraIshara/post-intergration";
+            const tempPosition = position? position:{groupId:0};
             console.log("documentPath", documentPath);
-            console.log("path.tostring()", path.toString());
+           // console.log("path.tostring()", path.toString());
             console.log("vscode.window.activeTextEditor?.document.uri.fsPath",vscode.window.activeTextEditor?.document.uri.fsPath);
             if (StateMachine.langClient()) { // This is added since we can't fetch new diagram data without bi supported ballerina version
-                openView(EVENT_TYPE.OPEN_VIEW, { documentUri:path.toString(), position: position }, resetHistory);
+                openView(EVENT_TYPE.OPEN_VIEW, { documentUri:path?path.toString():documentPath.toString(), position:position?position:tempPosition }, resetHistory);
             } else {
                 openView(EVENT_TYPE.OPEN_VIEW, { view: MACHINE_VIEW.BallerinaUpdateView }); // Redirect user to the ballerina update available page
             }
-
         })
     );
 
