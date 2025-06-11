@@ -88,11 +88,13 @@ export class VisualizerWebview {
                 retainContextWhenHidden: true,
             }
         );
-        // Use BI icons if in web mode, or if BI extension is present in desktop
-        const useBiIcons = extension.isWebMode || vscode.extensions.getExtension('wso2.ballerina-integrator');
-        panel.iconPath = {
-            light: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', useBiIcons ? 'light-icon.svg' : 'ballerina.svg'),
-            dark: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', useBiIcons ? 'dark-icon.svg' : 'ballerina-inverse.svg')
+        const biExtension = vscode.extensions.getExtension('wso2.ballerina-integrator');
+        panel.iconPath =extension.isWebMode? {
+            light: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'light-icon.svg' : 'ballerina.svg'),
+            dark: vscode.Uri.joinPath(extension.context.extensionUri, 'resources', 'icons', biExtension ? 'dark-icon.svg' : 'ballerina-inverse.svg')
+        }: {
+            light: vscode.Uri.file(path.join(extension.context.extensionPath, 'resources', 'icons', biExtension ? 'light-icon.svg' : 'ballerina.svg')),
+            dark: vscode.Uri.file(path.join(extension.context.extensionPath, 'resources', 'icons', biExtension ? 'dark-icon.svg' : 'ballerina-inverse.svg'))
         };
         return panel;
     }
