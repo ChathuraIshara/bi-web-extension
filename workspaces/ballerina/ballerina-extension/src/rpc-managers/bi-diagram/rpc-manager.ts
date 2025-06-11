@@ -659,10 +659,10 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         return new Promise(async (resolve) => {
             const req: UpdateConfigVariableRequest = params;
 
+             // Create config.bal if it doesn't exist
+             //need to handle this in web mode
             if (!extension.isWebMode) {
                 if (!fs.existsSync(params.configFilePath)) {
-
-                    // Create config.bal if it doesn't exist
                     writeBallerinaFileDidOpen(params.configFilePath, "\n");
                 }
 
