@@ -364,12 +364,15 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
         params.forceAssign = true; // TODO: remove this
 
         // Check if the file exists
-        // if (!fs.existsSync(params.filePath)) {
-        //     // Create the file if it does not exist
-        //     fs.writeFileSync(params.filePath, "");
-        //     console.log(`>>> Created file at ${params.filePath}`);
-        // }
-
+        //need to handle this in web mode
+        if(!extension.isWebMode)
+        {
+             if (!fs.existsSync(params.filePath)) {
+            // Create the file if it does not exist
+            fs.writeFileSync(params.filePath, "");
+            console.log(`>>> Created file at ${params.filePath}`);
+        }
+        }
         return new Promise((resolve) => {
             StateMachine.langClient()
                 .getNodeTemplate(params)
