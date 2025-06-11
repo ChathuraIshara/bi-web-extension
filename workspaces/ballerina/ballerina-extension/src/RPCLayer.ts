@@ -95,8 +95,6 @@ export class RPCLayer {
 }
 
 async function getContext(): Promise<VisualizerLocation> {
-    console.log("called getContext");
-
     const context = StateMachine.context();
     console.log("record file path",vscode.Uri.joinPath(vscode.Uri.parse(context.projectUri), "types.bal").path);
     return new Promise((resolve) => {
