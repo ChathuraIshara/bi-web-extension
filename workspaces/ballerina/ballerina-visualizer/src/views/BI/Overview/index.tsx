@@ -507,7 +507,6 @@ export function Overview(props: ComponentDiagramProps) {
 
 
     const fetchContext = () => {
-       // StateMachine.context().view= "overview";
         rpcClient
             .getBIDiagramRpcClient()
             .getProjectStructure()

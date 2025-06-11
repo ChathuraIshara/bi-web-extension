@@ -362,18 +362,20 @@ export class ServiceDesignerRpcManager implements ServiceDesignerAPI {
                 ? vscode.Uri.parse(`web-bala:${key}`)
                 : Uri.file(key);
             const fileUriString = fileUri.toString();
-            // if (!existsSync(fileUri.fsPath)) {
-            //     writeFileSync(fileUri.fsPath, '');
-            //     await new Promise(resolve => setTimeout(resolve, 500)); // Add small delay to ensure file is created
-            //     await StateMachine.langClient().didOpen({
-            //         textDocument: {
-            //             uri: fileUriString,
-            //             text: '',
-            //             languageId: 'ballerina',
-            //             version: 1
-            //         }
-            //     });
-            // }
+            if (!extension.isWebMode) {
+                if (!existsSync(fileUri.fsPath)) {
+                    writeFileSync(fileUri.fsPath, '');
+                    await new Promise(resolve => setTimeout(resolve, 500)); // Add small delay to ensure file is created
+                    await StateMachine.langClient().didOpen({
+                        textDocument: {
+                            uri: fileUriString,
+                            text: '',
+                            languageId: 'ballerina',
+                            version: 1
+                        }
+                    });
+                }
+            }
             const edits = value;
 
             if (edits && edits.length > 0) {
