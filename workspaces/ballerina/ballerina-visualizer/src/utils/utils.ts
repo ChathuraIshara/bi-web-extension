@@ -106,7 +106,7 @@ export const applyModifications = async (rpcClient: BallerinaRpcClient, modifica
     const { parseSuccess, source: newSource } = await langServerRPCClient?.stModify({
         astModifications: modifications,
         documentIdentifier: {
-            uri: URI.parse(filePath).toString(),
+            uri: isWebMode?URI.parse(filePath).toString():URI.file(filePath).toString(),
         },
     });
     if (parseSuccess) {
@@ -117,6 +117,11 @@ export const applyModifications = async (rpcClient: BallerinaRpcClient, modifica
         });
     }
 };
+
+function isWebMode(): boolean {
+  return typeof window !== 'undefined' && window.location.protocol.startsWith('http');
+}
+
 
 // Parameter object for ParamManager
 export const parameterConfig: ParamConfig = {

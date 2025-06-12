@@ -27,6 +27,7 @@ import { getPartialSTForExpression, getPartialSTForModuleMembers, getPartialSTFo
 import { StmtEditorUndoRedoManager } from "../../utils/undo-redo";
 import { StatementEditor } from "../StatementEditor";
 import { useStatementEditorStyles } from '../styles';
+import { isWebMode } from '../../utils';
 
 export interface LowCodeEditorProps {
     langServerRpcClient: LangClientRpcClient;
@@ -150,7 +151,7 @@ export function StatementEditorWrapper(props: StatementEditorWrapperProps) {
             };
 
             const fullST = await langServerRpcClient.getST({
-                documentIdentifier: { uri: URI.parse(currentFile.path).toString() }
+                documentIdentifier: { uri: isWebMode?URI.parse(currentFile.path).toString():URI.file(currentFile.path).toString()}
             });
             setFullSource(fullST.syntaxTree.source);
 

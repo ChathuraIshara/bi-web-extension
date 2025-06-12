@@ -53,7 +53,7 @@ export class RecordCreatorRpcManager implements RecordCreatorAPI {
 
     async convertXmlToRecordType(params: XMLToRecordParams): Promise<TypeDataWithReferences> {
         const projectUri = StateMachine.context().projectUri;
-        const filePath = path.join(projectUri, 'types.bal');
+        const filePath = extension.isWebMode?Uri.joinPath(Uri.parse(projectUri), 'types.bal').toString():path.join(projectUri, 'types.bal');
         return new Promise(async (resolve) => {
             const response = await StateMachine.langClient().convertXmlToRecordType({
                 ...params,

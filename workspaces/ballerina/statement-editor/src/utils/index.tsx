@@ -269,6 +269,10 @@ export function isQuestionMarkFromRecordField(model: STNode): boolean {
 export function isRecordFieldName(model: STNode): boolean {
     return STKindChecker.isIdentifierToken(model) && STKindChecker.isRecordField(model.parent);
 }
+export function isWebMode(): boolean {
+  return typeof window !== 'undefined' && window.location.protocol.startsWith('http');
+}
+
 
 export function getFilteredDiagnosticMessages(statement: string, targetPosition: NodePosition,
                                               diagnostics: Diagnostic[]): StatementSyntaxDiagnostics[] {

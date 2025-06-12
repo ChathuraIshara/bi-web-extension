@@ -41,6 +41,7 @@ import {
     isDocumentationSupportedModel,
     isModuleMember,
     isOperator,
+    isWebMode
 } from "../../utils";
 import {
     getCodeAction,
@@ -120,7 +121,7 @@ export function StatementEditor(props: StatementEditorProps) {
         updateEditor
     } = editorManager;
 
-    const fileURI = URI.parse(currentFile.path).toString();
+    const fileURI = isWebMode?URI.parse(currentFile.path).toString():URI.file(currentFile.path).toString();
     const initSymbolInfo : DocumentationInfo = {
         modelPosition: null,
         documentation: {}
