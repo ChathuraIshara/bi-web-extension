@@ -29,6 +29,7 @@ import { FILE_DOWNLOAD_PATH, BallerinaExtension, ExtendedLangClient } from "../c
 // } from "../features/telemetry";
 import { NodePosition } from "@wso2-enterprise/syntax-tree";
 import { existsSync } from "fs";
+import { extension } from "../BalExtensionContext";
 interface ProgressMessage {
     message: string;
     increment?: number;
@@ -240,7 +241,7 @@ async function handleDownloadFile(rawFileLink: string, defaultDownloadsPath: str
 }
 
 async function openFileInVSCode(ballerinaExtInstance: BallerinaExtension, filePath: string): Promise<void> {
-    const uri = Uri.file(filePath);
+    const uri = extension.isWebMode?Uri.parse(filePath):Uri.file(filePath);
     const message = `Would you like to open the downloaded file?`;
     const newWindow: MessageItem = { title: "Open in New Window" };
     const sameWindow: MessageItem = { title: 'Open' };
@@ -512,7 +513,7 @@ export async function goToSource(nodePosition: NodePosition, documentUri: string
     }
     let editor = window.visibleTextEditors.find(editor => editor.document.uri.fsPath === documentUri);
     if (!editor && documentUri) {
-        const document = await workspace.openTextDocument(Uri.file(documentUri));
+        const document = await workspace.openTextDocument(extension.isWebMode?Uri.parse(documentUri):Uri.file(documentUri));
         editor = await window.showTextDocument(document, ViewColumn.Beside);
     }
     if (editor) {

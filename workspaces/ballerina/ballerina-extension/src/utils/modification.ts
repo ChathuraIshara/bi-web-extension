@@ -24,7 +24,7 @@ interface UpdateFileContentRequest {
 export async function applyModifications(fileName: string, modifications: STModification[]): Promise<SyntaxTreeResponse | NOT_SUPPORTED_TYPE> {
     const ast = await InsertorDelete(modifications);
     return await StateMachine.langClient().stModify({
-        documentIdentifier: { uri: Uri.file(fileName).toString() },
+        documentIdentifier: { uri: extension.isWebMode?Uri.parse(fileName).toString():Uri.file(fileName).toString() },
         astModifications: ast
     });
 }
@@ -75,7 +75,7 @@ export async function writeBallerinaFileDidOpen(filePath: string, content: strin
     });
     StateMachine.langClient().didOpen({
         textDocument: {
-            uri: Uri.file(filePath).toString(),
+            uri: extension.isWebMode?Uri.parse(filePath).toString():Uri.file(filePath).toString(),
             languageId: 'ballerina',
             version: 1,
             text: content.trim()

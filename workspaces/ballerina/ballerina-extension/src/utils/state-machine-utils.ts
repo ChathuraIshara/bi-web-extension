@@ -404,7 +404,7 @@ export function getNodeByIndex(uid: string, fullST: STNode): [STNode, string] {
 
 function getSTByRangeReq(documentUri: string, position: NodePosition) {
     return {
-        documentIdentifier: { uri: Uri.file(documentUri).toString() },
+        documentIdentifier: { uri: extension.isWebMode?Uri.parse(documentUri).toString():Uri.file(documentUri).toString() },
         lineRange: {
             start: {
                 line: position.startLine,

@@ -22,6 +22,7 @@ import { existsSync, writeFileSync } from "fs";
 import { Uri } from "vscode";
 import { StateMachine } from "../../stateMachine";
 import { applyBallerinaTomlEdit } from "../common/utils";
+import { extension } from "../../BalExtensionContext";
 
 export class ICPServiceRpcManager implements ICPServiceAPI {
 
@@ -76,7 +77,7 @@ export class ICPServiceRpcManager implements ICPServiceAPI {
         const modificationRequests: Record<string, { filePath: string; modifications: STModification[] }> = {};
         let position: NodePosition;
         for (const [key, value] of Object.entries(params.textEdits)) {
-            const fileUri = Uri.file(key);
+            const fileUri = extension.isWebMode?Uri.parse(key):Uri.file(key);
             const fileUriString = fileUri.toString();
             if (!existsSync(fileUri.fsPath)) {
                 writeFileSync(fileUri.fsPath, '');

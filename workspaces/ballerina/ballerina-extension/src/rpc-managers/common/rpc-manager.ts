@@ -47,7 +47,7 @@ export class CommonRpcManager implements CommonRPCAPI {
             const context = StateMachine.context();
             const completionParams: CompletionParams = {
                 textDocument: {
-                    uri: Uri.file(context.documentUri!).toString()
+                    uri:extension.isWebMode?Uri.parse(context.documentUri!).toString(): Uri.file(context.documentUri!).toString()
                 },
                 context: {
                     triggerKind: 25,

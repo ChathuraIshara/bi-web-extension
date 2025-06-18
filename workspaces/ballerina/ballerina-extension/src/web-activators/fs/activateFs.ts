@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
-import {LANGUAGE,ballerinaExtInstance} from "../../core/extension";
+import { LANGUAGE, ballerinaExtInstance } from "../../core/extension";
 import { BalFileSystemProvider } from "./BalFileSystemProvider";
 
-export const WEB_IDE_SCHEME = 'web-bala';
-export const STD_LIB_SCHEME = 'bala';
+export const WEB_IDE_SCHEME = "web-bala";
+export const STD_LIB_SCHEME = "bala";
 const fsProvider = new BalFileSystemProvider();
 
 export function activateFileSystemProvider() {
@@ -16,31 +16,51 @@ export function activateFileSystemProvider() {
     );
 
     // Register the command to open a github repository
-    ballerinaExtInstance.context.subscriptions.push(vscode.commands.registerCommand('ballerina.openGithubRepository', async () => {
-        console.log("openGithubRepository command triggered");
-       // const repoUrl = await vscode.window.showInputBox({ placeHolder: 'Enter repository URL' });
-         //const repoUrl = "https://github.com/ChathuraIshara/ballerina-rest-api-demo";
-         const repoUrl= "https://github.com/ChathuraIshara/post-intergration";
-        if (!repoUrl) {
-            return; 
-        }
-        const repoInfo = extractGitHubRepoInfo(repoUrl);
-        if (!repoInfo) {
-            vscode.window.showErrorMessage('Invalid repository URL');
-            return;
-        }
-        vscode.workspace.updateWorkspaceFolders(
-            vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.length : 0, 0,
-            {
-                uri: vscode.Uri.parse(`${WEB_IDE_SCHEME}:/${repoInfo.username}/${repoInfo.repo}`),
-                name: `${repoInfo.username}/${repoInfo.repo}`
+    ballerinaExtInstance.context.subscriptions.push(
+        vscode.commands.registerCommand("ballerina.openGithubRepository", async () => {
+            console.log("openGithubRepository command triggered");
+            // const repoUrl = await vscode.window.showInputBox({ placeHolder: 'Enter repository URL' });
+            //const repoUrl = "https://github.com/ChathuraIshara/ballerina-rest-api-demo";
+            const repoUrl = "https://github.com/ChathuraIshara/post-intergration";
+            if (!repoUrl) {
+                return;
             }
-        );
-        vscode.window.showInformationMessage('Cloning the repository...');
-    }));
+            const repoInfo = extractGitHubRepoInfo(repoUrl);
+            if (!repoInfo) {
+                vscode.window.showErrorMessage("Invalid repository URL");
+                return;
+            }
+            vscode.workspace.updateWorkspaceFolders(
+                vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.length : 0,
+                0,
+                {
+                    uri: vscode.Uri.parse(`${WEB_IDE_SCHEME}:/${repoInfo.username}/${repoInfo.repo}`),
+                    name: `${repoInfo.username}/${repoInfo.repo}`,
+                }
+            );
+            // Log the current workspace folders after update
+            if (vscode.workspace.workspaceFolders) {
+                console.log(
+                    "Current workspace folders:",
+                    vscode.workspace.workspaceFolders.map((f) => f.uri.toString())
+                );
+            } else {
+                console.log("No workspace folders present.");
+            }
+            if (vscode.workspace.workspaceFolders) {
+                console.log(
+                    "Current workspace folders:",
+                    vscode.workspace.workspaceFolders.map((f) => f.uri.toString())
+                );
+            } else {
+                console.log("No workspace folders present.");
+            }
+            vscode.window.showInformationMessage("Cloning the repository...");
+        })
+    );
 
     // Delete folder in the fs while removing folder from the workspace
-    vscode.workspace.onDidChangeWorkspaceFolders(event => {
+    vscode.workspace.onDidChangeWorkspaceFolders((event) => {
         if (event.removed.length > 0) {
             console.log("Removed folders:", event.removed);
             for (const folder of event.removed) {
@@ -52,7 +72,7 @@ export function activateFileSystemProvider() {
     });
 
     // Track active ballerina text file
-    vscode.window.onDidChangeActiveTextEditor(editor => {
+    vscode.window.onDidChangeActiveTextEditor((editor) => {
         if (!editor && vscode.window.visibleTextEditors.length === 0) {
             ballerinaExtInstance.activeBalFileUri = undefined;
         }
@@ -62,7 +82,7 @@ export function activateFileSystemProvider() {
         if (editor && editor.document.languageId !== LANGUAGE.BALLERINA) {
             ballerinaExtInstance.activeBalFileUri = undefined;
         }
-        console.log("active file changed: ", {editor: editor, uri: ballerinaExtInstance.activeBalFileUri});
+        console.log("active file changed: ", { editor: editor, uri: ballerinaExtInstance.activeBalFileUri });
     });
 }
 

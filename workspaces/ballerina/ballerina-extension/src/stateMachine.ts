@@ -94,8 +94,7 @@ const stateMachine = createMachine<MachineContext>(
                         target: "activateFS",
                         actions: assign({
                             langClient: (context, event) => event.data.langClient,
-                            isBISupported: (context, event) => event.data.isBISupported,
-                            
+                            isBISupported: (context, event) => event.data.isBISupported,                   
                         })
                     },
                     onError: {

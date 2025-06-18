@@ -289,10 +289,10 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
 
     async applyTextEdits(filePath: string, textEdits: TextEdit[]): Promise<void> {
         const workspaceEdit = new vscode.WorkspaceEdit();
-        const fileUri = Uri.file(filePath);
+        const fileUri =extension.isWebMode?Uri.parse(filePath): Uri.file(filePath);
 
         const dirPath = path.dirname(filePath);
-        const dirUri = vscode.Uri.file(dirPath);
+        const dirUri = extension.isWebMode?vscode.Uri.parse(filePath):vscode.Uri.file(dirPath);
 
         try {
             await vscode.workspace.fs.createDirectory(dirUri);
@@ -432,7 +432,7 @@ export class BiDiagramRpcManager implements BIDiagramAPI {
     async getProjectComponents(): Promise<ProjectComponentsResponse> {
         return new Promise(async (resolve) => {
             const components = await StateMachine.langClient().getBallerinaProjectComponents({
-                documentIdentifiers: [{ uri: Uri.file(StateMachine.context().projectUri).toString() }],
+                documentIdentifiers: [{ uri:extension.isWebMode?Uri.parse(StateMachine.context().projectUri).toString(): Uri.file(StateMachine.context().projectUri).toString() }],
             });
             resolve({ components });
         });

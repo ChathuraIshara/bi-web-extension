@@ -15,6 +15,7 @@ import { StateMachine, history, openView } from "../stateMachine";
 import { applyModifications, modifyFileContent, writeBallerinaFileDidOpen } from "./modification";
 import { ModulePart, STKindChecker } from "@wso2-enterprise/syntax-tree";
 import { URI } from "vscode-uri";
+import { extension } from "../BalExtensionContext";
 
 export const README_FILE = "readme.md";
 export const FUNCTIONS_FILE = "functions.bal";
@@ -215,7 +216,7 @@ export async function createBIAutomation(params: ComponentRequest): Promise<Crea
     return new Promise(async (resolve) => {
         const functionFile = await handleAutomationCreation(params);
         const components = await StateMachine.langClient().getBallerinaProjectComponents({
-            documentIdentifiers: [{ uri: URI.file(StateMachine.context().projectUri).toString() }]
+            documentIdentifiers: [{ uri: extension.isWebMode?Uri.parse(StateMachine.context().projectUri).toString():URI.file(StateMachine.context().projectUri).toString() }]
         }) as BallerinaProjectComponents;
         const position: NodePosition = {};
         for (const pkg of components.packages) {
@@ -310,7 +311,7 @@ export async function handleFunctionCreation(targetFile: string, params: Compone
     }
 }`;
 
-    const document = await workspace.openTextDocument(Uri.file(targetFile));
+    const document = await workspace.openTextDocument(extension.isWebMode?Uri.parse(targetFile):Uri.file(targetFile));
     const lastPosition = document.lineAt(document.lineCount - 1).range.end;
 
     const targetPosition: NodePosition = {

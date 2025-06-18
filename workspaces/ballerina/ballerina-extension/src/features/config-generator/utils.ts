@@ -14,6 +14,7 @@ import { BallerinaExtension } from "../../core";
 import { findPropertyValues, getConfigValue, getCurrentBallerinaProjectFromContext } from "./configGenerator";
 import { ConfigProperty, Constants, Property } from "./model";
 import { BallerinaProject, PackageConfigSchema } from "@wso2-enterprise/ballerina-core";
+import {extension} from "../../BalExtensionContext";
 
 
 export const typeOfComment = 'Type of';
@@ -58,7 +59,7 @@ export async function getConfigCompletions(ballerinaExtInstance: BallerinaExtens
     try {
         const response = await ballerinaExtInstance.langClient?.getBallerinaProjectConfigSchema({
             documentIdentifier: {
-                uri: Uri.file(filePath).toString()
+                uri:extension.isWebMode?Uri.parse(filePath).toString():Uri.file(filePath).toString()
             }
         });
 

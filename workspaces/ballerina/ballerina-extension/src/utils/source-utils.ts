@@ -13,6 +13,7 @@ import { workspace } from 'vscode';
 import { Uri, Position } from 'vscode';
 import { LinePosition } from '@wso2-enterprise/ballerina-core';
 import path from 'path';
+import { extension } from '../BalExtensionContext';
 
 export async function injectImportIfMissing(importStatement: string, filePath: string) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -44,7 +45,7 @@ final ai:Agent _${name}Agent = check new (systemPrompt = {role: "", instructions
     }
 
     // Insert at the end of the file
-    agentEdit.insert(Uri.file(agentsFile), new Position(fileContent.split('\n').length, 0), agentCode);
+    agentEdit.insert(extension.isWebMode?Uri.parse(agentsFile):Uri.file(agentsFile), new Position(fileContent.split('\n').length, 0), agentCode);
     await workspace.applyEdit(agentEdit);
 }
 
@@ -56,6 +57,6 @@ export async function injectAgentCode(name: string, serviceFile: string, injecti
         string stringResult = check _${name}Agent->run(request.message, request.sessionId);
         return {message: stringResult};
 `;
-    serviceEdit.insert(Uri.file(serviceFile), new Position(injectionPosition.line, 0), serviceSourceCode);
+    serviceEdit.insert(extension.isWebMode?Uri.parse(serviceFile):Uri.file(serviceFile), new Position(injectionPosition.line, 0), serviceSourceCode);
     await workspace.applyEdit(serviceEdit);
 }

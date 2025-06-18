@@ -53,6 +53,7 @@ import { notifyBreakpointChange } from '../../RPCLayer';
 import { VisualizerWebview } from '../../views/visualizer/webview';
 import { URI } from 'vscode-uri';
 import { prepareAndGenerateConfig, cleanAndValidateProject } from '../config-generator/configGenerator';
+import { extension } from '../../BalExtensionContext';
 
 const BALLERINA_COMMAND = "ballerina.command";
 const EXTENDED_CLIENT_CAPABILITIES = "capabilities";
@@ -248,7 +249,7 @@ async function getModifiedConfigs(workspaceFolder: WorkspaceFolder, config: Debu
       //  sendTelemetryEvent(ballerinaExtInstance, TM_EVENT_START_NOTEBOOK_DEBUG, CMP_NOTEBOOK);
         let activeTextEditorUri = activeTextEditor.document.uri;
         if (activeTextEditorUri.scheme === NOTEBOOK_CELL_SCHEME) {
-            activeTextEditorUri = Uri.file(getTempFile());
+            activeTextEditorUri =extension.isWebMode?Uri.parse(getTempFile()): Uri.file(getTempFile());
             config.script = fileUriToPath(activeTextEditorUri.toString(true));
         } else {
             return Promise.reject();
@@ -485,7 +486,7 @@ class BallerinaDebugAdapterTrackerFactory implements DebugAdapterTrackerFactory 
                             if (workspaceRoot) {
                                 // Get the component list
                                 const components: BallerinaProjectComponents = await ballerinaExtInstance?.langClient?.getBallerinaProjectComponents({
-                                    documentIdentifiers: [{ uri: URI.file(workspaceRoot).toString() }]
+                                    documentIdentifiers: [{ uri:extension.isWebMode?Uri.parse(workspaceRoot).toString(): URI.file(workspaceRoot).toString() }]
                                 });
 
                                 // Iterate and extract the services

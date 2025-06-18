@@ -139,7 +139,7 @@ async function createDiagnosticCollection(responses: any[], projectUri: string,
     // Set diagnostics in VS Code
     diagnosticCollection.clear();
     diagnosticsMap.forEach((diagnostics, filePath) => {
-        const uri = vscode.Uri.file(filePath);
+        const uri = extension.isWebMode?vscode.Uri.parse(filePath):vscode.Uri.file(filePath);
         diagnosticCollection.set(uri, diagnostics);
     });
 }

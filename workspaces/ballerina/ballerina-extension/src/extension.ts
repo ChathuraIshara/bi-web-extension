@@ -101,7 +101,7 @@ function onBeforeInit(langClient: ExtendedLangClient) {
 export async function activate(context: ExtensionContext) {
     extension.context = context;
     extension.isWebMode = env.uiKind === UIKind.Web ? true : false;
-    console.log("is webmode in ballerina extension", extension.isWebMode);
+
     
     // Init RPC Layer methods
     RPCLayer.init();

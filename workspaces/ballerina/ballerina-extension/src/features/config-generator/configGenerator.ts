@@ -19,6 +19,7 @@ import { TextDocumentEdit } from "vscode-languageserver-types";
 import { modifyFileContent } from "../../utils/modification";
 import { fileURLToPath } from "url";
 import { startDebugging } from "../editor-support/codelens-provider";
+import { extension } from "../../BalExtensionContext";
 
 const UNUSED_IMPORT_ERR_CODE = "BCE2002";
 
@@ -37,7 +38,7 @@ export async function prepareAndGenerateConfig(ballerinaExtInstance: BallerinaEx
         return;
     }
 
-    const uri = Uri.file(context.configFilePath);
+    const uri =extension.isWebMode?Uri.parse(context.configFilePath): Uri.file(context.configFilePath);
     const ignoreFile = `${context.projectPath}/.gitignore`;
 
     await handleNewValues(
@@ -87,7 +88,7 @@ export async function checkConfigGenerationRequired(ballerinaExtInstance: Baller
     try {
         const response = await ballerinaExtInstance.langClient?.getBallerinaProjectConfigSchema({
             documentIdentifier: {
-                uri: Uri.file(`${currentProject.path}/${BAL_TOML}`).toString()
+                uri: extension.isWebMode?Uri.parse(`${currentProject.path}/${BAL_TOML}`).toString():Uri.file(`${currentProject.path}/${BAL_TOML}`).toString()
             }
         });
 
@@ -729,7 +730,7 @@ export async function cleanAndValidateProject(langClient: ExtendedLangClient, pa
         const projectPath = ballerinaExtInstance?.getDocumentContext()?.getCurrentProject()?.path || path;
         let response: ProjectDiagnosticsResponse = await langClient.getProjectDiagnostics({
             projectRootIdentifier: {
-                uri: Uri.file(projectPath).toString()
+                uri: extension.isWebMode?Uri.parse(projectPath).toString():Uri.file(projectPath).toString()
             }
         });
 
@@ -783,7 +784,7 @@ export async function cleanAndValidateProject(langClient: ExtendedLangClient, pa
         // Check if errors still exist after fixes
         const updatedResponse: ProjectDiagnosticsResponse = await langClient.getProjectDiagnostics({
             projectRootIdentifier: {
-                uri: Uri.file(projectPath).toString()
+                uri: extension.isWebMode?Uri.parse(projectPath).toString():Uri.file(projectPath).toString()
             }
         });
 
